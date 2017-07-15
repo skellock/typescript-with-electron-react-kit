@@ -38,4 +38,10 @@ Some automation so I stop checking in crap looking code.
 
 This is my favourite testing framework. I've tried them all. The devs behind this are very talented, helpful, and friendly.
 
+**npm-scripts-info**, **npm-run-all**
 
+Quality-of-life utilities for npm.
+
+# License
+
+MIT
