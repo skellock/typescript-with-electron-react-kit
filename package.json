@@ -31,14 +31,19 @@
       "git add"
     ]
   },
+  "main": "dist/main.js",
   "name": "electron-starter",
   "private": true,
   "repository": "skellock/electron-starter",
   "scripts": {
-    "info": "npm-scripts-info"
+    "info": "npm-scripts-info",
+    "start": "node fuse",
+    "clean": "rm -rf .fusebox dist"
   },
   "scripts-info": {
-    "info": "Shows available npm scripts."
+    "info": "Shows available npm scripts.",
+    "start": "Starts the app in dev mode.",
+    "clean": "Removes build artifacts and caches."
   },
   "version": "0.0.1"
 }
