@@ -29,6 +29,32 @@ I'm still deciding on a simple way, but there will be a script you can run.
 npm run time-to-shine
 ```
 
+# Using
+
+Your source files will live in the `src/main` and `src/renderer` directories.
+
+To build your apps, first bundle it:
+
+```sh
+npm run compile
+```
+
+Then you can `pack` a copy to see what it will look like assembled:
+
+```sh
+npm run pack
+npm run dist
+```
+
+And when you're ready to ship:
+
+```sh
+npm run dist
+```
+
+To create a .zip and .dmg.
+
+
 # What's Inside?
 
 libs | why
