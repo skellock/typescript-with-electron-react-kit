@@ -17,7 +17,7 @@ export function createWindow(appPath: string) {
   // load entry html page in the renderer.
   window.loadURL(
     format({
-      pathname: join(appPath, 'dist/index.html'),
+      pathname: join(appPath, 'out/index.html'),
       protocol: 'file:',
       slashes: true
     })

@@ -2,7 +2,10 @@ const { FuseBox, CSSPlugin, Sparky } = require('fuse-box')
 const { spawn } = require('child_process')
 
 const DEV_PORT = 4445
-const OUTPUT_DIR = 'dist'
+const OUTPUT_DIR = 'out'
+
+// are we running in production mode?
+const isProduction = process.env.NODE_ENV === 'production'
 
 // copy the renderer's html file into the right place
 Sparky.task('copy-html', () => {
@@ -17,31 +20,45 @@ Sparky.task('default', ['copy-html'], () => {
   const fuse = FuseBox.init({
     homeDir: 'src',
     output: `${OUTPUT_DIR}/$name.js`,
-    target: 'electron'
+    target: 'electron',
+    cache: !isProduction,
+    sourceMaps: true
   })
 
   // start the hot reload server
-  fuse.dev({ port: DEV_PORT, httpServer: false })
+  if (!isProduction) {
+    fuse.dev({ port: DEV_PORT, httpServer: false })
+  }
 
   // bundle the electron main code
-  fuse
+  const mainBundle = fuse
     .bundle('main')
-    .watch()
     .instructions('> [main/main.ts]')
 
+  // and watch unless we're bundling for production
+  if (!isProduction) {
+    mainBundle.watch()
+  }
+
   // bundle the electron renderer code
-  fuse
+  const rendererBundle = fuse
     .bundle('renderer')
     .plugin(CSSPlugin())
-    .watch()
-    .hmr()
     .instructions('> [renderer/index.tsx]')
+
+  // and watch & hot reload unless we're bundling for production
+  if (!isProduction) {
+    rendererBundle.watch()
+    rendererBundle.hmr()
+  }
 
   // when we are finished bundling...
   return fuse
     .run()
     .then(() => {
-      // startup electron
-      spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname])
+      if (!isProduction) {
+        // startup electron
+        spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname])
+      }
     })
 })
