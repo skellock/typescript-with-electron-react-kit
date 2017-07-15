@@ -2,8 +2,8 @@ import { BrowserWindow } from 'electron'
 import { join } from 'path'
 import { format } from 'url'
 
-const DEFAULT_WIDTH = 800
-const DEFAULT_HEIGHT = 500
+// default dimensions
+const DIMENSIONS = { width: 800, height: 500 }
 
 /**
  * Creates the main window.
@@ -12,10 +12,7 @@ const DEFAULT_HEIGHT = 500
  * @return The main BrowserWindow.
  */
 export function createWindow(appPath: string) {
-  const window = new BrowserWindow({
-    width: DEFAULT_WIDTH,
-    height: DEFAULT_HEIGHT
-  })
+  const window = new BrowserWindow(DIMENSIONS)
 
   // load entry html page in the renderer.
   window.loadURL(
