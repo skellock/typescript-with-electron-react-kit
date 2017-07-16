@@ -1,8 +1,9 @@
-const { FuseBox, CSSPlugin, Sparky, ImageBase64Plugin } = require('fuse-box')
+const { FuseBox, CSSPlugin, Sparky, CopyPlugin } = require('fuse-box')
 const { spawn } = require('child_process')
 
 const DEV_PORT = 4445
 const OUTPUT_DIR = 'out'
+const ASSETS = ['*.jpg', '*.png', '*.jpeg', '*.gif', '*.svg']
 
 // are we running in production mode?
 const isProduction = process.env.NODE_ENV === 'production'
@@ -20,7 +21,6 @@ Sparky.task('default', ['copy-html'], () => {
     output: `${OUTPUT_DIR}/$name.js`,
     target: 'electron',
     cache: !isProduction,
-    plugins: [CSSPlugin(), ImageBase64Plugin({ useDefault: true })],
     sourceMaps: true
   })
 
@@ -38,7 +38,11 @@ Sparky.task('default', ['copy-html'], () => {
   }
 
   // bundle the electron renderer code
-  const rendererBundle = fuse.bundle('renderer').instructions('> [renderer/index.tsx]')
+  const rendererBundle = fuse
+    .bundle('renderer')
+    .instructions('> [renderer/index.tsx]')
+    .plugin(CSSPlugin())
+    .plugin(CopyPlugin({ useDefault: true, files: ASSETS, dest: 'assets', resolve: 'assets/' }))
 
   // and watch & hot reload unless we're bundling for production
   if (!isProduction) {
