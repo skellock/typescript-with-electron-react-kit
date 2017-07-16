@@ -1,5 +1,6 @@
+
 import * as React from 'react'
-import { Text, Logo } from '../platform'
+import { Text, Logo, FunDog } from '../platform'
 
 const appStyle = {
   flex: 1,
@@ -18,12 +19,18 @@ const appStyle = {
   cursor: 'default'
 }
 
+const textStyle = {
+  paddingTop: 20,
+  paddingBottom: 20
+}
+
 export class App extends React.Component<{}, {}> {
   render() {
     return (
       <div style={appStyle}>
         <Logo />
-        <Text>Wake up and smell the electrons.</Text>
+        <Text style={textStyle}>Wake up and smell the electrons.</Text>
+        <FunDog />
       </div>
     )
   }
