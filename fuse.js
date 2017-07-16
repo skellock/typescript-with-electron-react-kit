@@ -1,4 +1,4 @@
-const { FuseBox, CSSPlugin, Sparky, SVGPlugin } = require('fuse-box')
+const { FuseBox, CSSPlugin, Sparky, ImageBase64Plugin } = require('fuse-box')
 const { spawn } = require('child_process')
 
 const DEV_PORT = 4445
@@ -20,7 +20,7 @@ Sparky.task('default', ['copy-html'], () => {
     output: `${OUTPUT_DIR}/$name.js`,
     target: 'electron',
     cache: !isProduction,
-    plugins: [SVGPlugin(), CSSPlugin()],
+    plugins: [CSSPlugin(), ImageBase64Plugin({ useDefault: true })],
     sourceMaps: true
   })
 
