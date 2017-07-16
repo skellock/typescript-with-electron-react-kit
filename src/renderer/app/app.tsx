@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from '../platform'
+import { Text, Logo } from '../platform'
 
 const appStyle = {
   flex: 1,
@@ -22,6 +22,7 @@ export class App extends React.Component<{}, {}> {
   render() {
     return (
       <div style={appStyle}>
+        <Logo />
         <Text>Wake up and smell the electrons.</Text>
       </div>
     )
