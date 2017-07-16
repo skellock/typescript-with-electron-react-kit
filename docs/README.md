@@ -1,11 +1,27 @@
 # electron-starter
 
-This is my own personal electron starter kit.
+This is a electron starter kit from some random guy on the Internet.
 
-I will be bikeshedding with myself. I'm going to change my mind quite a bit.  You might prefer something more stable.
 
-Still here?  Ok, let's do this.
+### Why?
+
+I've got dozens of Electron apps started and not finished. They die before they can leave the bikeshed.
+
+This is my attempt to fix that.
+
+
+### Why Not?
+
+Oh man... lots of reasons. There's other starter ones out there. That use things like WebPack, Babel, Flow, and Redux.
+
+This pack o' tools is slightly off the main stream. I mean, don't get me wrong, it's not full on hipster, but does have hipster-like tendencies. It's not as far as say, `reason`, `elm`, or `purescript`. I'm not that crazy or brave yet.
+
+The tools in this pack do **less**. They have less config. Less API. Less plugins.
+
+I need more **less** in my life.
+
 
 ### License
 
-MIT
+MIT. A tip of the hat is always nice, but I'm more interested in hearing what you do with it.
+
