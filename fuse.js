@@ -20,6 +20,7 @@ Sparky.task('default', ['copy-html'], () => {
     homeDir: 'src',
     output: `${OUTPUT_DIR}/$name.js`,
     target: 'electron',
+    log: isProduction,
     cache: !isProduction,
     sourceMaps: true
   })

@@ -3,8 +3,10 @@ import { createWindow } from './create-window'
 import * as log from 'electron-log'
 import * as isDev from 'electron-is-dev'
 import { setupAutoUpdates } from './auto-updater'
+
 // set proper logging level
-log.transports.file.level = isDev ? 'error' : 'debug'
+log.transports.file.level = isDev ? false : 'info'
+log.transports.console.level = isDev ? 'debug' : false
 
 // usually we'd just use __dirname here, however, the FuseBox
 // bundler rewrites that, so we have to get it from Electron.
