@@ -7,9 +7,17 @@
     "appId": "com.example.electron-starter",
     "mac": {
       "category": "public.app-category.developer-tools"
+    },
+    "publish": {
+      "owner": "skellock",
+      "provider": "github",
+      "repo": "electron-starter"
     }
   },
   "dependencies": {
+    "electron-is-dev": "^0.2.0",
+    "electron-log": "^2.2.7",
+    "electron-updater": "^2.7.1",
     "mobx": "3.2.1",
     "mobx-react": "4.2.2",
     "mobx-state-tree": "0.9.2",
@@ -47,6 +55,7 @@
     "clean": "rm -rf .fusebox out",
     "compile": "NODE_ENV=production node fuse",
     "dist": "electron-builder",
+    "draft": "electron-builder -p always --mac --draft",
     "info": "npm-scripts-info",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
@@ -56,10 +65,11 @@
     "clean": "Removes build artifacts and caches.",
     "compile": "Builds both js bundles in production mode.",
     "dist": "Creates a executable for distributing.",
+    "draft": "Releases a version as a draft.",
     "info": "Shows available npm scripts.",
     "pack": "Creates a executable for trying out.",
     "postinstall": "Used by electron-builder to build native dependencies.",
     "start": "Starts the app in dev mode."
   },
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

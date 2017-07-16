@@ -58,7 +58,7 @@ Sparky.task('default', ['copy-html'], () => {
     .then(() => {
       if (!isProduction) {
         // startup electron
-        spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname])
+        spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname], { stdio: 'inherit' })
       }
     })
 })

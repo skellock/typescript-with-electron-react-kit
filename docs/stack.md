@@ -45,6 +45,20 @@ A nice little addition from the `mobx` team. It brings `redux`-like state trees,
 There's so much awesome packed in here. `pipe` for days. I'll be honest, it took me a long time get comfortable with `ramda`. Nowadays, you can pry it from my cold dead hands. PRECIOUS!!!
 
 
+## Electron Things
+
+> **electron-builder**
+
+This does most of the heavy lifting for assembling cross-platform distributables.
+
+> **electron-updater**
+
+Allows our app to auto-update.
+
+> **electron-is-dev**, **electron-log**
+
+A few quality-of-life utilities for working in Electron.
+
 ## Bundler
 
 > **fuse-box**
