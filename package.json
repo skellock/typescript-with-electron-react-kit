@@ -5,13 +5,34 @@
   },
   "build": {
     "appId": "com.example.electron-starter",
+    "files": [
+      "!src",
+      "!docs",
+      "!tsconfig.json",
+      "!fuse.js",
+      "!dev-app-update.yml",
+      "!README.md",
+      "!LICENSE",
+      "!globals.d.ts"
+    ],
+    "linux": {
+      "target": [
+        "tar.gz"
+      ]
+    },
     "mac": {
       "category": "public.app-category.developer-tools"
     },
+    "productName": "Electron Starter",
     "publish": {
       "owner": "skellock",
       "provider": "github",
       "repo": "electron-starter"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ]
     }
   },
   "dependencies": {
@@ -52,10 +73,10 @@
   "private": true,
   "repository": "skellock/electron-starter",
   "scripts": {
-    "clean": "rm -rf .fusebox out",
+    "clean": "rm -rf .fusebox out dist",
     "compile": "NODE_ENV=production node fuse",
-    "dist": "electron-builder",
-    "draft": "electron-builder -p always --mac --draft",
+    "dist": "electron-builder --mac --win --linux --ia32 --x64",
+    "draft": "electron-builder -p always --draft --mac --win --linux --ia32 --x64",
     "info": "npm-scripts-info",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
@@ -71,5 +92,5 @@
     "postinstall": "Used by electron-builder to build native dependencies.",
     "start": "Starts the app in dev mode."
   },
-  "version": "0.6.0"
+  "version": "0.7.0"
 }
