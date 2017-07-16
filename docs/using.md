@@ -42,3 +42,13 @@ npm run dist
 ```
 
 To create a .zip and .dmg in the `dist` directory.
+
+And when you're ready to upload to github (if that's what you're doing), you can run:
+
+```sh
+npm run draft
+```
+
+This will make a new release based on the version number found in your `package.json` file (so you might want to bump that first).
+
+I made it draft mode, because you'll probably want to do release notes. For that step, jump on to github and checkout the draft under releases to complete the process.
