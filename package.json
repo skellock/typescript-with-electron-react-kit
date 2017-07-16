@@ -61,5 +61,5 @@
     "postinstall": "Used by electron-builder to build native dependencies.",
     "start": "Starts the app in dev mode."
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
