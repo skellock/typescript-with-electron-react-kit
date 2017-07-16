@@ -12,8 +12,13 @@ const DIMENSIONS = { width: 800, height: 500 }
  * @return The main BrowserWindow.
  */
 export function createWindow(appPath: string) {
-  const window = new BrowserWindow(DIMENSIONS)
-
+  const window = new BrowserWindow({
+    ...DIMENSIONS,
+    show: false,
+    useContentSize: true,
+    titleBarStyle: 'hidden'
+  })
+  
   // load entry html page in the renderer.
   window.loadURL(
     format({
@@ -22,6 +27,13 @@ export function createWindow(appPath: string) {
       slashes: true
     })
   )
+
+  // only appear once we've loaded
+  window.webContents.on('did-finish-load', () => {
+    window.show()
+    window.focus()
+  })
+
 
   return window
 }

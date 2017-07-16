@@ -3,3 +3,4 @@
 export * from './text/text'
 export * from './logo/logo'
 export * from './fun-dog/fun-dog'
+export * from './vignette/vignette'

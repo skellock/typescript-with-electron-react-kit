@@ -9,5 +9,12 @@ const style = {
 }
 
 export function FunDog() {
-  return <img src={dogImage} style={style} alt="Photo by Braydon Anderson on Unsplash" />
+  return (
+    <img
+      draggable={false}
+      src={dogImage}
+      style={style}
+      alt="Photo by Braydon Anderson on Unsplash"
+    />
+  )
 }
