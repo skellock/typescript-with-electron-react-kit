@@ -1,6 +1,6 @@
-
 import * as React from 'react'
 import { Text, Logo, FunDog } from '../platform'
+// import * as log from 'electron-log'
 
 const appStyle = {
   flex: 1,
@@ -25,6 +25,15 @@ const textStyle = {
 }
 
 export class App extends React.Component<{}, {}> {
+
+  componentWillMount () {
+    // log.debug('example of logging')
+  }
+
+  componentDidMount () {
+    // log.info('more logging')
+  }
+
   render() {
     return (
       <div style={appStyle}>
