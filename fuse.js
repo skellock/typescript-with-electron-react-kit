@@ -10,7 +10,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // copy the renderer's html file into the right place
 Sparky.task('copy-html', () => {
   return Sparky
-    .src('src/renderer/index.html')
+    .src('src/renderer/{index.html,*.css}')
     .dest(`${OUTPUT_DIR}/$name`)
 })
 
