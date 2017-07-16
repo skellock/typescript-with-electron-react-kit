@@ -1,4 +1,4 @@
-const { FuseBox, CSSPlugin, Sparky } = require('fuse-box')
+const { FuseBox, CSSPlugin, Sparky, SVGPlugin } = require('fuse-box')
 const { spawn } = require('child_process')
 
 const DEV_PORT = 4445
@@ -9,9 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 // copy the renderer's html file into the right place
 Sparky.task('copy-html', () => {
-  return Sparky
-    .src('src/renderer/{index.html,*.css}')
-    .dest(`${OUTPUT_DIR}/$name`)
+  return Sparky.src('src/renderer/{index.html,*.css}').dest(`${OUTPUT_DIR}/$name`)
 })
 
 // the default task
@@ -22,6 +20,7 @@ Sparky.task('default', ['copy-html'], () => {
     output: `${OUTPUT_DIR}/$name.js`,
     target: 'electron',
     cache: !isProduction,
+    plugins: [SVGPlugin(), CSSPlugin()],
     sourceMaps: true
   })
 
@@ -31,9 +30,7 @@ Sparky.task('default', ['copy-html'], () => {
   }
 
   // bundle the electron main code
-  const mainBundle = fuse
-    .bundle('main')
-    .instructions('> [main/main.ts]')
+  const mainBundle = fuse.bundle('main').instructions('> [main/main.ts]')
 
   // and watch unless we're bundling for production
   if (!isProduction) {
@@ -41,10 +38,7 @@ Sparky.task('default', ['copy-html'], () => {
   }
 
   // bundle the electron renderer code
-  const rendererBundle = fuse
-    .bundle('renderer')
-    .plugin(CSSPlugin())
-    .instructions('> [renderer/index.tsx]')
+  const rendererBundle = fuse.bundle('renderer').instructions('> [renderer/index.tsx]')
 
   // and watch & hot reload unless we're bundling for production
   if (!isProduction) {
@@ -53,12 +47,10 @@ Sparky.task('default', ['copy-html'], () => {
   }
 
   // when we are finished bundling...
-  return fuse
-    .run()
-    .then(() => {
-      if (!isProduction) {
-        // startup electron
-        spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname], { stdio: 'inherit' })
-      }
-    })
+  return fuse.run().then(() => {
+    if (!isProduction) {
+      // startup electron
+      spawn('node', [`${__dirname}/node_modules/electron/cli.js`, __dirname], { stdio: 'inherit' })
+    }
+  })
 })
