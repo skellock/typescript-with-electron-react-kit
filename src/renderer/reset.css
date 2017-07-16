@@ -3,6 +3,9 @@
 *:focus {
   outline: 0;
 }
+html, body {
+  user-select: none;
+}
 
 body,
 h1,

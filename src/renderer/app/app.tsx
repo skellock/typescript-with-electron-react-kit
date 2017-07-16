@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, Logo, FunDog } from '../platform'
+import { Text, Logo, FunDog, Vignette } from '../platform'
 // import * as log from 'electron-log'
 
 const appStyle = {
@@ -19,6 +19,7 @@ const appStyle = {
   cursor: 'default'
 }
 
+
 const textStyle = {
   paddingTop: 20,
   paddingBottom: 20
@@ -37,6 +38,7 @@ export class App extends React.Component<{}, {}> {
   render() {
     return (
       <div style={appStyle}>
+        <Vignette opacity={0.3} />
         <Logo />
         <Text style={textStyle}>Wake up and smell the electrons.</Text>
         <FunDog />
