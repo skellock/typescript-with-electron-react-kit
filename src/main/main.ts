@@ -3,6 +3,7 @@ import { createWindow } from './create-window'
 import * as log from 'electron-log'
 import * as isDev from 'electron-is-dev'
 import { setupAutoUpdates } from './auto-updater'
+import { setupMenu } from './menu/menu'
 
 // set proper logging level
 log.transports.file.level = isDev ? false : 'info'
@@ -14,7 +15,8 @@ const appPath = app.getAppPath()
 
 // fires when Electron is ready to start
 app.on('ready', () => {
-  createWindow(appPath)
+  const window = createWindow(appPath)
+  setupMenu(window)
 })
 
 // fires when all windows are closed
