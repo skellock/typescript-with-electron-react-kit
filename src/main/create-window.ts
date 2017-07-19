@@ -3,7 +3,7 @@ import { join } from 'path'
 import { format } from 'url'
 
 // default dimensions
-const DIMENSIONS = { width: 800, height: 500 }
+const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
 
 /**
  * Creates the main window.

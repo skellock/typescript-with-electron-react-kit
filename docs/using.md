@@ -21,6 +21,15 @@ I'm still deciding on a simple way, but there will be a script you can run.
 npm run time-to-shine
 ```
 
+## But I Don't Want...
+
+You can keep the Electron parts but lose the rendering opinions.
+
+* delete the directories under `src/renderer`
+* change `src/renderer/index.tsx` to point to your new component
+* remove `rebass` from `package.json`
+
+
 ## Building
 
 To build your apps, first bundle it:

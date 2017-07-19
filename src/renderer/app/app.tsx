@@ -1,48 +1,23 @@
 import * as React from 'react'
-import { Text, Logo, FunDog, Vignette } from '../platform'
-// import * as log from 'electron-log'
+import { theme } from '../platform'
+import { Provider } from 'rebass'
+import { WelcomeScreen } from '../features'
 
-const appStyle = {
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100vh',
-  width: '100vw',
+// this is in place to claim 100% of the viewport and not scroll.
+const rootStyle: React.CSSProperties = {
   overflow: 'hidden',
-  backgroundColor: 'rebeccapurple',
-  color: 'white',
-  justifyContent: 'center',
-  alignItems: 'center',
-  fontFamily: "'Avenir Next', sans-serif",
-  fontSize: '1.5rem',
-  userSelect: 'none',
-  cursor: 'default'
-}
-
-
-const textStyle = {
-  paddingTop: 20,
-  paddingBottom: 20
+  height: '100vh',
+  display: 'flex'
 }
 
 export class App extends React.Component<{}, {}> {
-
-  componentWillMount () {
-    // log.debug('example of logging')
-  }
-
-  componentDidMount () {
-    // log.info('more logging')
-  }
-
   render() {
     return (
-      <div style={appStyle}>
-        <Vignette opacity={0.3} />
-        <Logo />
-        <Text style={textStyle}>Wake up and smell the electrons.</Text>
-        <FunDog />
-      </div>
+      <Provider theme={theme}>
+        <div style={rootStyle}>
+          <WelcomeScreen />
+        </div>
+      </Provider>
     )
   }
 }
