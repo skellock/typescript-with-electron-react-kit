@@ -15,7 +15,11 @@ Mousetrap.prototype.stopCallback = () => false
  * @param callback The function to fire.
  * @param action Optional keyboard event to further constraint.
  */
-export function bindKey(keys: string | string[], callback: KeyboardCallback, action?: KeyboardAction) {
+export function bindKey(
+  keys: string | string[],
+  callback: KeyboardCallback,
+  action?: KeyboardAction
+) {
   Mousetrap.bind(keys, callback, action)
 }
 

@@ -18,7 +18,7 @@ export function createWindow(appPath: string) {
     useContentSize: true,
     titleBarStyle: 'hidden'
   })
-  
+
   // load entry html page in the renderer.
   window.loadURL(
     format({
@@ -33,7 +33,6 @@ export function createWindow(appPath: string) {
     window.show()
     window.focus()
   })
-
 
   return window
 }
