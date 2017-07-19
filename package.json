@@ -86,6 +86,7 @@
     "info": "npm-scripts-info",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
+    "precommit": "lint-staged",
     "start": "node fuse"
   },
   "scripts-info": {
@@ -96,6 +97,7 @@
     "info": "Shows available npm scripts.",
     "pack": "Creates a executable for trying out.",
     "postinstall": "Used by electron-builder to build native dependencies.",
+    "precommit": "Runs automatically before committing code in git.",
     "start": "Starts the app in dev mode."
   },
   "version": "0.10.0"
