@@ -9,7 +9,7 @@ import { isMac, isLinux, isWindows } from '../../shared'
  * 
  * @param window The main window.
  */
-export function setupMenu(window: Electron.BrowserWindow) {
+export function createMenu(window: Electron.BrowserWindow) {
   if (isMac()) {
     // on mac, the menu goes on the app
     const template = createMacMenu(window)
