@@ -43,6 +43,13 @@ It brings the same things to the table as `redux`, but with considerably less ty
 
 A nice little addition from the `mobx` team. It brings `redux`-like state trees, immutability, and type guarantees. Love it.
 
+## Keyboard Support
+
+> **mousetrap**
+
+The main menu in electron has keyboard accelators, but we still need one in the renderer for convenience.
+
+Mousetrap fills that gap. It's a pretty decent little library despite not being maintained any more (lol@js). Does the job though. I've tried a couple of others but keep coming back to this one.
 
 ## Utilities
 
