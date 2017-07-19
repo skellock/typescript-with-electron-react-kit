@@ -26,6 +26,12 @@ Some automation so I stop checking in crap-looking code.
 
 Can't imagine doing web differently to be honest. I'm sure we will soon, but for mid-2017, this is dominating.
 
+> **rebass**
+
+I'm not sure if I'll keep this one, but it's looking good for now.  It brings a great way to stitch together UIs.
+
+It brings, however, a butt-tonne of dependencies (29) including, most notably, `styled-components` although that is behind the scenes.
+
 
 ## State Management
 

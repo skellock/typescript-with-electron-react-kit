@@ -1,3 +1,2 @@
-// exports all the platform
-
+export * from './theme/theme'
 export * from './components'

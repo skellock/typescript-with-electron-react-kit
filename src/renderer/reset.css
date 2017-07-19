@@ -3,8 +3,10 @@
 *:focus {
   outline: 0;
 }
-html, body {
+html,
+body {
   user-select: none;
+  cursor: default;
 }
 
 body,
@@ -68,10 +70,4 @@ h6 {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: #333;
 }

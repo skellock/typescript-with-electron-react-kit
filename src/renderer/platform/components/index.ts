@@ -1,6 +1,5 @@
-// exports all the components
-
 export * from './text/text'
 export * from './logo/logo'
 export * from './fun-dog/fun-dog'
-export * from './vignette/vignette'
+export * from './scrollable-content/scrollable-content'
+export * from './centered-content/centered-content'

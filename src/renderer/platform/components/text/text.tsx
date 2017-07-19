@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Text } from 'rebass'
 
 export interface TextProps {
   text?: string
@@ -8,6 +9,8 @@ export interface TextProps {
 
 export function Text(props: TextProps) {
   return (
-    <div style={props.style}>{props.text || props.children}</div>
+    <Text {...props}>
+      {props.text || props.children}
+    </Text>
   )
 }
