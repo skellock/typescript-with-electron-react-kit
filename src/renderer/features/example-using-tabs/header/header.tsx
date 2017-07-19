@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from '../../platform'
+import { Text } from '../../../platform'
 import { remote } from 'electron'
 
 const style = { WebkitAppRegion: 'drag' }

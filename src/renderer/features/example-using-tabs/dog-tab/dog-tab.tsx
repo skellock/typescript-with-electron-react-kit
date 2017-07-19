@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { Text, FunDog, Logo, CenteredContent } from '../../platform'
+import { Text, CenteredContent } from '../../../platform'
+import { FunDog } from '../fun-dog/fun-dog'
+import { Logo } from '../logo/logo'
 
 export class DogTab extends React.Component<{}, {}> {
   render() {

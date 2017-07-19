@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Tabs, TabItem } from 'rebass'
-import { bindKey, unbindKey } from '../../platform'
+import { bindKey, unbindKey } from '../../../platform'
 
 export type SampleTabType = 'one' | 'two' | 'three'
 

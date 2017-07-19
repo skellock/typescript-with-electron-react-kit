@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { SampleTabs, SampleTabType } from './sample-tabs'
-import { LongTab, DogTab } from '..'
+import { LongTab } from '../long-tab/long-tab'
+import { DogTab } from '../dog-tab/dog-tab'
 import { Flex } from 'rebass'
-import { Header } from './header'
+import { Header } from '../header/header'
 
 interface WelcomeScreenState {
   tab: SampleTabType
