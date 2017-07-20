@@ -11,6 +11,7 @@ npm start
 
 _Requires `node@>=8.1` and `npm@>=5.2`._
 
+
 ## Start Your Own Project
 
 Ready to start your project?
@@ -21,13 +22,25 @@ I'm still deciding on a simple way, but there will be a script you can run.
 npm run time-to-shine
 ```
 
-## But I Don't Want...
+
+## Strip It Down to the Bones
 
 You can keep the Electron parts but lose the rendering opinions.
 
 * delete the directories under `src/renderer`
 * change `src/renderer/index.tsx` to point to your new component
 * remove `rebass` from `package.json`
+
+
+## Keep the Meat, Ditch the Fluff
+
+If you want to just remove the examples and continue with the app layout:
+
+* delete `src/renderer/features/example-using-tabs`
+* remove corresponding lines from `src/renderer/index.ts`
+* remove the same from `src/renderer/app/app.tsx`
+
+Now you're ready to start adding your own features.
 
 
 ## Building
