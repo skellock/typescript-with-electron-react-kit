@@ -72,6 +72,10 @@ Allows our app to auto-update.
 
 A few quality-of-life utilities for working in Electron.
 
+> **electron-store**
+
+Persist JSON to the file system.
+
 ## Bundler
 
 > **fuse-box**
