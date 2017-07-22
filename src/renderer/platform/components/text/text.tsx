@@ -8,9 +8,10 @@ export interface TextProps {
 }
 
 export function Text(props: TextProps) {
+  const { text, children, style, ...rest } = props
   return (
-    <Text {...props}>
-      {props.text || props.children}
+    <Text style={style} {...rest}>
+      {children || text}
     </Text>
   )
 }

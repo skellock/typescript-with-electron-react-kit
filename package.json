@@ -56,7 +56,10 @@
     "@types/react": "15.0.38",
     "@types/react-dom": "15.5.1",
     "ava": "0.21.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-react": "^6.24.1",
     "electron": "1.7.4",
+    "electron-ava": "skellock/electron-ava#ava21",
     "electron-builder": "19.16.0",
     "fuse-box": "2.2.0",
     "husky": "0.14.3",
@@ -64,14 +67,35 @@
     "npm-run-all": "4.0.2",
     "npm-scripts-info": "0.3.6",
     "prettier": "1.5.3",
+    "react-test-renderer": "^15.6.1",
+    "standard": "^10.0.2",
+    "ts-node": "^3.2.1",
     "tslint": "5.5.0",
     "typescript": "2.4.2"
+  },
+  "electron-ava": {
+    "babel": {
+      "presets": [
+        "react"
+      ]
+    },
+    "files": [
+      "src/**/*.test.js"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   },
   "license": "MIT",
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write --no-semi --print-width 100 --single-quote",
       "tslint \"src/**/*.{ts,tsx}\" --fix",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write --no-semi --print-width 100 --single-quote \"*.js\"",
+      "standard --fix \"src/**/*.js\"",
       "git add"
     ]
   },
@@ -88,7 +112,11 @@
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
     "precommit": "lint-staged",
-    "start": "node fuse"
+    "start": "node fuse",
+    "test": "npm-run-all test:main test:renderer",
+    "test:main": "electron-ava src/main/**/*.test.js",
+    "test:renderer": "electron-ava src/renderer/**/*.test.js",
+    "test:snapshots": "electron-ava src/renderer/**/*.test.js -u"
   },
   "scripts-info": {
     "clean": "Removes build artifacts and caches.",
@@ -99,7 +127,14 @@
     "pack": "Creates a executable for trying out.",
     "postinstall": "Used by electron-builder to build native dependencies.",
     "precommit": "Runs automatically before committing code in git.",
-    "start": "Starts the app in dev mode."
+    "start": "Starts the app in dev mode.",
+    "test": "Runs tests.",
+    "test:main": "Runs the main process tests.",
+    "test:renderer": "Runs the renderer process tests.",
+    "test:snapshots": "Updates the snapshots."
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "version": "0.10.0"
 }
