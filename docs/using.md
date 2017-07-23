@@ -3,14 +3,13 @@
 Want to try this out? Clone & run.  There's a small sample project included.
 
 ```sh
-git clone git@github.com:skellock/electron-starter.git
+git clone --depth 1 git@github.com:skellock/electron-starter.git
 cd electron-starter
 npm i
 npm start
 ```
 
-_Requires `node@>=8.1` and `npm@>=5.2`._
-
+_Requires `node@>=8.2` and `npm@>=5.3`._ (NOTE: not really, but ya, upgrade ... there's some pretty big bugs in earlier versions)
 
 ## Start Your Own Project
 
@@ -29,7 +28,6 @@ You can keep the Electron parts but lose the rendering opinions.
 
 * delete the directories under `src/renderer`
 * change `src/renderer/index.tsx` to point to your new component
-* remove `rebass` from `package.json`
 
 
 ## Keep the Meat, Ditch the Fluff

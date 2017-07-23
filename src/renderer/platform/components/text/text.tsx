@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { Text } from 'rebass'
+import { CSSProperties } from 'react'
+import { fonts, fontSizes } from '../..'
 
 export interface TextProps {
   text?: string
@@ -7,11 +8,21 @@ export interface TextProps {
   style?: any
 }
 
+const ROOT_STYLE: CSSProperties = {
+  fontSize: fontSizes.default,
+  fontFamily: fonts.default,
+  padding: 0,
+  margin: 0
+}
+
 export function Text(props: TextProps) {
-  const { text, children, style, ...rest } = props
+  const style: CSSProperties = {
+    ...ROOT_STYLE,
+    ...props.style
+  }
   return (
-    <Text style={style} {...rest}>
-      {children || text}
-    </Text>
+    <p style={style}>
+      {props.children || props.text}
+    </p>
   )
 }

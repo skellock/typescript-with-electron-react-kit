@@ -1,11 +1,16 @@
 import * as React from 'react'
-import { Text, ScrollableContent } from '../../../platform'
+import { CSSProperties } from 'react'
+import { Text, ScrollableContent, spacing } from '../../../platform'
+
+const PADDED_STYLE: CSSProperties = {
+  paddingBottom: spacing.medium
+}
 
 export class LongTab extends React.Component<{}, {}> {
   render() {
     return (
       <ScrollableContent>
-        <Text pb={3}>
+        <Text style={PADDED_STYLE}>
           Lomo kombucha irony, keffiyeh man bun pitchfork helvetica organic godard brunch XOXO
           subway tile. Vexillologist gluten-free prism air plant godard raw denim tacos forage
           neutra kogi lyft beard. Direct trade retro ramps, pour-over slow-carb 8-bit hell of
@@ -17,7 +22,7 @@ export class LongTab extends React.Component<{}, {}> {
           bicycle rights. Post-ironic selfies gochujang franzen master cleanse chicharrones ethical
           coloring book keytar 8-bit poutine fixie.
         </Text>
-        <Text pb={3}>
+        <Text style={PADDED_STYLE}>
           Shaman glossier listicle, tousled knausgaard vegan microdosing mumblecore meditation
           freegan taiyaki. Dreamcatcher occupy enamel pin edison bulb PBR&B +1 food truck try-hard
           forage pug iceland sartorial scenester. Yr brooklyn pinterest +1 sustainable. Narwhal
@@ -28,7 +33,7 @@ export class LongTab extends React.Component<{}, {}> {
           VHS, brooklyn salvia lyft activated charcoal direct trade mlkshk unicorn williamsburg
           post-ironic banjo. Sriracha cray coloring book activated charcoal irony meditation.
         </Text>
-        <Text pb={3}>
+        <Text style={PADDED_STYLE}>
           Drinking vinegar 8-bit roof party leggings, master cleanse deep v slow-carb locavore
           hoodie. La croix thundercats trust fund synth, truffaut woke bitters twee craft beer next
           level mustache ramps yr hashtag. Portland 8-bit gentrify 3 wolf moon hexagon, 90's
@@ -44,7 +49,7 @@ export class LongTab extends React.Component<{}, {}> {
           Listicle letterpress waistcoat actually, hell of typewriter normcore thundercats kale
           chips post-ironic helvetica pabst.
         </Text>
-        <Text pb={3}>
+        <Text style={PADDED_STYLE}>
           Chambray ethical vice williamsburg. Four loko chambray glossier seitan, stumptown fanny
           pack PBR&B normcore quinoa echo park. Direct trade taxidermy pok pok, unicorn you probably
           haven't heard of them letterpress leggings. Flannel kinfolk four loko taxidermy fanny pack
@@ -58,7 +63,7 @@ export class LongTab extends React.Component<{}, {}> {
           master cleanse wayfarers. Mlkshk sriracha microdosing, chia post-ironic paleo chillwave
           PBR&B.
         </Text>
-        <Text pb={3}>
+        <Text style={PADDED_STYLE}>
           Ugh +1 narwhal, truffaut polaroid live-edge artisan tousled wayfarers taxidermy chia raw
           denim flannel. Vinyl polaroid franzen portland tilde edison bulb, you probably haven't
           heard of them hot chicken mlkshk. Prism blue bottle mustache, tattooed selvage franzen
@@ -71,7 +76,9 @@ export class LongTab extends React.Component<{}, {}> {
           synth affogato pickled. Truffaut typewriter quinoa copper mug fanny pack glossier 8-bit,
           meditation vape jean shorts. Ennui church-key cliche af intelligentsia, fam fingerstache.
         </Text>
-        <Text pb={3}>Oh. You need a little dummy text for your mockup? How quaint.</Text>
+        <Text style={PADDED_STYLE}>
+          Oh. You need a little dummy text for your mockup? How quaint.
+        </Text>
         <Text>I bet you’re still using Bootstrap too…</Text>
       </ScrollableContent>
     )

@@ -47,8 +47,7 @@
     "mousetrap": "1.6.1",
     "ramda": "0.24.1",
     "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "rebass": "1.0.3"
+    "react-dom": "15.6.1"
   },
   "description": "An electron starter project.",
   "devDependencies": {
@@ -79,23 +78,20 @@
         "react"
       ]
     },
-    "files": [
-      "src/**/*.test.js"
-    ],
     "require": [
       "ts-node/register"
     ]
   },
   "license": "MIT",
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write --no-semi --print-width 100 --single-quote",
-      "tslint \"src/**/*.{ts,tsx}\" --fix",
-      "git add"
-    ],
     "*.js": [
       "prettier --write --no-semi --print-width 100 --single-quote \"*.js\"",
       "standard --fix \"src/**/*.js\"",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --write --no-semi --print-width 100 --single-quote",
+      "tslint \"src/**/*.{ts,tsx}\" --fix",
       "git add"
     ]
   },

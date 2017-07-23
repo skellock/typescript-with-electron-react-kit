@@ -1,3 +1,6 @@
+export * from './theme/colors'
+export * from './theme/spacing'
+export * from './theme/fontSizes'
+export * from './theme/fonts'
 export * from './utils'
-export * from './theme/theme'
 export * from './components'
