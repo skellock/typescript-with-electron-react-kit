@@ -10,7 +10,7 @@ export interface SampleTabsProps {
   onChangeTab: (tab: SampleTabType) => void
 }
 
-const commandOrControl = isMac ? 'command' : 'ctrl'
+const commandOrControl = isMac() ? 'command' : 'ctrl'
 const KEY_1 = `${commandOrControl}+1`
 const KEY_2 = `${commandOrControl}+2`
 const KEY_3 = `${commandOrControl}+3`
