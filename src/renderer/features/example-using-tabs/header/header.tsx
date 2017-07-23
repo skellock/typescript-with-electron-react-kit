@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
 import { Text, spacing, colors, fontSizes } from '../../../platform'
+import { isMac } from '../../../../shared'
 import { remote } from 'electron'
 
 const ROOT_STYLE: CSSProperties = {
@@ -14,9 +15,13 @@ const ROOT_STYLE: CSSProperties = {
 const title = remote.require('../package.json').name
 
 export function Header() {
-  return (
-    <Text style={ROOT_STYLE}>
-      {title}
-    </Text>
-  )
+  if (isMac) {
+    return (
+      <Text style={ROOT_STYLE}>
+        {title}
+      </Text>
+    )
+  } else {
+    return null
+  }
 }

@@ -7,6 +7,9 @@ html,
 body {
   user-select: none;
   cursor: default;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+  font: caption;
 }
 
 body,
