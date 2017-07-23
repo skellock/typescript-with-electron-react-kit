@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron'
+import { app, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { format } from 'url'
 
@@ -16,7 +16,10 @@ export function createMainWindow(appPath: string) {
     ...DIMENSIONS,
     show: false,
     useContentSize: true,
-    titleBarStyle: 'hidden'
+    titleBarStyle: 'hidden',
+    autoHideMenuBar: true,
+    backgroundColor: '#fff',
+    title: app.getName()
   })
 
   // load entry html page in the renderer.

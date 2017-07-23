@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
 import { Tab, bindKey, unbindKey, spacing, colors } from '../../../platform'
+import { isMac } from '../../../../shared'
 
 export type SampleTabType = 'one' | 'two' | 'three'
 
@@ -9,9 +10,10 @@ export interface SampleTabsProps {
   onChangeTab: (tab: SampleTabType) => void
 }
 
-const KEY_1 = 'command+1'
-const KEY_2 = 'command+2'
-const KEY_3 = 'command+3'
+const commandOrControl = isMac ? 'command' : 'ctrl'
+const KEY_1 = `${commandOrControl}+1`
+const KEY_2 = `${commandOrControl}+2`
+const KEY_3 = `${commandOrControl}+3`
 
 const ROOT_STYLE: CSSProperties = {
   display: 'flex',
