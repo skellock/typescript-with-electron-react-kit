@@ -2,6 +2,7 @@
 
 Hey, so everyone has their favourites right? Here's a few of mine.
 
+
 ## Language
 
 > **typescript**
@@ -26,11 +27,11 @@ Some automation so I stop checking in crap-looking code.
 
 Can't imagine doing web differently to be honest. I'm sure we will soon, but for mid-2017, this is dominating.
 
-> **rebass**
+> **vanilla react**
 
-I'm not sure if I'll keep this one, but it's looking good for now.  It brings a great way to stitch together UIs.
+There are lot of great libraries out there for UI. This intentionally uses none of them. Don't hestitate to bring one in and use it if that's how you roll.
 
-It brings, however, a butt-tonne of dependencies (29) including, most notably, `styled-components` although that is behind the scenes.
+I'm keep it straight-up react here because some types of apps I'd will be using webgl, pixi, or are pure svg interfaces.
 
 
 ## State Management
@@ -43,6 +44,7 @@ It brings the same things to the table as `redux`, but with considerably less ty
 
 A nice little addition from the `mobx` team. It brings `redux`-like state trees, immutability, and type guarantees. Love it.
 
+
 ## Keyboard Support
 
 > **mousetrap**
@@ -50,6 +52,7 @@ A nice little addition from the `mobx` team. It brings `redux`-like state trees,
 The main menu in electron has keyboard accelators, but we still need one in the renderer for convenience.
 
 Mousetrap fills that gap. It's a pretty decent little library despite not being maintained any more (lol@js). Does the job though. I've tried a couple of others but keep coming back to this one.
+
 
 ## Utilities
 
@@ -75,6 +78,7 @@ A few quality-of-life utilities for working in Electron.
 > **electron-store**
 
 Persist JSON to the file system.
+
 
 ## Bundler
 

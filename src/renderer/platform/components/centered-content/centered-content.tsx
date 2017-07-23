@@ -1,16 +1,23 @@
 import * as React from 'react'
-import { Flex } from 'rebass'
+import { CSSProperties } from 'react'
 
 export interface CenteredContentProps {
   children: React.ReactNode
 }
 
-const style = { overflow: 'hidden' }
+const style: CSSProperties = {
+  overflow: 'hidden',
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
 
 export function CenteredContent(props: CenteredContentProps) {
   return (
-    <Flex flex={1} column align="center" justify="center" style={style}>
+    <div style={style}>
       {props.children}
-    </Flex>
+    </div>
   )
 }
