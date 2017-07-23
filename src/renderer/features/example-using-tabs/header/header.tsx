@@ -15,7 +15,7 @@ const ROOT_STYLE: CSSProperties = {
 const title = remote.require('../package.json').name
 
 export function Header() {
-  if (isMac) {
+  if (isMac()) {
     return (
       <Text style={ROOT_STYLE}>
         {title}
