@@ -1,4 +1,5 @@
 export const fontSizes = {
   small: 12,
-  default: 16,
+  medium: 15,
+  mediumPlus: 18,
 }

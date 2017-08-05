@@ -9,8 +9,9 @@ const ROOT = compose(
   cssProps({
     textAlign: 'center',
     paddingTop: spacing.verySmall,
-    backgroundColor: colors.headerBg,
-    fontSize: fontSizes.small,
+    backgroundColor: colors.navBackground,
+    color: colors.navLine,
+    fontSize: fontSizes.medium,
   }),
 )
 
