@@ -54,14 +54,14 @@ I've flip-flopped on this quite a bit. We're spoiled by awesome options.
 
 `glamor` nails what I'm looking for:
 
-* ✅  pojo objects are first class
+* ✅  objects are first class
 * ✅  strong on composibility
 * ✅  performant out of the box (without configuration)
 * ✅  works well with global styles and things like keyframes
-* ✅  friendly devs at them helm
-* ✅  DSL is true to css (especially with child selectors)
-* ✅  built with escape hatches in mind
-* ✅  clear docs with examples & patterns
+* ✅  friendly devs
+* ✅  a DSL that is true to CSS (especially with child selectors)
+* ✅  built-in escape hatches
+* ✅  clear docs with examples, patterns, and advice
 * ✅  stable-ish API
 * ✅  TypeScript-friendly
 * ✅  testability without flushing caches or buffers
