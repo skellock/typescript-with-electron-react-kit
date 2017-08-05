@@ -1,22 +1,26 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
+import { cssProps, styles } from '../..'
+import { compose, css } from 'glamor'
 
 export interface CenteredContentProps {
   children: React.ReactNode
+  style?: CSSProperties | CSSProperties[]
 }
 
-const style: CSSProperties = {
-  overflow: 'hidden',
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
+const BASE = compose(
+  styles.flex1,
+  styles.column,
+  cssProps({
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }),
+)
 
 export function CenteredContent(props: CenteredContentProps) {
   return (
-    <div style={style}>
+    <div {...css(BASE, props.style)}>
       {props.children}
     </div>
   )

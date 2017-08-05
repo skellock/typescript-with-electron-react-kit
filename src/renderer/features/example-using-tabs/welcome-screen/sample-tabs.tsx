@@ -1,7 +1,15 @@
 import * as React from 'react'
-import { CSSProperties } from 'react'
-import { Tab, bindKey, unbindKey, spacing, colors } from '../../../platform'
-import { isMac } from '../../../../shared'
+import {
+  Tab,
+  bindKey,
+  unbindKey,
+  spacing,
+  colors,
+  styles,
+  cssProps,
+  commandOrControlKey,
+} from '../../../platform'
+import { css, compose } from 'glamor'
 
 export type SampleTabType = 'one' | 'two' | 'three'
 
@@ -10,19 +18,18 @@ export interface SampleTabsProps {
   onChangeTab: (tab: SampleTabType) => void
 }
 
-const commandOrControl = isMac() ? 'command' : 'ctrl'
-const KEY_1 = `${commandOrControl}+1`
-const KEY_2 = `${commandOrControl}+2`
-const KEY_3 = `${commandOrControl}+3`
+const KEY_1 = `${commandOrControlKey}+1`
+const KEY_2 = `${commandOrControlKey}+2`
+const KEY_3 = `${commandOrControlKey}+3`
 
-const ROOT_STYLE: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'row',
-  WebkitAppRegion: 'drag',
-  paddingLeft: spacing.medium,
-  paddingRight: spacing.medium,
-  backgroundColor: colors.headerBg,
-}
+const ROOT_STYLE = compose(
+  styles.row,
+  cssProps({
+    paddingLeft: spacing.medium,
+    paddingRight: spacing.medium,
+    backgroundColor: colors.headerBg,
+  }),
+)
 
 export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
   changeTab1 = () => this.props.onChangeTab('one')
@@ -44,8 +51,8 @@ export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
   render() {
     const { tab } = this.props
     return (
-      <div style={ROOT_STYLE}>
-        <Tab first onClick={this.changeTab1} active={tab === 'one'} text='Random Dog' />
+      <div {...css(ROOT_STYLE)}>
+        <Tab onClick={this.changeTab1} active={tab === 'one'} text='Random Dog' />
         <Tab onClick={this.changeTab2} active={tab === 'two'} text='Long Content' />
         <Tab onClick={this.changeTab3} active={tab === 'three'} text='Empty' />
       </div>

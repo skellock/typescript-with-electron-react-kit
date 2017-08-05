@@ -1,44 +1,40 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import { colors, spacing, fontSizes, Text } from '../..'
+import { colors, spacing, fontSizes, Text, styles, cssProps } from '../..'
+import { css, compose } from 'glamor'
 
 export interface TabProps {
   text: string
   active?: boolean
-  style?: CSSProperties
+  style?: CSSProperties | CSSProperties[]
   onClick: () => void
-  first?: boolean
 }
 
-const ROOT_STYLE: CSSProperties = {
-  display: 'flex',
-  paddingTop: spacing.small,
-  paddingBottom: spacing.small,
-  marginLeft: spacing.small,
-  marginRight: spacing.small,
-  cursor: 'pointer',
-  WebkitAppRegion: 'no-drag',
-  fontSize: fontSizes.default,
-}
+const BASE = compose(
+  styles.noWindowDrag,
+  cssProps({
+    cursor: 'pointer',
+    padding: spacing.small,
+    fontSize: fontSizes.default,
+  }),
+)
 
-const ACTIVE_STYLE: CSSProperties = {
+const ACTIVE = cssProps({
   color: colors.primary,
   borderBottom: colors.primary,
   borderBottomWidth: 2,
   borderBottomStyle: 'solid',
-}
+})
 
-const FIRST_STYLE: CSSProperties = { marginLeft: 0 }
-
+/**
+ * A tab component that you click on.  Not the tab panel.
+ */
 export function Tab(props: TabProps) {
-  const style: CSSProperties = {
-    ...ROOT_STYLE,
-    ...props.active ? ACTIVE_STYLE : null,
-    ...props.first ? FIRST_STYLE : null,
-    ...props.style,
-  }
+  // work out the styles
+  const styleProps = css(BASE, props.active && ACTIVE, props.style)
+
   return (
-    <div style={style} onClick={props.onClick}>
+    <div {...styleProps} onClick={props.onClick}>
       <Text text={props.text} />
     </div>
   )

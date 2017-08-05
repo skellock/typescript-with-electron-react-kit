@@ -1,6 +1,7 @@
 // A straight thru wrapper with the intention to add contexts
 // which will swap out groups of keybinds at a time.
 import * as Mousetrap from 'mousetrap'
+import { isMac } from '../../../../shared'
 
 export type KeyboardCallback = (e: ExtendedKeyboardEvent, combo: string) => any
 export type KeyboardAction = 'keypress' | 'keydown' | 'keyup'
@@ -9,6 +10,8 @@ export type KeyboardAction = 'keypress' | 'keydown' | 'keyup'
 if (Mousetrap.prototype) {
   Mousetrap.prototype.stopCallback = () => false
 }
+
+export const commandOrControlKey = isMac() ? 'command' : 'ctrl'
 
 /**
  * Binds a keystroke to a function.

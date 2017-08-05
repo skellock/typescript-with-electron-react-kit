@@ -1,16 +1,19 @@
 import * as React from 'react'
-import { CSSProperties } from 'react'
 import { WelcomeScreen } from '..'
-import './reset.css'
-import './app.css'
+import { styles, cssProps, colors } from '../../platform'
+import { css, compose } from 'glamor'
 
-// this is in place to claim 100% of the viewport and not scroll.
-const rootStyle: CSSProperties = { overflow: 'hidden', height: '100vh', display: 'flex' }
+const ROOT = compose(
+  styles.fullScreen,
+  cssProps({
+    backgroundColor: colors.background,
+  }),
+)
 
 export class App extends React.Component<{}, {}> {
   render() {
     return (
-      <div style={rootStyle}>
+      <div {...css(ROOT)}>
         <WelcomeScreen />
       </div>
     )

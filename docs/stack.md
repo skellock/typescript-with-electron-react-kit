@@ -27,11 +27,50 @@ Some automation so I stop checking in crap-looking code.
 
 Can't imagine doing web differently to be honest. I'm sure we will soon, but for mid-2017, this is dominating.
 
-> **vanilla react**
+I like `preact` as well.  I feel like the switching over will be pretty simple and I probably will.
 
-There are lot of great libraries out there for UI. This intentionally uses none of them. Don't hestitate to bring one in and use it if that's how you roll.
 
-I'm keep it straight-up react here because some types of apps I'd will be using webgl, pixi, or are pure svg interfaces.
+## Component Styling ##
+
+> **glamor**
+
+The winner is: 
+
+* ~vanilla css~ 
+* ~sass~ 
+* ~css modules~
+* ~diy~
+* ~radium~
+* ~aphrodite~
+* ~styletron~
+* ~styled-components~
+* ~typestyle~
+* ~emotion~
+* ~glam~
+* ~glamorous~
+* `glamor`!
+
+I've flip-flopped on this quite a bit. We're spoiled by awesome options.
+
+`glamor` nails what I'm looking for:
+
+* ✅  objects are first class
+* ✅  strong on composibility
+* ✅  performant out of the box (without configuration)
+* ✅  works well with global styles and things like keyframes
+* ✅  friendly devs
+* ✅  a DSL that is true to CSS (especially with child selectors)
+* ✅  built-in escape hatches
+* ✅  clear docs with examples, patterns, and advice
+* ✅  stable-ish API
+* ✅  TypeScript-friendly
+* ✅  testability without flushing caches or buffers
+
+My advice? **Don't listen to my advice**. Explore & pick your own. Much, if not most, of your app is UI. 
+
+Start your app only when your gut says, "You'll fuck this up long before your styling lib gives out."
+
+`glamor` gives me that vibe. 💃
 
 
 ## State Management

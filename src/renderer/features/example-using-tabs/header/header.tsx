@@ -1,23 +1,25 @@
 import * as React from 'react'
-import { CSSProperties } from 'react'
-import { Text, spacing, colors, fontSizes } from '../../../platform'
+import { Text, spacing, colors, fontSizes, styles, cssProps } from '../../../platform'
 import { isMac } from '../../../../shared'
 import { remote } from 'electron'
+import { compose } from 'glamor'
 
-const ROOT_STYLE: CSSProperties = {
-  WebkitAppRegion: 'drag',
-  textAlign: 'center',
-  paddingTop: spacing.verySmall,
-  backgroundColor: colors.headerBg,
-  fontSize: fontSizes.small,
-}
+const ROOT = compose(
+  styles.windowDrag,
+  cssProps({
+    textAlign: 'center',
+    paddingTop: spacing.verySmall,
+    backgroundColor: colors.headerBg,
+    fontSize: fontSizes.small,
+  }),
+)
 
 const title = remote.require('../package.json').name
 
 export function Header() {
   if (isMac()) {
     return (
-      <Text style={ROOT_STYLE}>
+      <Text style={ROOT}>
         {title}
       </Text>
     )
