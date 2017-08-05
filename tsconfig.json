@@ -5,6 +5,8 @@
     "moduleResolution": "node",
     "jsx": "react",
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": false,
+    "strict": true,
     "noUnusedLocals": true
   }
 }

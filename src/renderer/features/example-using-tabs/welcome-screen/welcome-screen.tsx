@@ -4,7 +4,7 @@ import { SampleTabs, SampleTabType } from './sample-tabs'
 import { LongTab } from '../long-tab/long-tab'
 import { DogTab } from '../dog-tab/dog-tab'
 import { Header } from '../header/header'
-import * as Store from 'electron-store'
+import Store = require('electron-store')
 
 // a sample store
 const store = new Store()

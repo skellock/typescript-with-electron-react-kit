@@ -1,5 +1,4 @@
 import { autoUpdater } from 'electron-updater'
-import { ProgressInfo } from 'electron-builder-http/out/ProgressCallbackTransform'
 import * as log from 'electron-log'
 import * as isDev from 'electron-is-dev'
 
@@ -50,24 +49,24 @@ export function createUpdater(app: Electron.App): void {
     log.info('checking for update')
   })
 
-  autoUpdater.on('update-available', info => {
+  autoUpdater.on('update-available', (info: string) => {
     log.info('update available')
   })
 
-  autoUpdater.on('update-not-available', info => {
+  autoUpdater.on('update-not-available', (info: string) => {
     log.info('update not available')
   })
 
-  autoUpdater.on('error', err => {
+  autoUpdater.on('error', (err: Error) => {
     log.error('error updating', err.message)
   })
 
-  autoUpdater.on('download-progress', (progressObj: ProgressInfo) => {
-    log.info(`${progressObj.percent}%`)
+  autoUpdater.signals.progress(info => {
+    log.info(`${info.percent}%`)
   })
 
   // fires when an update has been downloaded
-  autoUpdater.on('update-downloaded', info => {
+  autoUpdater.signals.updateDownloaded(info => {
     log.info('update downloaded')
     autoUpdater.quitAndInstall()
   })

@@ -33,8 +33,8 @@ const FIRST_STYLE: CSSProperties = { marginLeft: 0 }
 export function Tab(props: TabProps) {
   const style: CSSProperties = {
     ...ROOT_STYLE,
-    ...props.active && ACTIVE_STYLE,
-    ...props.first && FIRST_STYLE,
+    ...props.active ? ACTIVE_STYLE : null,
+    ...props.first ? FIRST_STYLE : null,
     ...props.style
   }
   return (
