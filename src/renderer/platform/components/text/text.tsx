@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import { fonts, fontSizes, cssProps } from '../..'
+import { colors, fonts, fontSizes, cssProps } from '../..'
 import { css } from 'glamor'
 
 export interface TextProps {
@@ -10,7 +10,8 @@ export interface TextProps {
 }
 
 const STYLE = cssProps({
-  fontSize: fontSizes.default,
+  color: colors.text,
+  fontSize: fontSizes.medium,
   fontFamily: fonts.default,
   padding: 0,
   margin: 0,

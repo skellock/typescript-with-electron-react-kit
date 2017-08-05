@@ -10,7 +10,7 @@ import { css } from 'glamor'
 css.global('html, body', {
   userSelect: 'none',
   cursor: 'default',
-  WebkitFontSmoothing: 'subpixel-antialiased',
+  WebkitFontSmoothing: 'subpixel-antialiased', // none | antialiased | subpixel-antialiased
   textRendering: 'optimizeLegibility',
   font: 'caption',
 })

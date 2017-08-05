@@ -2,10 +2,13 @@ import * as React from 'react'
 import { SampleTabs, SampleTabType } from './sample-tabs'
 import { LongTab } from '../long-tab'
 import { DogTab } from '../dog-tab'
-import { Header } from '../header'
-import { styles } from '../../../platform'
+import { styles, cssProps } from '../../../platform'
 import Store = require('electron-store')
 import { css } from 'glamor'
+
+const HIDDEN = cssProps({
+  display: 'none',
+})
 
 // a sample store
 const store = new Store()
@@ -36,10 +39,9 @@ export class WelcomeScreen extends React.Component<{}, WelcomeScreenState> {
   render() {
     return (
       <div id='WelcomeScreen' {...css(styles.column, styles.flex1)}>
-        <Header />
         <SampleTabs tab={this.state.tab} onChangeTab={this.setTab} />
-        {this.state.tab === 'one' && <DogTab />}
-        {this.state.tab === 'two' && <LongTab />}
+        <DogTab style={this.state.tab !== 'one' && HIDDEN} />
+        <LongTab style={this.state.tab !== 'two' && HIDDEN} />
       </div>
     )
   }

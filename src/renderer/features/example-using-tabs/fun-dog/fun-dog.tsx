@@ -1,12 +1,14 @@
 import * as React from 'react'
 import dogImage from './fun-dog.jpg'
-import { cssProps } from '../../../platform'
+import { cssProps, colors } from '../../../platform'
 import { css } from 'glamor'
 
 const ROOT = cssProps({
   width: 300,
   borderStyle: 'solid',
-  borderWidth: 1,
+  borderWidth: 2,
+  borderColor: colors.line,
+  borderRadius: 4,
 })
 
 export function FunDog() {

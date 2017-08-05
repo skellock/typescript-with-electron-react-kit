@@ -5,7 +5,7 @@ import { css, compose } from 'glamor'
 
 export interface ScrollableContentProps {
   children?: React.ReactNode
-  style?: CSSProperties | CSSProperties[]
+  style?: CSSProperties | CSSProperties[] | null | false
 }
 
 const ROOT = compose(
