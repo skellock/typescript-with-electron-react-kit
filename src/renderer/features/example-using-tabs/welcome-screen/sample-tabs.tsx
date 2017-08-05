@@ -21,7 +21,7 @@ const ROOT_STYLE: CSSProperties = {
   WebkitAppRegion: 'drag',
   paddingLeft: spacing.medium,
   paddingRight: spacing.medium,
-  backgroundColor: colors.headerBg
+  backgroundColor: colors.headerBg,
 }
 
 export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
@@ -45,9 +45,9 @@ export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
     const { tab } = this.props
     return (
       <div style={ROOT_STYLE}>
-        <Tab first onClick={this.changeTab1} active={tab === 'one'} text="Random Dog" />
-        <Tab onClick={this.changeTab2} active={tab === 'two'} text="Long Content" />
-        <Tab onClick={this.changeTab3} active={tab === 'three'} text="Empty" />
+        <Tab first onClick={this.changeTab1} active={tab === 'one'} text='Random Dog' />
+        <Tab onClick={this.changeTab2} active={tab === 'two'} text='Long Content' />
+        <Tab onClick={this.changeTab3} active={tab === 'three'} text='Empty' />
       </div>
     )
   }

@@ -3,7 +3,7 @@ import { CSSProperties } from 'react'
 import { Text, ScrollableContent, spacing } from '../../../platform'
 
 const PADDED_STYLE: CSSProperties = {
-  paddingBottom: spacing.medium
+  paddingBottom: spacing.medium,
 }
 
 export class LongTab extends React.Component<{}, {}> {

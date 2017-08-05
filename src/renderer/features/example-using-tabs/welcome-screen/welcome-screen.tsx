@@ -16,12 +16,12 @@ interface WelcomeScreenState {
 const style: CSSProperties = {
   display: 'flex',
   flex: 1,
-  flexDirection: 'column'
+  flexDirection: 'column',
 }
 
 export class WelcomeScreen extends React.Component<{}, WelcomeScreenState> {
   state: WelcomeScreenState = {
-    tab: 'one'
+    tab: 'one',
   }
 
   componentDidMount() {

@@ -6,7 +6,7 @@ import { Logo } from '../logo/logo'
 
 const TEXT_STYLE: CSSProperties = {
   paddingTop: spacing.medium,
-  paddingBottom: spacing.medium
+  paddingBottom: spacing.medium,
 }
 
 export class DogTab extends React.Component<{}, {}> {

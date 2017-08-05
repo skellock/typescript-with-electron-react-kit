@@ -71,6 +71,9 @@
     "standard": "10.0.2",
     "ts-node": "3.3.0",
     "tslint": "5.5.0",
+    "tslint-eslint-rules": "4.1.1",
+    "tslint-react": "3.2.0",
+    "tslint-react-recommended": "1.0.15",
     "typescript": "2.4.2"
   },
   "electron-ava": {
@@ -110,6 +113,11 @@
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
     "precommit": "lint-staged",
+    "lint": "npm-run-all lint:*",
+    "lint:ts": "tslint \"src/**/*.{ts,tsx}\"",
+    "lint:js": "standard",
+    "sanity": "npm-run-all check lint test",
+    "prepush": "npm-run-all sanity",
     "start": "node fuse",
     "test": "npm-run-all test:main test:renderer",
     "test:main": "electron-ava src/main/**/*.test.js",

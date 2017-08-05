@@ -9,7 +9,7 @@ const ROOT_STYLE: CSSProperties = {
   textAlign: 'center',
   paddingTop: spacing.verySmall,
   backgroundColor: colors.headerBg,
-  fontSize: fontSizes.small
+  fontSize: fontSizes.small,
 }
 
 const title = remote.require('../package.json').name

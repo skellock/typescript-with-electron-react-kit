@@ -5,14 +5,14 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
     label: 'Visit on Github',
     click() {
       shell.openExternal('https://github.com/skellock/electron-starter')
-    }
+    },
   }
 
   const reload: Electron.MenuItemConstructorOptions = {
     label: 'Reload',
     click() {
       window.webContents.reload()
-    }
+    },
   }
 
   const quit: Electron.MenuItemConstructorOptions = { label: 'Quit', role: 'quit' }
@@ -21,14 +21,14 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
     label: 'Toggle Developer Tools',
     click() {
       window.webContents.toggleDevTools()
-    }
+    },
   }
 
   const fullScreen: Electron.MenuItemConstructorOptions = {
     label: 'Toggle Full Screen',
     click() {
       window.setFullScreen(!window.isFullScreen())
-    }
+    },
   }
 
   return {
@@ -36,6 +36,6 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
     reload,
     quit,
     toggleDevTools,
-    fullScreen
+    fullScreen,
   }
 }

@@ -4,5 +4,5 @@ export const spacing = {
   small: 8,
   medium: 16,
   large: 32,
-  veryLarge: 64
+  veryLarge: 64,
 }

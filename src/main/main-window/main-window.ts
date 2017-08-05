@@ -19,7 +19,7 @@ export function createMainWindow(appPath: string) {
     titleBarStyle: 'hidden',
     autoHideMenuBar: true,
     backgroundColor: '#fff',
-    title: app.getName()
+    title: app.getName(),
   })
 
   // load entry html page in the renderer.
@@ -27,8 +27,8 @@ export function createMainWindow(appPath: string) {
     format({
       pathname: join(appPath, 'out/index.html'),
       protocol: 'file:',
-      slashes: true
-    })
+      slashes: true,
+    }),
   )
 
   // only appear once we've loaded

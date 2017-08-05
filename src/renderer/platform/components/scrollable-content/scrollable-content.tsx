@@ -11,7 +11,7 @@ const style: CSSProperties = {
   flex: 1,
   flexDirection: 'column',
   padding: spacing.medium,
-  overflowY: 'scroll'
+  overflowY: 'scroll',
 }
 
 export function ScrollableContent(props: ScrollableContentProps) {

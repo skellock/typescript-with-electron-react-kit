@@ -20,7 +20,7 @@ if (Mousetrap.prototype) {
 export function bindKey(
   keys: string | string[],
   callback: KeyboardCallback,
-  action?: KeyboardAction
+  action?: KeyboardAction,
 ) {
   Mousetrap.bind(keys, callback, action)
 }
