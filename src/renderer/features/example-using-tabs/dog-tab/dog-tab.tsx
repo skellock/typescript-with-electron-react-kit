@@ -1,15 +1,14 @@
 import * as React from 'react'
-import { CSSProperties } from 'react'
-import { Text, CenteredContent, spacing } from '../../../platform'
-import { FunDog } from '../fun-dog/fun-dog'
-import { Logo } from '../logo/logo'
+import { Text, CenteredContent, spacing, cssProps } from '../../../platform'
+import { FunDog } from '../fun-dog'
+import { Logo } from '../logo'
 
-const TEXT_STYLE: CSSProperties = {
+const TEXT_STYLE = cssProps({
   paddingTop: spacing.medium,
   paddingBottom: spacing.medium,
-}
+})
 
-export class DogTab extends React.Component<{}, {}> {
+export class DogTab extends React.PureComponent<{}, {}> {
   render() {
     return (
       <CenteredContent>

@@ -1,22 +1,17 @@
 import * as React from 'react'
-import { CSSProperties } from 'react'
 import { SampleTabs, SampleTabType } from './sample-tabs'
-import { LongTab } from '../long-tab/long-tab'
-import { DogTab } from '../dog-tab/dog-tab'
-import { Header } from '../header/header'
+import { LongTab } from '../long-tab'
+import { DogTab } from '../dog-tab'
+import { Header } from '../header'
+import { styles } from '../../../platform'
 import Store = require('electron-store')
+import { css } from 'glamor'
 
 // a sample store
 const store = new Store()
 
 interface WelcomeScreenState {
   tab: SampleTabType
-}
-
-const style: CSSProperties = {
-  display: 'flex',
-  flex: 1,
-  flexDirection: 'column',
 }
 
 export class WelcomeScreen extends React.Component<{}, WelcomeScreenState> {
@@ -40,7 +35,7 @@ export class WelcomeScreen extends React.Component<{}, WelcomeScreenState> {
 
   render() {
     return (
-      <div style={style}>
+      <div id='WelcomeScreen' {...css(styles.column, styles.flex1)}>
         <Header />
         <SampleTabs tab={this.state.tab} onChangeTab={this.setTab} />
         {this.state.tab === 'one' && <DogTab />}

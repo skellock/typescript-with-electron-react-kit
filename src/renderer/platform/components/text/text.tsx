@@ -1,27 +1,25 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import { fonts, fontSizes } from '../..'
+import { fonts, fontSizes, cssProps } from '../..'
+import { css } from 'glamor'
 
 export interface TextProps {
   text?: string
   children?: React.ReactNode
-  style?: any
+  style?: CSSProperties | CSSProperties[]
 }
 
-const ROOT_STYLE: CSSProperties = {
+const STYLE = cssProps({
   fontSize: fontSizes.default,
   fontFamily: fonts.default,
   padding: 0,
   margin: 0,
-}
+})
 
 export function Text(props: TextProps) {
-  const style: CSSProperties = {
-    ...ROOT_STYLE,
-    ...props.style,
-  }
+  const styleProps = css(STYLE, props.style)
   return (
-    <p style={style}>
+    <p {...styleProps}>
       {props.children || props.text}
     </p>
   )
