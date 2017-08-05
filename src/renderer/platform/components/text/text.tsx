@@ -12,13 +12,13 @@ const ROOT_STYLE: CSSProperties = {
   fontSize: fontSizes.default,
   fontFamily: fonts.default,
   padding: 0,
-  margin: 0
+  margin: 0,
 }
 
 export function Text(props: TextProps) {
   const style: CSSProperties = {
     ...ROOT_STYLE,
-    ...props.style
+    ...props.style,
   }
   return (
     <p style={style}>

@@ -18,14 +18,14 @@ const ROOT_STYLE: CSSProperties = {
   marginRight: spacing.small,
   cursor: 'pointer',
   WebkitAppRegion: 'no-drag',
-  fontSize: fontSizes.default
+  fontSize: fontSizes.default,
 }
 
 const ACTIVE_STYLE: CSSProperties = {
   color: colors.primary,
   borderBottom: colors.primary,
   borderBottomWidth: 2,
-  borderBottomStyle: 'solid'
+  borderBottomStyle: 'solid',
 }
 
 const FIRST_STYLE: CSSProperties = { marginLeft: 0 }
@@ -35,7 +35,7 @@ export function Tab(props: TabProps) {
     ...ROOT_STYLE,
     ...props.active ? ACTIVE_STYLE : null,
     ...props.first ? FIRST_STYLE : null,
-    ...props.style
+    ...props.style,
   }
   return (
     <div style={style} onClick={props.onClick}>

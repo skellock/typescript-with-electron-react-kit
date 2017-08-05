@@ -3,7 +3,7 @@ import { createSharedMenuItems } from './shared-menu'
 import * as isDev from 'electron-is-dev'
 
 export function createMacMenu(
-  window: Electron.BrowserWindow
+  window: Electron.BrowserWindow,
 ): Electron.MenuItemConstructorOptions[] {
   const shared = createSharedMenuItems(window)
   const name: string = app.getName()
@@ -17,8 +17,8 @@ export function createMacMenu(
       { label: 'Hide Others', accelerator: 'Command+Option+H', role: 'hideOtherApplications' },
       { label: 'Show All', role: 'unhideAllApplications' },
       { type: 'separator' },
-      { ...shared.quit, accelerator: 'Command+Q' }
-    ]
+      { ...shared.quit, accelerator: 'Command+Q' },
+    ],
   }
 
   const viewMenu: Electron.MenuItemConstructorOptions = {
@@ -26,14 +26,14 @@ export function createMacMenu(
     submenu: isDev
       ? [
           { ...shared.reload, accelerator: 'Command+R' },
-          { ...shared.toggleDevTools, accelerator: 'Alt+Command+I' }
-        ]
-      : [{ ...shared.fullScreen, accelerator: 'Ctrl+Command+F' }]
+          { ...shared.toggleDevTools, accelerator: 'Alt+Command+I' },
+      ]
+      : [{ ...shared.fullScreen, accelerator: 'Ctrl+Command+F' }],
   }
 
   const helpMenu: Electron.MenuItemConstructorOptions = {
     label: 'Help',
-    submenu: [shared.visit]
+    submenu: [shared.visit],
   }
 
   return [appMenu, viewMenu, helpMenu]

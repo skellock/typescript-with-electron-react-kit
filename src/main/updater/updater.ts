@@ -34,8 +34,10 @@ Heads up: dev-app-update.yml is in the .gitignore file.
  * @param app The electron app.
  */
 export function createUpdater(app: Electron.App): void {
-  // jet if we shoulldn't be here
-  if (!shouldCheck) return
+  // jet if we shouldn't be here
+  if (!shouldCheck) {
+    return
+  }
 
   // configure the autoUpdater's logger
   autoUpdater.logger = log
