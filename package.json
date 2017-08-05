@@ -85,13 +85,13 @@
   "license": "MIT",
   "lint-staged": {
     "*.js": [
-      "prettier --write --no-semi --print-width 100 --single-quote \"*.js\"",
-      "standard --fix \"src/**/*.js\"",
+      "prettier --write --no-semi --print-width 100 --single-quote",
+      "standard --fix",
       "git add"
     ],
     "*.{ts,tsx}": [
       "prettier --write --no-semi --print-width 100 --single-quote",
-      "tslint \"src/**/*.{ts,tsx}\" --fix",
+      "tslint --fix",
       "git add"
     ]
   },
@@ -100,6 +100,7 @@
   "private": true,
   "repository": "skellock/electron-starter",
   "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit --pretty",
     "clean": "rm -rf .fusebox out dist",
     "compile": "NODE_ENV=production node fuse",
     "dist": "electron-builder --mac --win --linux --ia32 --x64",
@@ -113,21 +114,6 @@
     "test:main": "electron-ava src/main/**/*.test.js",
     "test:renderer": "electron-ava src/renderer/**/*.test.js",
     "test:snapshots": "electron-ava src/renderer/**/*.test.js -u"
-  },
-  "scripts-info": {
-    "clean": "Removes build artifacts and caches.",
-    "compile": "Builds both js bundles in production mode.",
-    "dist": "Creates a executable for distributing.",
-    "draft": "Releases a version as a draft.",
-    "info": "Shows available npm scripts.",
-    "pack": "Creates a executable for trying out.",
-    "postinstall": "Used by electron-builder to build native dependencies.",
-    "precommit": "Runs automatically before committing code in git.",
-    "start": "Starts the app in dev mode.",
-    "test": "Runs tests.",
-    "test:main": "Runs the main process tests.",
-    "test:renderer": "Runs the renderer process tests.",
-    "test:snapshots": "Updates the snapshots."
   },
   "standard": {
     "parser": "babel-eslint"
