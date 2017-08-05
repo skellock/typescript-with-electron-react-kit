@@ -22,7 +22,7 @@ const KEY_1 = `${commandOrControlKey}+1`
 const KEY_2 = `${commandOrControlKey}+2`
 const KEY_3 = `${commandOrControlKey}+3`
 
-const ROOT_STYLE = compose(
+const ROOT = compose(
   styles.row,
   cssProps({
     paddingLeft: spacing.medium,
@@ -51,7 +51,7 @@ export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
   render() {
     const { tab } = this.props
     return (
-      <div {...css(ROOT_STYLE)}>
+      <div {...css(ROOT)}>
         <Tab onClick={this.changeTab1} active={tab === 'one'} text='Random Dog' />
         <Tab onClick={this.changeTab2} active={tab === 'two'} text='Long Content' />
         <Tab onClick={this.changeTab3} active={tab === 'three'} text='Empty' />

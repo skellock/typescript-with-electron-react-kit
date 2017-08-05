@@ -5,7 +5,7 @@ import { compose, css } from 'glamor'
 
 export interface CenteredContentProps {
   children: React.ReactNode
-  style?: CSSProperties | CSSProperties[]
+  style?: CSSProperties | CSSProperties[] | false | null
 }
 
 const BASE = compose(
