@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { format } from 'url'
+import WindowStateManager = require('electron-window-state-manager')
 
 // default dimensions
 const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
@@ -12,8 +13,20 @@ const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
  * @return The main BrowserWindow.
  */
 export function createMainWindow(appPath: string) {
+  // persistent window state manager
+  const windowState = new WindowStateManager('main', {
+    defaultWidth: DIMENSIONS.width,
+    defaultHeight: DIMENSIONS.height,
+  })
+
+  // create our main window
   const window = new BrowserWindow({
-    ...DIMENSIONS,
+    minWidth: DIMENSIONS.minWidth,
+    minHeight: DIMENSIONS.minHeight,
+    width: windowState.width,
+    height: windowState.height,
+    x: windowState.x,
+    y: windowState.y,
     show: false,
     useContentSize: true,
     titleBarStyle: 'hidden',
@@ -21,6 +34,16 @@ export function createMainWindow(appPath: string) {
     backgroundColor: '#fff',
     title: app.getName(),
   })
+
+  // maximize if we did before
+  if (windowState.maximized) {
+    window.maximize()
+  }
+
+  // trap movement events
+  window.on('close', () => windowState.saveState(window))
+  window.on('move', () => windowState.saveState(window))
+  window.on('resize', () => windowState.saveState(window))
 
   // load entry html page in the renderer.
   window.loadURL(
@@ -33,8 +56,10 @@ export function createMainWindow(appPath: string) {
 
   // only appear once we've loaded
   window.webContents.on('did-finish-load', () => {
-    window.show()
-    window.focus()
+    setTimeout(() => {
+      window.show()
+      window.focus()
+    }, 100)
   })
 
   return window
