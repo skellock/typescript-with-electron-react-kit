@@ -79,10 +79,6 @@ Start your app only when your gut says, "You'll fuck this up long before your st
 
 It brings the same things to the table as `redux`, but with considerably less typing.
 
-> **mobx-state-tree**
-
-A nice little addition from the `mobx` team. It brings `redux`-like state trees, immutability, and type guarantees. Love it.
-
 
 ## Keyboard Support
 
