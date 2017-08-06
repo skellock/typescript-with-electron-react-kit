@@ -118,6 +118,10 @@ A few quality-of-life utilities for working in Electron.
 
 Persist JSON to the file system.
 
+> **electron-window-state-manager**
+
+Persist window coordinates & dimensions to disk to survive restarts.
+
 
 ## Bundler
 
