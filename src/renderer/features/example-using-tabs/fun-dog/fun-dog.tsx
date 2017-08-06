@@ -1,6 +1,6 @@
 import * as React from 'react'
 import dogImage from './fun-dog.jpg'
-import { cssProps, colors } from '../../../platform'
+import { cssProps, colors, SpinAnimation } from '../../../platform'
 import { css } from 'glamor'
 
 const ROOT = cssProps({
@@ -12,5 +12,9 @@ const ROOT = cssProps({
 })
 
 export function FunDog() {
-  return <img draggable={false} src={dogImage} {...css(ROOT)} />
+  return (
+    <SpinAnimation>
+      <img draggable={false} src={dogImage} {...css(ROOT)} />
+    </SpinAnimation>
+  )
 }

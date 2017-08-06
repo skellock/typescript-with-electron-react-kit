@@ -16,8 +16,8 @@ export class DogTab extends React.PureComponent<DogTabProps, {}> {
   render() {
     return (
       <CenteredContent style={this.props.style}>
+        <Text style={TEXT_STYLE}>Do a barrel roll.</Text>
         <FunDog />
-        <Text style={TEXT_STYLE}>Wake up and smell the electrons.</Text>
         <Logo />
       </CenteredContent>
     )
