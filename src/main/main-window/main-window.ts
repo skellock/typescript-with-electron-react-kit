@@ -33,6 +33,10 @@ export function createMainWindow(appPath: string) {
     autoHideMenuBar: true,
     backgroundColor: '#fff',
     title: app.getName(),
+    webPreferences: {
+      backgroundThrottling: false,
+      textAreasAreResizable: false,
+    },
   })
 
   // maximize if we did before
