@@ -29,7 +29,6 @@ Can't imagine doing web differently to be honest. I'm sure we will soon, but for
 
 I like `preact` as well.  I feel like the switching over will be pretty simple and I probably will.
 
-
 ## Component Styling ##
 
 > **glamor**
@@ -71,6 +70,17 @@ My advice? **Don't listen to my advice**. Explore & pick your own. Much, if not 
 Start your app only when your gut says, "You'll fuck this up long before your styling lib gives out."
 
 `glamor` gives me that vibe. 💃
+
+
+## Animations
+
+**react-transition-group**
+
+Brings enter + leave lifecycle events for animations.
+
+**popmotion**
+
+Power animation & tweening library.
 
 
 ## State Management
