@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import { colors, spacing, fontSizes, Text, styles, cssProps } from '../..'
+import { colors, spacing, fontSizes, Text, styles, cssProps, EnterAnimation } from '../..'
 import { css, compose } from 'glamor'
 
 export interface TabProps {
@@ -39,8 +39,10 @@ export function Tab(props: TabProps) {
   const textStyle = css(BASE_TEXT, props.active && ACTIVE_TEXT)
 
   return (
-    <div {...styleProps} onClick={props.onClick}>
-      <Text style={textStyle} text={props.text} />
-    </div>
+    <EnterAnimation animation='grow' speed={100} delay={400}>
+      <div {...styleProps} onClick={props.onClick}>
+        <Text style={textStyle} text={props.text} />
+      </div>
+    </EnterAnimation>
   )
 }
