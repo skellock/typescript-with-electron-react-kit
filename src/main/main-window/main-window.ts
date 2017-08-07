@@ -29,9 +29,11 @@ export function createMainWindow(appPath: string) {
     y: windowState.y,
     show: false,
     useContentSize: true,
-    titleBarStyle: 'hidden',
+    titleBarStyle: 'hidden-inset',
     autoHideMenuBar: true,
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
+    vibrancy: 'light',
+    transparent: true,
     title: app.getName(),
     webPreferences: {
       backgroundThrottling: false,
