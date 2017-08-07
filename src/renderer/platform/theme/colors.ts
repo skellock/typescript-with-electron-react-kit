@@ -29,9 +29,10 @@ const white = grayScale[grayScale.length - 1]
 // =--- colors with specific meaning ------>
 
 const sentiment = {
-  error: '#D44',
-  success: '#4D4',
-  warning: '#DD4',
+  error: 'cherry',
+  success: 'lime',
+  warning: 'orange',
+  highlight: secondaryScale[2],
 }
 
 // =--- special-use window chrome ------>

@@ -1,9 +1,14 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
 import { Text, ScrollableContent, spacing, cssProps } from '../../../platform'
+import { css } from 'glamor'
 
 const PADDED = cssProps({
-  paddingBottom: spacing.medium,
+  paddingBottom: spacing.large,
+})
+
+const ROOT = cssProps({
+  padding: spacing.large,
 })
 
 export interface LongTabProps {
@@ -12,8 +17,10 @@ export interface LongTabProps {
 
 export class LongTab extends React.PureComponent<LongTabProps, {}> {
   render() {
+    const root = css(ROOT, this.props.style)
+
     return (
-      <ScrollableContent style={this.props.style}>
+      <ScrollableContent style={root}>
         <Text style={PADDED}>
           Lomo kombucha irony, keffiyeh man bun pitchfork helvetica organic godard brunch XOXO
           subway tile. Vexillologist gluten-free prism air plant godard raw denim tacos forage

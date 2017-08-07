@@ -1,20 +1,30 @@
 import * as React from 'react'
+import { CSSProperties } from 'react'
 import dogImage from './fun-dog.jpg'
-import { cssProps, colors, SpinAnimation } from '../../../platform'
+import { colors, SpinAnimation } from '../../../platform'
 import { css } from 'glamor'
 
-const ROOT = cssProps({
-  width: 300,
+const IMAGE = css({
+  width: 400,
   borderStyle: 'solid',
   borderWidth: 2,
   borderColor: colors.line,
   borderRadius: 4,
+  transition: `all 150ms`,
+  '&:hover': {
+    borderColor: colors.sentiment.highlight,
+  },
 })
 
-export function FunDog() {
+export interface FunDogProps {
+  style?: CSSProperties | CSSProperties[] | null | false
+}
+
+export function FunDog(props: FunDogProps) {
+  const style = css(IMAGE, props.style)
   return (
     <SpinAnimation>
-      <img draggable={false} src={dogImage} {...css(ROOT)} />
+      <img draggable={false} src={dogImage} {...style} />
     </SpinAnimation>
   )
 }

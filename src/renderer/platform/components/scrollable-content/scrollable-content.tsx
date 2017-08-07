@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
 import { spacing, styles, cssProps } from '../..'
-import { css, compose } from 'glamor'
+import { compose } from 'glamor'
 
 export interface ScrollableContentProps {
   children?: React.ReactNode
@@ -11,12 +11,12 @@ export interface ScrollableContentProps {
 const ROOT = compose(
   styles.column,
   styles.flex1,
-  cssProps({ padding: spacing.medium, overflowY: 'scroll' }),
+  cssProps({ padding: spacing.small, overflowY: 'scroll' }),
 )
 
 export function ScrollableContent(props: ScrollableContentProps) {
   return (
-    <div {...css(ROOT, props.style)}>
+    <div {...compose(ROOT, props.style)}>
       {props.children}
     </div>
   )
