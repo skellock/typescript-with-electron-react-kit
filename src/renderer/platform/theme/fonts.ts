@@ -1,3 +1,4 @@
 export const fonts = {
-  default: '-apple-system, Helvetica Neue, Segoe UI, Roboto, Liberation Sans',
+  default:
+    'Fira Code, Operator Mono, -apple-system, Helvetica Neue, Segoe UI, Roboto, Liberation Sans',
 }

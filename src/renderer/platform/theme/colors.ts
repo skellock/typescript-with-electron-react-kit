@@ -1,52 +1,71 @@
-/**
- * Named colours.
- */
-const palette = {
-  bluez: ['#2B3A45', '#56748A', '#9CD4FC', '#D2EBFD', '#EDF7FE'],
-  beige: ['#383330', '#585350', '#a8a3a0', '#d8d3d0', '#f8f3f0'],
-  mint: ['#385350', '#587370', '#a8c3c0', '#d8e3e0', '#f8ffff'],
-  purps: ['#503853', '#705873', '#c0a8c3', '#e0d8e3', '#fff8ff'],
-  grayscale: ['#1d1d1d', '#2d2d2d', '#333', '#666', '#888', '#aaa', '#ddd', '#e6e6e6', '#f0f0f0'],
-  cherry: '#d44',
+// =--- theme colors ------>
+
+// const mintScale = ['#385350', '#587370', '#A8C3C0', '#D8E3E0', '#F8FFFF']
+// const purpleScale = ['#503853', '#705873', '#C0A8C3', '#E0D8E3', '#FFF8FF']
+const blueScale = ['#2B3A45', '#56748A', '#9CD4FC', '#D2EBFD', '#EDF7FE']
+const beigeScale = ['#383330', '#585350', '#A8A3A0', '#D8D3D0', '#F8F3F0']
+
+// choose a primaries (frequent use) & secondaries (rare use)
+const primaryScale = beigeScale
+const secondaryScale = blueScale
+
+// a healthy selection of grays
+const grayScale = [
+  '#1D1D1D',
+  '#2D2D2D',
+  '#333',
+  '#666',
+  '#888',
+  '#AAA',
+  '#DDD',
+  '#E6E6E6',
+  '#F0F0F0',
+]
+
+// black is 1st, white is last
+const black = grayScale[0]
+const white = grayScale[grayScale.length - 1]
+
+// =--- colors with specific meaning ------>
+
+const sentiment = {
+  error: '#D44',
+  success: '#4D4',
+  warning: '#DD4',
 }
 
-/**
- * The dominant color scale.
- */
-const dominant = palette.beige
+// =--- special-use window chrome ------>
+
+const window = { background: 'transparent' }
+const scrollbar = {
+  base: 'transparent',
+  track: 'rgba(0, 0, 0, 0.04)',
+  thumb: 'rgba(0, 0, 0, 0.1)',
+}
+
+// =--- special-use window chrome ------>
+
+const text = grayScale[0]
+const line = primaryScale[1]
+const nav = {
+  line,
+  background: primaryScale[2],
+  inactive: primaryScale[3],
+  active: primaryScale[1],
+}
 
 /**
  * These are the various roles that colour plays in the system.
  */
 export const colors = {
-  /**
-   * The color palette if you need it, but prefer to use the other
-   * roles since it is easier to make sweeping chanegs.
-   */
-  palette,
-
-  /** 
-   * The default dackground color.
-   */
-  background: dominant[4],
-
-  /**
-   * The background color navigation.
-   */
-  navBackground: dominant[2],
-  /** the line color of the nav */
-  navLine: dominant[1],
-  /** Navigation foreground when it isn't active. */
-  navInactive: dominant[3],
-  /** Navigation foreground when active. */
-  navActive: dominant[1],
-
-  /** Normal reading text. */
-  text: palette.grayscale[2],
-
-  /** When something goes wrong. */
-  error: palette.cherry,
-
-  /** Subtle lines like dividers. */
-  line: dominant[1],
+  primaryScale,
+  secondaryScale,
+  black,
+  white,
+  window,
+  scrollbar,
+  nav,
+  line,
+  text,
+  sentiment,
 }

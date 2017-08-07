@@ -22,13 +22,13 @@ const BASE = compose(
 )
 
 const ACTIVE = cssProps({
-  borderBottom: colors.line,
+  borderBottom: colors.nav.line,
   borderBottomWidth: 2,
   borderBottomStyle: 'solid',
 })
 
-const BASE_TEXT = cssProps({ color: colors.navInactive, fontSize: fontSizes.mediumPlus })
-const ACTIVE_TEXT = cssProps({ color: colors.navActive })
+const BASE_TEXT = cssProps({ color: colors.nav.inactive, fontSize: fontSizes.mediumPlus })
+const ACTIVE_TEXT = cssProps({ color: colors.nav.active })
 
 /**
  * A tab component that you click on.  Not the tab panel.

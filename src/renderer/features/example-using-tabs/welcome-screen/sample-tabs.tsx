@@ -10,7 +10,7 @@ import {
   commandOrControlKey,
   EnterAnimation,
 } from '../../../platform'
-import { css, compose } from 'glamor'
+import { css } from 'glamor'
 
 export type SampleTabType = 'one' | 'two' | 'three'
 
@@ -24,20 +24,20 @@ const KEY_2 = `${commandOrControlKey}+2`
 const KEY_3 = `${commandOrControlKey}+3`
 
 // an extra layer just for the drag style due to electron bug
-const ROOT = styles.windowDrag
+const ROOT = css(styles.windowDrag)
 
-const BAR = compose(
+const BAR = css(
   styles.row,
+  styles.windowDrag,
   cssProps({
     paddingLeft: spacing.medium,
     paddingRight: spacing.medium,
     paddingTop: spacing.small,
-    backgroundColor: colors.navBackground,
+    backgroundColor: colors.nav.background,
     justifyContent: 'center',
     borderBottom: 1,
-    borderBottomColor: colors.line,
+    borderBottomColor: colors.nav.line,
     borderBottomStyle: 'solid',
-    boxShadow: `0px 2px 10px ${colors.navBackground}`,
   }),
 )
 
@@ -62,7 +62,7 @@ export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
     const { tab } = this.props
 
     return (
-      <div {...css(ROOT)}>
+      <div {...ROOT}>
         <EnterAnimation animation='slide' delay={100} y={-60}>
           <div {...BAR}>
             <Tab onClick={this.changeTab1} active={tab === 'one'} text='doggo' />
