@@ -22,7 +22,7 @@ Sparky.task('default', ['copy-html'], () => {
     target: 'electron',
     log: isProduction,
     cache: !isProduction,
-    sourceMaps: true
+    sourceMaps: true,
   })
 
   // start the hot reload server

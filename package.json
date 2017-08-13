@@ -4,9 +4,7 @@
     "name": "Steve Kellock"
   },
   "ava": {
-    "require": [
-      "./out-test/main/test/setup.js"
-    ]
+    "require": ["./out-test/main/test/setup.js"]
   },
   "build": {
     "appId": "com.example.electron-starter",
@@ -21,9 +19,7 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": [
-        "tar.gz"
-      ]
+      "target": ["tar.gz"]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -35,10 +31,7 @@
       "repo": "electron-starter"
     },
     "win": {
-      "target": [
-        "zip",
-        "nsis"
-      ]
+      "target": ["zip", "nsis"]
     }
   },
   "dependencies": {
@@ -66,7 +59,6 @@
     "@types/react-dom": "15.5.2",
     "@types/sinon": "2.3.3",
     "ava": "0.21.0",
-    "babel-eslint": "7.2.3",
     "babel-preset-react": "6.24.1",
     "electron": "1.7.5",
     "electron-builder": "19.19.1",
@@ -79,7 +71,6 @@
     "prettier": "1.5.3",
     "react-test-renderer": "15.6.1",
     "sinon": "3.2.0",
-    "standard": "10.0.3",
     "ts-node": "3.3.0",
     "tslint": "5.6.0",
     "tslint-eslint-rules": "4.1.1",
@@ -89,11 +80,6 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "*.js": [
-      "prettier --write --no-semi --print-width 100 --single-quote",
-      "standard --fix",
-      "git add"
-    ],
     "*.{ts,tsx}": [
       "prettier --write --no-semi --print-width 100 --single-quote",
       "tslint --fix",
@@ -109,28 +95,23 @@
     "check:src": "tsc -p tsconfig.json --noEmit --pretty",
     "check:test": "tsc -p tsconfig.test.json --noEmit --pretty",
     "clean": "rm -rf .fusebox out dist out-test",
-    "compile": "NODE_ENV=production node fuse",
+    "compile": "NODE_ENV=production ts-node fuse",
     "dist": "electron-builder --mac --win --linux --ia32 --x64",
     "draft": "electron-builder -p always --draft --mac --win --linux --ia32 --x64",
     "info": "npm-scripts-info",
-    "lint": "npm-run-all lint:*",
-    "lint:js": "standard \"src/**/*.js\" fuse.js",
-    "lint:ts": "tslint \"{src,typings}/**/*.{ts,tsx}\"",
+    "lint": "tslint \"fuse.ts\" \"{src,typings}/**/*.{ts,tsx}\"",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
     "precommit": "lint-staged",
     "prepush": "npm-run-all sanity",
     "sanity": "npm-run-all clean check lint test clean compile clean",
-    "start": "node fuse",
+    "start": "ts-node fuse",
     "test": "npm-run-all test:clean test:compile test:unit",
     "test:clean": "rm -rf out-test",
     "test:compile": "tsc -p tsconfig.test.json",
     "test:unit": "ava out-test/**/*.test.js",
     "watch:compile": "npm run test:compile -- -w",
     "watch:tests": "npm run test:unit -- --watch"
-  },
-  "standard": {
-    "parser": "babel-eslint"
   },
   "version": "0.12.0"
 }
