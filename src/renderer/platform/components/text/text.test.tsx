@@ -1,7 +1,7 @@
-const React = require('react')
-const { test } = require('ava')
-const { create } = require('react-test-renderer')
-const { Text } = require('./text')
+import * as React from 'react'
+import { test } from 'ava'
+import { create } from 'react-test-renderer'
+import { Text } from './text'
 
 test('Text can be prop-less.', t => {
   const c = <Text />
