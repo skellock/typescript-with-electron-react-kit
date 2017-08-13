@@ -1,9 +1,9 @@
 export function isLinux() {
-  return process.platform.includes('linux')
+  return process.platform === 'linux'
 }
 
 export function isWindows() {
-  return process.platform.includes('win')
+  return process.platform === 'win32'
 }
 
 export function isMac() {
