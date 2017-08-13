@@ -18,7 +18,8 @@ Ready to start your project?
 I'm still deciding on a simple way, but there will be a script you can run.
 
 ```sh
-npm run time-to-shine
+# this does exist yet
+npm run time-to-shine 
 ```
 
 
@@ -37,8 +38,43 @@ If you want to just remove the examples and continue with the app layout:
 * delete `src/renderer/features/example-using-tabs`
 * remove corresponding lines from `src/renderer/index.ts`
 * remove the same from `src/renderer/app/app.tsx`
+* remove the `src/shared/models`
+* remove the `src/main/database`
 
 Now you're ready to start adding your own features.
+
+## Testing
+
+There's a script that does everything.
+
+```sh
+npm run sanity
+```
+
+It'll:
+
+* clean up an temp files or build artifacts
+* compile & check your typescript for errors
+* lint both typescript and javascript for issues
+* run the tests
+* clean again
+* compile the app in production mode
+* clean 1 last time.
+
+This is hooked up to a `pre-push` build script. This will help you not check in mistakes.  Trust me.
+
+If you want to run in `watch` mode for testing while you develop (quite nice!):
+
+```sh
+# in terminal 1:
+npm run watch:compile
+
+# in terminal 2:
+npm run watch:tests
+```
+
+Now when you edit your files, it'll recompile & re-run the relevant tests on the fly.  And it's quick!
+
 
 
 ## Building
