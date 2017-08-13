@@ -9,6 +9,7 @@
     "trailing-comma": [true, { "singleline": "never", "multiline": "always" }],
     "no-empty": false,
     "ter-indent": [true, 2, { "SwitchCase": 1 }],
-    "no-duplicate-imports": false
+    "no-duplicate-imports": false,
+    "max-classes-per-file": [false]
   }
 }

@@ -144,6 +144,14 @@ What I do know is, once I started playing with FuseBox, I was sold. I like the d
 
 This is my favourite testing framework. I've tried them all. The devs behind this are very talented, helpful, and friendly.
 
+> **sinon**
+
+This is great for spies and stubs.
+
+> **mockery**
+
+Hooks require('') calls to hijack dependencies and replace with your own.
+
 
 ## Compile Time Utilities
 

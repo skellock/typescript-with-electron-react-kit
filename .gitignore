@@ -5,5 +5,7 @@ npm-debug.log
 yarn-error.log
 dist/
 out/
+tmp/
+out-test/
 dev-app-update.yml
 .vscode/
