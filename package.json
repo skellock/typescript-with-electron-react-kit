@@ -4,9 +4,7 @@
     "name": "Steve Kellock"
   },
   "ava": {
-    "require": [
-      "./out-test/main/test/setup.js"
-    ]
+    "require": ["./out-test/main/test/setup.js"]
   },
   "build": {
     "appId": "com.example.electron-starter",
@@ -21,9 +19,7 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": [
-        "tar.gz"
-      ]
+      "target": ["tar.gz"]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -35,10 +31,7 @@
       "repo": "electron-starter"
     },
     "win": {
-      "target": [
-        "zip",
-        "nsis"
-      ]
+      "target": ["zip", "nsis"]
     }
   },
   "dependencies": {
@@ -59,7 +52,7 @@
   },
   "description": "An electron starter project.",
   "devDependencies": {
-    "@storybook/react": "^3.2.4",
+    "@storybook/react": "3.2.4",
     "@types/electron-store": "1.2.0",
     "@types/mockery": "1.4.29",
     "@types/mousetrap": "1.5.34",
@@ -67,7 +60,7 @@
     "@types/react-dom": "15.5.2",
     "@types/react-test-renderer": "15.5.2",
     "@types/sinon": "2.3.3",
-    "@types/storybook__react": "^3.0.3",
+    "@types/storybook__react": "3.0.3",
     "ava": "0.21.0",
     "babel-preset-react": "6.24.1",
     "electron": "1.7.5",
@@ -81,7 +74,7 @@
     "prettier": "1.5.3",
     "react-test-renderer": "15.6.1",
     "sinon": "3.2.0",
-    "ts-loader": "^2.3.2",
+    "ts-loader": "2.3.2",
     "ts-node": "3.3.0",
     "tslint": "5.6.0",
     "tslint-eslint-rules": "4.1.1",
@@ -95,13 +88,15 @@
       "prettier --write --no-semi --print-width 100 --single-quote",
       "tslint --fix",
       "git add"
-    ]
+    ],
+    "package.json": ["prettier --write", "git add"]
   },
   "main": "out/main.js",
   "name": "electron-starter",
   "private": true,
   "repository": "skellock/electron-starter",
   "scripts": {
+    "build-storybook": "build-storybook",
     "check": "npm-run-all check:*",
     "check:src": "tsc -p tsconfig.json --noEmit --pretty",
     "check:test": "tsc -p tsconfig.test.json --noEmit --pretty",
@@ -117,14 +112,13 @@
     "prepush": "npm-run-all sanity",
     "sanity": "npm-run-all clean check lint test clean compile clean",
     "start": "ts-node fuse",
+    "storybook": "start-storybook -p 6006",
     "test": "npm-run-all test:clean test:compile test:unit",
     "test:clean": "rm -rf out-test",
     "test:compile": "tsc -p tsconfig.test.json",
     "test:unit": "ava out-test/**/*.test.js",
     "watch:compile": "npm run test:compile -- -w",
-    "watch:tests": "npm run test:unit -- --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "watch:tests": "npm run test:unit -- --watch"
   },
   "version": "0.12.0"
 }
