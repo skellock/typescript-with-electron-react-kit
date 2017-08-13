@@ -1,54 +1,33 @@
 import { stub } from 'sinon'
+import { EventEmitter } from 'events'
 
-interface Events {
-  [eventName: string]: [() => void]
-}
-
-export class WebContents {
-  events: Events = {}
-
-  on(eventName: string, callback: () => void): void {
-    this.events[eventName] = this.events[eventName] || []
-    this.events[eventName].push(callback)
-  }
-
-  emit(eventName: string) {
-    if (this.events[eventName]) {
-      this.events[eventName].forEach(fn => fn())
-    }
-  }
-}
+export class WebContents extends EventEmitter {}
 
 /**
  * Spins up an Electron Browser Window full of stubby goodness.
  */
-export class BrowserWindow {
+export class BrowserWindow extends EventEmitter {
   webContents: WebContents = new WebContents()
-  events: Events = {}
-  constructor() {
-    this.webContents = new WebContents()
-  }
-
-  on(eventName: string, callback: () => void): void {
-    this.events[eventName] = this.events[eventName] || []
-    this.events[eventName].push(callback)
-  }
-
-  emit(eventName: string) {
-    if (this.events[eventName]) {
-      this.events[eventName].forEach(fn => fn())
-    }
-  }
-
   getSize() {}
   loadURL() {}
   maximize() {}
 }
+
+/**
+ * The electron app.
+ */
+export const app = {
+  getName: stub().returns('hi'),
+}
+
+/**
+ * The whole "namespace"
+ */
 export const electron = {
-  app: {
-    getName: stub().returns('hi'),
-  },
+  app,
   BrowserWindow,
 }
+
+// export const app = electron.app
 
 export default electron
