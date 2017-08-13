@@ -4,7 +4,9 @@
     "name": "Steve Kellock"
   },
   "ava": {
-    "require": ["./out-test/main/test/setup.js"]
+    "require": [
+      "./out-test/main/test/setup.js"
+    ]
   },
   "build": {
     "appId": "com.example.electron-starter",
@@ -19,7 +21,9 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": ["tar.gz"]
+      "target": [
+        "tar.gz"
+      ]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -31,7 +35,10 @@
       "repo": "electron-starter"
     },
     "win": {
-      "target": ["zip", "nsis"]
+      "target": [
+        "zip",
+        "nsis"
+      ]
     }
   },
   "dependencies": {
@@ -63,7 +70,7 @@
     "babel-preset-react": "6.24.1",
     "electron": "1.7.5",
     "electron-builder": "19.19.1",
-    "fuse-box": "2.2.1",
+    "fuse-box": "2.2.2-beta.12",
     "husky": "0.14.3",
     "lint-staged": "4.0.3",
     "mockery": "2.1.0",
