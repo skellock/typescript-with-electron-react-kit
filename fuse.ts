@@ -1,5 +1,5 @@
-const { FuseBox, CSSPlugin, Sparky, CopyPlugin } = require('fuse-box')
-const { spawn } = require('child_process')
+import { FuseBox, CSSPlugin, Sparky, CopyPlugin } from 'fuse-box'
+import { spawn } from 'child_process'
 
 const DEV_PORT = 4445
 const OUTPUT_DIR = 'out'
