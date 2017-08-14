@@ -1,4 +1,5 @@
-import { shell } from 'electron'
+import * as log from 'electron-log'
+import { shell, ipcMain } from 'electron'
 
 export function createSharedMenuItems(window: Electron.BrowserWindow) {
   const visit: Electron.MenuItemConstructorOptions = {
@@ -12,6 +13,14 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
     label: 'Reload',
     click() {
       window.webContents.reload()
+    },
+  }
+
+  const storybook: Electron.MenuItemConstructorOptions = {
+    label: 'Toggle Storybook',
+    click() {
+      log.info('gonna send')
+      ipcMain.emit('storybook-toggle')
     },
   }
 
@@ -34,6 +43,7 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
   return {
     visit,
     reload,
+    storybook,
     quit,
     toggleDevTools,
     fullScreen,
