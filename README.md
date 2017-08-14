@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/infinite-steve/electron-starter/branches/master/shields_badge.svg)](https://semaphoreci.com/infinite-steve/electron-starter)
+
 # electron-starter
 
 This is a electron starter kit from some random guy on the Internet.
