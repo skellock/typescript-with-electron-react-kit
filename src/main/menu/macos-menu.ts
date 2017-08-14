@@ -26,6 +26,7 @@ export function createMacMenu(
     submenu: isDev
       ? [
           { ...shared.reload, accelerator: 'Command+R' },
+          { ...shared.storybook, accelerator: 'Command+Shift+S' },
           { ...shared.toggleDevTools, accelerator: 'Alt+Command+I' },
       ]
       : [{ ...shared.fullScreen, accelerator: 'Ctrl+Command+F' }],

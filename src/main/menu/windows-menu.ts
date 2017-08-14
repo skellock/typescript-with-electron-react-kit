@@ -16,6 +16,7 @@ export function createWindowsMenu(
     submenu: isDev
       ? [
           { ...shared.reload, accelerator: 'Ctrl+R' },
+          { ...shared.storybook, accelerator: 'Ctrl+Shift+S' },
           { ...shared.toggleDevTools, accelerator: 'Ctrl+Alt+I' },
       ]
       : [{ ...shared.fullScreen, accelerator: 'Ctrl+Alt+F' }],

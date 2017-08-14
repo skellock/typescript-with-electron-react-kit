@@ -1,7 +1,6 @@
 import { app, BrowserWindow } from 'electron'
-import { join } from 'path'
-import { format } from 'url'
 import WindowStateManager = require('electron-window-state-manager')
+import { loadURL } from './load-url'
 
 // default dimensions
 const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
@@ -52,13 +51,7 @@ export function createMainWindow(appPath: string) {
   window.on('resize', () => windowState.saveState(window))
 
   // load entry html page in the renderer.
-  window.loadURL(
-    format({
-      pathname: join(appPath, 'out/index.html'),
-      protocol: 'file:',
-      slashes: true,
-    }),
-  )
+  loadURL(window, appPath)
 
   // only appear once we've loaded
   window.webContents.on('did-finish-load', () => {

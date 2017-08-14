@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import dogImage from './fun-dog.jpg'
+import * as dogImage from './fun-dog.jpg'
 import { colors, SpinAnimation } from '../../../platform'
 import { css } from 'glamor'
 

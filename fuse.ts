@@ -43,7 +43,7 @@ Sparky.task('default', ['copy-html'], () => {
     .bundle('renderer')
     .instructions('> [renderer/index.tsx] +fuse-box-css')
     .plugin(CSSPlugin())
-    .plugin(CopyPlugin({ useDefault: true, files: ASSETS, dest: 'assets', resolve: 'assets/' }))
+    .plugin(CopyPlugin({ useDefault: false, files: ASSETS, dest: 'assets', resolve: 'assets/' }))
 
   // and watch & hot reload unless we're bundling for production
   if (!isProduction) {
