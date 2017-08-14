@@ -102,7 +102,7 @@
     "check:test": "tsc -p tsconfig.test.json --noEmit --pretty",
     "clean": "rm -rf .fusebox out dist out-test",
     "compile": "NODE_ENV=production ts-node fuse",
-    "coverage:upload": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage:upload": "cat ./coverage/lcov.info | coveralls",
     "coverage:report": "nyc --reporter=lcov --reporter=html --reporter=text ava",
     "coverage": "npm-run-all test:clean test:compile coverage:report",
     "dist": "electron-builder --mac --win --linux --ia32 --x64",
@@ -119,7 +119,7 @@
     "test": "npm-run-all test:clean test:compile test:unit",
     "test:clean": "rm -rf out-test",
     "test:compile": "tsc -p tsconfig.test.json",
-    "test:unit": "ava out-test/**/*.test.js",
+    "test:unit": "ava",
     "watch:compile": "npm run test:compile -- -w",
     "watch:tests": "npm run test:unit -- --watch"
   },
