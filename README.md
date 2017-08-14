@@ -1,4 +1,5 @@
 [![Build Status](https://semaphoreci.com/api/v1/infinite-steve/electron-starter/branches/master/shields_badge.svg)](https://semaphoreci.com/infinite-steve/electron-starter)
+[![codecov](https://codecov.io/gh/skellock/electron-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/skellock/electron-starter)
 
 # electron-starter
 
