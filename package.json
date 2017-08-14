@@ -4,7 +4,9 @@
     "name": "Steve Kellock"
   },
   "ava": {
-    "require": ["./out-test/main/test/setup.js"]
+    "require": [
+      "./out-test/main/test/setup.js"
+    ]
   },
   "build": {
     "appId": "com.example.electron-starter",
@@ -19,7 +21,9 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": ["tar.gz"]
+      "target": [
+        "tar.gz"
+      ]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -31,7 +35,10 @@
       "repo": "electron-starter"
     },
     "win": {
-      "target": ["zip", "nsis"]
+      "target": [
+        "zip",
+        "nsis"
+      ]
     }
   },
   "dependencies": {
@@ -88,8 +95,7 @@
       "prettier --write --no-semi --print-width 100 --single-quote",
       "tslint --fix",
       "git add"
-    ],
-    "package.json": ["prettier --write", "git add"]
+    ]
   },
   "main": "out/main.js",
   "name": "electron-starter",
