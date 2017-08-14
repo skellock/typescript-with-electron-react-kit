@@ -6,7 +6,7 @@ This is a electron starter kit from some random guy on the Internet.
 
 # example
 
-<img src='./docs/screenshot.png' width='450' />
+<img src='./docs/demo.gif' width='450' />
 
 It's not much to look at really. Just a barebones boilerplate. You need to bring your own awesome.
 

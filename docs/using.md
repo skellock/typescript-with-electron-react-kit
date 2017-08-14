@@ -19,7 +19,7 @@ I'm still deciding on a simple way, but there will be a script you can run.
 
 ```sh
 # this does exist yet
-npm run time-to-shine 
+npm run time-to-shine
 ```
 
 
@@ -74,6 +74,25 @@ npm run watch:tests
 ```
 
 Now when you edit your files, it'll recompile & re-run the relevant tests on the fly.  And it's quick!
+
+If you are ready to see how much of your codebase is covered simply run:
+
+```sh
+npm run coverage
+```
+
+and check out the output in the coverage folder.
+
+
+## Writing Components
+
+When you are adding new components to your app you typically will want to write stories in `storybook`. You do this by simply creating a `<component name>.story.tsx` file along side your component and then writing stories that outline the different prop usage and put it in all the states that it could be in. While you are working on the component you will want to run
+
+```sh
+npm run storybook
+```
+
+and then switch to the storybook view from the `view` menu in your app so you can get a live preview of the component you are working on.
 
 
 

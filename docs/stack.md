@@ -7,6 +7,8 @@ Hey, so everyone has their favourites right? Here's a few of mine.
 
 > **typescript**
 
+[typescript - github](https://github.com/Microsoft/TypeScript)
+
 Such a well polished and wonderful typing system. I know this is a stepping stone to a better language, but JavaScript is really comfortable at this point. TypeScript dials the safety part in.
 
 
@@ -14,9 +16,15 @@ Such a well polished and wonderful typing system. I know this is a stepping ston
 
 > **tslint**
 
+[tslint - github](https://github.com/palantir/tslint)
+
 A linter with a great set of rules is awesome.
 
 > **husky**, **lint-staged**, **prettier**
+
+[husky - github](https://github.com/typicode/husky) /
+[lint-staged - github](https://github.com/okonet/lint-staged) /
+[prettier - github](https://github.com/prettier/prettier)
 
 Some automation so I stop checking in crap-looking code.
 
@@ -25,13 +33,17 @@ Some automation so I stop checking in crap-looking code.
 
 > **react**, **react-dom**
 
+[react - github](https://github.com/facebook/react)
+
 Can't imagine doing web differently to be honest. I'm sure we will soon, but for mid-2017, this is dominating.
 
 I like `preact` as well.  I feel like the switching over will be pretty simple and I probably will.
 
-## Component Styling ##
+## Components ##
 
 > **glamor**
+
+[glamor - github](https://github.com/threepointone/glamor)
 
 The winner is:
 
@@ -71,14 +83,23 @@ Start your app only when your gut says, "You'll fuck this up long before your st
 
 `glamor` gives me that vibe. 💃
 
+> **Storybook**
+
+[storybook - github](https://github.com/storybooks/storybook)
+
+Provides a sandbox to work on your components with whatever props you can dream of wanting set to make sure your components are in tip top shape before and during use in your application. If you are writing a component you should be writing stories about it.
 
 ## Animations
 
-**react-transition-group**
+> **react-transition-group**
+
+[react-transition-group - github](https://github.com/reactjs/react-transition-group)
 
 Brings enter + leave lifecycle events for animations.
 
-**popmotion**
+> **popmotion**
+
+[popmotion - github](https://github.com/Popmotion/popmotion)
 
 Power animation & tweening library.
 
@@ -86,6 +107,8 @@ Power animation & tweening library.
 ## Keyboard Support
 
 > **mousetrap**
+
+[mousetrp - github](https://github.com/ccampbell/mousetrap)
 
 The main menu in electron has keyboard accelators, but we still need one in the renderer for convenience.
 
@@ -96,12 +119,16 @@ Mousetrap fills that gap. It's a pretty decent little library despite not being 
 
 > **ramda**
 
+[ramda - github](https://github.com/ramda/ramda)
+
 There's so much awesome packed in here. `pipe` for days. I'll be honest, it took me a long time get comfortable with `ramda`. Nowadays, you can pry it from my cold dead hands. PRECIOUS!!!
 
 
 ## Electron Things
 
 > **electron-builder**
+
+[electron-builder - github](https://github.com/electron-userland/electron-builder)
 
 This does most of the heavy lifting for assembling cross-platform distributables.
 
@@ -111,13 +138,20 @@ Allows our app to auto-update.
 
 > **electron-is-dev**, **electron-log**
 
+[electron-is-dev - github](https://github.com/sindresorhus/electron-is-dev) /
+[electron-log - github](https://github.com/megahertz/electron-log)
+
 A few quality-of-life utilities for working in Electron.
 
 > **electron-store**
 
+[electron-store - github](https://github.com/sindresorhus/electron-store)
+
 Persist JSON to the file system.
 
 > **electron-window-state-manager**
+
+[electron-window-state-manager - github](https://github.com/TamkeenLMS/electron-window-manager)
 
 Persist window coordinates & dimensions to disk to survive restarts.
 
@@ -125,6 +159,8 @@ Persist window coordinates & dimensions to disk to survive restarts.
 ## Bundler
 
 > **fuse-box**
+
+[fuse-box - github](https://github.com/fuse-box/fuse-box)
 
 Yes, you read that right. Not WebPack. WebPack always rubbed me wrong. Maybe it's the config? Maybe it's the way they name things? I'm not sure.
 
@@ -135,20 +171,35 @@ What I do know is, once I started playing with FuseBox, I was sold. I like the d
 
 > **ava**
 
+[ava - github](https://github.com/avajs/ava)
+
 This is my favourite testing framework. I've tried them all. The devs behind this are very talented, helpful, and friendly.
 
 > **sinon**
+
+[sinon - github](https://github.com/sinonjs/sinon)
 
 This is great for spies and stubs.
 
 > **mockery**
 
+[mockery - github](https://github.com/mockery/mockery)
+
 Hooks require('') calls to hijack dependencies and replace with your own.
+
+> **nyc**
+
+[nyc - github](https://github.com/istanbuljs/nyc)
+
+Coverage report generation of your tests.
 
 
 ## Compile Time Utilities
 
 > **npm-scripts-info**, **npm-run-all**
+
+[npm-scripts-info - github](https://github.com/srph/npm-scripts-info) /
+[npm-run-all - github](hhttps://github.com/mysticatea/npm-run-all)
 
 Quality-of-life utilities for npm.
 
@@ -156,6 +207,8 @@ Quality-of-life utilities for npm.
 ## Docs
 
 > **docsify**
+
+[docsify - github](https://github.com/QingWei-Li/docsify)
 
 You're reading it right now.
 
