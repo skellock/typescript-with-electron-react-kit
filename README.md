@@ -1,5 +1,5 @@
 [![Build Status](https://semaphoreci.com/api/v1/infinite-steve/electron-starter/branches/master/shields_badge.svg)](https://semaphoreci.com/infinite-steve/electron-starter)
-[![Coverage Status](https://coveralls.io/repos/github/skellock/electron-starter/badge.svg?branch=master)](https://coveralls.io/github/skellock/electron-starter?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/skellock/electron-starter/badge.svg)](https://coveralls.io/github/skellock/electron-starter)
 
 # electron-starter
 
