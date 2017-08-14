@@ -1,4 +1,3 @@
-import * as log from 'electron-log'
 import { shell, ipcMain } from 'electron'
 
 export function createSharedMenuItems(window: Electron.BrowserWindow) {
@@ -19,7 +18,6 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
   const storybook: Electron.MenuItemConstructorOptions = {
     label: 'Toggle Storybook',
     click() {
-      log.info('gonna send')
       ipcMain.emit('storybook-toggle')
     },
   }
