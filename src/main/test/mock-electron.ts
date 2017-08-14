@@ -11,6 +11,8 @@ export class BrowserWindow extends EventEmitter {
   getSize() {}
   loadURL() {}
   maximize() {}
+  show() {}
+  focus() {}
 }
 
 /**

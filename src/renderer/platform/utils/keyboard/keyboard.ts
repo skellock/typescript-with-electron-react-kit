@@ -6,10 +6,10 @@ import { isMac } from '../../../../shared'
 export type KeyboardCallback = (e: ExtendedKeyboardEvent, combo: string) => any
 export type KeyboardAction = 'keypress' | 'keydown' | 'keyup'
 
-// only needs to happen once (if statement is for running in test mode -- not sure why)
-if (Mousetrap.prototype) {
-  Mousetrap.prototype.stopCallback = () => false
-}
+// only needs to happen once
+// if (Mousetrap.prototype) {
+//   Mousetrap.prototype.stopCallback = () => false
+// }
 
 export const commandOrControlKey = isMac() ? 'command' : 'ctrl'
 

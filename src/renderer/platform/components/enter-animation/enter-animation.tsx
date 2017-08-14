@@ -51,7 +51,7 @@ export class EnterAnimation extends React.PureComponent<EnterAnimationProps, Ent
         break
     }
 
-    const transition = `transform ${speed || DEFAULT_SPEED}ms ${delay || DEFAULT_DELAY}ms`
+    const transition = `transform ${speed}ms ${delay}ms`
 
     // style props
     const starting = css(cssProps({ transform, transition }))

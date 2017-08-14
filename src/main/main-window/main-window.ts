@@ -9,9 +9,10 @@ const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
  * Creates the main window.
  *
  * @param appPath The path to the bundle root.
+ * @param showDelay How long in ms before showing the window after the renderer is ready.
  * @return The main BrowserWindow.
  */
-export function createMainWindow(appPath: string) {
+export function createMainWindow(appPath: string, showDelay: number = 100) {
   // persistent window state manager
   const windowState = new WindowStateManager('main', {
     defaultWidth: DIMENSIONS.width,
@@ -58,7 +59,7 @@ export function createMainWindow(appPath: string) {
     setTimeout(() => {
       window.show()
       window.focus()
-    }, 100)
+    }, showDelay)
   })
 
   return window

@@ -31,7 +31,6 @@ app.on('ready', () => {
     })
 
     ipcMain.on('storybook-toggle', () => {
-      log.info('toggle')
       showStorybook = !showStorybook
       loadURL(window, appPath, showStorybook)
     })
