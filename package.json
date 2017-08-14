@@ -129,5 +129,5 @@
     "watch:compile": "npm run test:compile -- -w",
     "watch:tests": "npm run test:unit -- --watch"
   },
-  "version": "0.12.0"
+  "version": "0.13.0"
 }
