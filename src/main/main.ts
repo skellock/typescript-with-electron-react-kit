@@ -1,4 +1,4 @@
-import { app, ipcMain } from 'electron'
+import { app, dialog, ipcMain } from 'electron'
 import { createMainWindow } from './main-window/main-window'
 import { loadURL } from './main-window/load-url'
 import * as log from 'electron-log'
@@ -23,6 +23,13 @@ app.on('ready', () => {
   createMenu(window)
 
   if (isDev) {
+    window.webContents.on('did-fail-load', () => {
+      dialog.showErrorBox(
+        'Error opening storybook',
+        'Storybook failed to open. Please ensure the storybook server is running by executing "npm run storybook"',
+      )
+    })
+
     ipcMain.on('storybook-toggle', () => {
       log.info('toggle')
       showStorybook = !showStorybook
