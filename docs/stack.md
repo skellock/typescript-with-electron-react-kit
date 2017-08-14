@@ -29,7 +29,7 @@ Can't imagine doing web differently to be honest. I'm sure we will soon, but for
 
 I like `preact` as well.  I feel like the switching over will be pretty simple and I probably will.
 
-## Component Styling ##
+## Components ##
 
 > **glamor**
 
@@ -71,14 +71,17 @@ Start your app only when your gut says, "You'll fuck this up long before your st
 
 `glamor` gives me that vibe. 💃
 
+> **Storybook**
+
+Provides a sandbox to work on your components with whatever props you can dream of wanting set to make sure your components are in tip top shape before and during use in your application. If you are writing a component you should be writing stories about it.
 
 ## Animations
 
-**react-transition-group**
+> **react-transition-group**
 
 Brings enter + leave lifecycle events for animations.
 
-**popmotion**
+> **popmotion**
 
 Power animation & tweening library.
 
@@ -144,6 +147,10 @@ This is great for spies and stubs.
 > **mockery**
 
 Hooks require('') calls to hijack dependencies and replace with your own.
+
+> **nyc**
+
+Coverage report generation of your tests.
 
 
 ## Compile Time Utilities
