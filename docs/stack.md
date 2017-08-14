@@ -33,10 +33,10 @@ I like `preact` as well.  I feel like the switching over will be pretty simple a
 
 > **glamor**
 
-The winner is: 
+The winner is:
 
-* ~vanilla css~ 
-* ~sass~ 
+* ~vanilla css~
+* ~sass~
 * ~css modules~
 * ~diy~
 * ~radium~
@@ -65,7 +65,7 @@ I've flip-flopped on this quite a bit. We're spoiled by awesome options.
 * ✅  TypeScript-friendly
 * ✅  testability without flushing caches or buffers
 
-My advice? **Don't listen to my advice**. Explore & pick your own. Much, if not most, of your app is UI. 
+My advice? **Don't listen to my advice**. Explore & pick your own. Much, if not most, of your app is UI.
 
 Start your app only when your gut says, "You'll fuck this up long before your styling lib gives out."
 
@@ -83,13 +83,6 @@ Brings enter + leave lifecycle events for animations.
 Power animation & tweening library.
 
 
-## State Management
-
-> **mobx**, **mobx-react**
-
-It brings the same things to the table as `redux`, but with considerably less typing.
-
-
 ## Keyboard Support
 
 > **mousetrap**
@@ -101,7 +94,7 @@ Mousetrap fills that gap. It's a pretty decent little library despite not being 
 
 ## Utilities
 
-> **ramda** 
+> **ramda**
 
 There's so much awesome packed in here. `pipe` for days. I'll be honest, it took me a long time get comfortable with `ramda`. Nowadays, you can pry it from my cold dead hands. PRECIOUS!!!
 
