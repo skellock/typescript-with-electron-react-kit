@@ -9,7 +9,7 @@
     ]
   },
   "build": {
-    "appId": "com.example.electron-starter",
+    "appId": "com.example.typescript-with-electron-react-kit",
     "files": [
       "!src",
       "!docs",
@@ -28,11 +28,11 @@
     "mac": {
       "category": "public.app-category.developer-tools"
     },
-    "productName": "Electron Starter",
+    "productName": "Sweet Sweet App",
     "publish": {
       "owner": "skellock",
       "provider": "github",
-      "repo": "electron-starter"
+      "repo": "typescript-with-electron-react-kit"
     },
     "win": {
       "target": [
@@ -98,9 +98,9 @@
     ]
   },
   "main": "out/main.js",
-  "name": "electron-starter",
+  "name": "typescript-with-electron-react-kit",
   "private": true,
-  "repository": "skellock/electron-starter",
+  "repository": "skellock/typescript-with-electron-react-kit",
   "scripts": {
     "build-storybook": "build-storybook",
     "check": "npm-run-all check:*",

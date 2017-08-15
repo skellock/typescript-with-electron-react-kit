@@ -3,10 +3,10 @@ import { createDb, createRepo } from './database.fixtures'
 
 test('can load', async t => {
   const db = createDb()
-  const repo = await db.load('skellock/electron-starter')
+  const repo = await db.load('skellock/typescript-with-electron-react-kit')
 
-  t.is(repo.name, 'electron-starter')
-  t.is(repo.fullName, 'skellock/electron-starter')
+  t.is(repo.name, 'typescript-with-electron-react-kit')
+  t.is(repo.fullName, 'skellock/typescript-with-electron-react-kit')
 })
 
 test('can save', async t => {

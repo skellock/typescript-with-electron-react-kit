@@ -21,7 +21,7 @@ If you're shipping via S3 or another provider, please the
 
 ```yml
 provider: 'github'
-repo: 'electron-starter'
+repo: 'typescript-with-electron-react-kit'
 owner: 'skellock'
 ```
 

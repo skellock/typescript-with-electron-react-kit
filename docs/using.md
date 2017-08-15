@@ -3,8 +3,8 @@
 Want to try this out? Clone & run.  There's a small sample project included.
 
 ```sh
-git clone --depth 1 git@github.com:skellock/electron-starter.git
-cd electron-starter
+git clone --depth 1 git@github.com:skellock/typescript-with-electron-react-kit.git
+cd typescript-with-electron-react-kit
 npm i
 npm start
 ```

@@ -1,14 +1,14 @@
-[![Build Status](https://semaphoreci.com/api/v1/infinite-steve/electron-starter/branches/master/shields_badge.svg)](https://semaphoreci.com/infinite-steve/electron-starter)
-[![Coverage Status](https://coveralls.io/repos/github/skellock/electron-starter/badge.svg)](https://coveralls.io/github/skellock/electron-starter)
-[![GitHub release](https://img.shields.io/github/release/skellock/electron-starter.svg)]()
-[![GitHub contributors](https://img.shields.io/github/contributors/skellock/electron-starter.svg)]()
-[![license](https://img.shields.io/github/license/skellock/electron-starter.svg)]()
+[![Build Status](https://semaphoreci.com/api/v1/infinite-steve/typescript-with-electron-react-kit/branches/master/shields_badge.svg)](https://semaphoreci.com/infinite-steve/typescript-with-electron-react-kit)
+[![Coverage Status](https://coveralls.io/repos/github/skellock/typescript-with-electron-react-kit/badge.svg)](https://coveralls.io/github/skellock/typescript-with-electron-react-kit)
+[![GitHub release](https://img.shields.io/github/release/skellock/typescript-with-electron-react-kit.svg)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/skellock/typescript-with-electron-react-kit.svg)]()
+[![license](https://img.shields.io/github/license/skellock/typescript-with-electron-react-kit.svg)]()
 
-# electron-starter
+# typescript-with-electron-react-kit
 
 This is a `TypeScript` and `React` starter kit for building Electron apps.
 
-[Check out the docs](https://skellock.github.io/electron-starter) for some of the choices and motivations.
+[Check out the docs](https://skellock.github.io/typescript-with-electron-react-kit) for some of the choices and motivations.
 
 
 ### Example
