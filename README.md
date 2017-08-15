@@ -61,3 +61,34 @@ You have to bring your own awesome.  But here's a picture* after `npm i` and `np
 You down with MIT? 
 
 
+# Contributors
+
+<table>
+<tr>
+  <td align='center'>
+    <a href='https://github.com/skellock'><img src='https://avatars2.githubusercontent.com/u/68273?v=4&s=400' width='120' style='border-radius: 10px;' ><br>
+    @skellock
+    </a>
+  </td>
+  <td align='center'>
+    <a href='https://github.com/rmevans9'><img src='https://avatars2.githubusercontent.com/u/14151327?v=4&s=400' width='120' style='border-radius: 10px;' ><br>
+    @rmevans
+    </a>
+  </td>
+</tr>
+</table>
+
+<!-- 
+Did i just use a <table> to do css layout? 
+  
+Yes. I believe I just did.  
+
+👊
+
+
+
+
+
+🎤
+
+-->
