@@ -6,8 +6,8 @@ import { Database } from './database'
  */
 export function createRepo() {
   const repo: GithubRepo = {
-    name: 'electron-starter',
-    fullName: 'skellock/electron-starter',
+    name: 'typescript-with-electron-react-kit',
+    fullName: 'skellock/typescript-with-electron-react-kit',
     private: false,
   }
   return repo

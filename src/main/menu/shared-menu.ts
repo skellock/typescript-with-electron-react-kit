@@ -4,7 +4,7 @@ export function createSharedMenuItems(window: Electron.BrowserWindow) {
   const visit: Electron.MenuItemConstructorOptions = {
     label: 'Visit on Github',
     click() {
-      shell.openExternal('https://github.com/skellock/electron-starter')
+      shell.openExternal('https://github.com/skellock/typescript-with-electron-react-kit')
     },
   }
 
