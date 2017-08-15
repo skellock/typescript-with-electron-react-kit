@@ -72,7 +72,7 @@ You down with MIT?
   </td>
   <td align='center'>
     <a href='https://github.com/rmevans9'><img src='https://avatars2.githubusercontent.com/u/14151327?v=4&s=400' width='120' style='border-radius: 10px;' ><br>
-    @rmevans
+    @rmevans9
     </a>
   </td>
 </tr>
