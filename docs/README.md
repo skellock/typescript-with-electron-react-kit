@@ -18,13 +18,20 @@ This is my attempt to fix that.
 
 ### Why Not?
 
-Oh man... lots of reasons. There's other starter ones out there. That use things like WebPack, Babel, Flow, and Redux.
+Most other starter kits use things like WebPack, Babel, Flow, and Redux.
 
 This pack o' tools is slightly off the main stream. I mean, don't get me wrong, it's not full on hipster, but does have hipster-like tendencies. It's not as far as say, `reason`, `elm`, or `purescript`. I'm not that crazy or brave yet.
 
-The tools in this pack do **less**. They have less config. Less API. Less plugins.
+### Please Try These Too
 
-I need more **less** in my life.
+Honestly, these are pretty pro.
+
+* https://github.com/chentsulin/electron-react-boilerplate
+* https://github.com/szwacz/electron-boilerplate
+* https://github.com/bitjson/typescript-starter
+* https://github.com/alexjoverm/typescript-library-starter
+
+They have been influential and instructional.  Pretty cool people at the helm too.
 
 
 ### License
