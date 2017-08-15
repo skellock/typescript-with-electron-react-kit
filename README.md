@@ -6,13 +6,89 @@
 
 # electron-starter
 
-This is a electron starter kit from some random guy on the Internet.
+This is a `TypeScript` and `React` starter kit for building Electron apps.
 
-[Check out the docs](https://skellock.github.io/electron-starter) for all the gory details.
+[Check out the docs](https://skellock.github.io/electron-starter) for some of the choices and motivations.
 
-# example
+
+### Example
+
+You have to bring your own awesome.  But here's a picture* after `npm i` and `npm start` and `npm storybook`...
 
 <img src='./docs/demo.gif' width='450' />
 
-It's not much to look at really. Just a barebones boilerplate. You need to bring your own awesome.
+><small>* What it looks like moments before you hit the delete button to nuke all the staged features..</small>
 
+
+# Out of the Box
+
+### Electron Features 💫
+
+* ability to build all 3 platforms on your mac
+* auto-update your apps!
+* a simple library for css styling
+* fast & fluid animation engine
+* fantastic keyboard support
+* save window position between launches
+* persist application data as JSON
+* sane styling defaults on windows, mac, and linux
+
+### Devs Like Nice Things Too  🔨
+
+* super-fast hot reloading 🔥
+* lean production bundles
+* integrated storybook support
+* unit tests with mocking
+* 100% code coverage with examples on how to keep it there
+* code linting & formatting
+
+### Documentation & Samples  🖨
+
+* how to quickly jettison parts you don't want
+* why we chose the stack we did
+* how to structure your electron app
+* a simple & co-located approach to building your components
+
+### Not Included  💣
+
+* lock in... keep what works for you, ditch the rest
+* state management... `mobx`? / `redux`? ... both awesome.  both excluded.
+* a component toolkit
+
+
+# License  🎤 
+
+You down with MIT? 
+
+
+# Contributors
+
+<table>
+<tr>
+  <td align='center'>
+    <a href='https://github.com/skellock'><img src='https://avatars2.githubusercontent.com/u/68273?v=4&s=400' width='120' style='border-radius: 10px;' ><br>
+    @skellock
+    </a>
+  </td>
+  <td align='center'>
+    <a href='https://github.com/rmevans9'><img src='https://avatars2.githubusercontent.com/u/14151327?v=4&s=400' width='120' style='border-radius: 10px;' ><br>
+    @rmevans9
+    </a>
+  </td>
+</tr>
+</table>
+
+<!-- 
+Did i just use a <table> to do css layout? 
+  
+Yes. I believe I just did.  
+
+👊
+
+
+
+
+
+🎤
+
+-->
