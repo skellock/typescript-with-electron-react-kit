@@ -1,4 +1,6 @@
 declare module 'electron-window-state-manager' {
+  import { BrowserWindow } from 'electron'
+
   interface ElectronStateManagerOptions {
     /** The default width for this window. */
     defaultWidth?: number
@@ -18,7 +20,7 @@ declare module 'electron-window-state-manager' {
      */
     constructor(name: string, options?: ElectronStateManagerOptions)
     /** Save this window's dimensions */
-    saveState(browserWindow: Electron.BrowserWindow): void
+    saveState(browserWindow: BrowserWindow): void
     /** The window width. */
     width: number
     /** The window height. */

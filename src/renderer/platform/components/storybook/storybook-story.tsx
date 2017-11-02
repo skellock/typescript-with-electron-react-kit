@@ -6,7 +6,10 @@ const style: CSSProperties = {
   paddingRight: 20,
 }
 
-export const StorybookStory: React.StatelessComponent<{}> = props =>
-  <div style={style}>
-    {props.children}
-  </div>
+export interface StorybookStoryProps {
+  children: React.ReactNode
+}
+
+export function StorybookStory(props: StorybookStoryProps) {
+  return <div style={style}>{props.children}</div>
+}

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import * as dogImage from './fun-dog.jpg'
 import { colors, SpinAnimation } from '../../../platform'
 import { css } from 'glamor'
+const dogImage = require('./fun-dog.jpg')
 
 const IMAGE = css({
   width: 400,

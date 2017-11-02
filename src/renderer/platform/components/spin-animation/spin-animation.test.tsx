@@ -2,7 +2,6 @@ import * as React from 'react'
 import { test } from 'ava'
 import { create } from 'react-test-renderer'
 import { SpinAnimation } from './spin-animation'
-import { SpinAnimationStateProps } from './spin-animation-state'
 
 test('render', t => {
   const c = (
@@ -20,7 +19,5 @@ test('willReceiveNewProps', t => {
     </SpinAnimation>
   )
   const instance = create(c)
-  const newProps: SpinAnimationStateProps = { duration: 1, revolutions: 2 }
   t.truthy(instance.getInstance().props.children)
-  instance.getInstance().componentWillReceiveProps(newProps)
 })
