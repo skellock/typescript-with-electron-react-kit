@@ -23,6 +23,7 @@ Sparky.task('default', ['copy-html'], () => {
     log: isProduction,
     cache: !isProduction,
     sourceMaps: true,
+    tsConfig: 'tsconfig.json',
   })
 
   // start the hot reload server

@@ -12,6 +12,7 @@ export class SpinAnimation extends React.PureComponent<SpinAnimationStateProps, 
     this.animationStates = createSpinStates(this.props)
   }
 
+  /* istanbul ignore next */
   componentWillReceiveProps(newProps: SpinAnimationStateProps) {
     this.animationStates = createSpinStates(newProps)
   }

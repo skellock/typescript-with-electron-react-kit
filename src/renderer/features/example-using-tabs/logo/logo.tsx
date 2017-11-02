@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
 import { cssProps, animations } from '../../../platform'
-import * as icon from './electron-icon.svg'
+const icon = require('./electron-icon.svg')
 import { css } from 'glamor'
 
 const ROOT = css(

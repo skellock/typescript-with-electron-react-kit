@@ -9,7 +9,7 @@ interface EnterAnimationState {
 export interface EnterAnimationProps {
   children?: React.ReactNode
   /** the type of animation */
-  animation: 'grow' | 'slide'
+  animation?: 'grow' | 'slide'
   /** how long to wait in milliseconds before starting */
   delay?: number
   /** how fast to complete the animation in milliseconds */
@@ -25,7 +25,7 @@ const SCALE_FROM = `scale(0.01, 0.01)`
 
 const FINISH = cssProps({ transform: `translate(0, 0) scale(1, 1)` })
 
-export class EnterAnimation extends React.PureComponent<EnterAnimationProps, EnterAnimationState> {
+export class EnterAnimation extends React.Component<EnterAnimationProps, EnterAnimationState> {
   state: EnterAnimationState = {}
 
   componentDidMount() {

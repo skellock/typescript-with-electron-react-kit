@@ -11,7 +11,10 @@ const textStyle: CSSProperties = {
   fontSize: 14,
 }
 
-export const StorybookLabel: React.StatelessComponent<{ title: string }> = props =>
-  <p style={textStyle}>
-    {props.title}
-  </p>
+export interface StorybookLabelProps {
+  title?: string
+}
+
+export function StorybookLabel(props: StorybookLabelProps) {
+  return <p style={textStyle}>{props.title}</p>
+}
