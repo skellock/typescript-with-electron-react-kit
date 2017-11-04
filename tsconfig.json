@@ -6,7 +6,7 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": false,
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true
   },
   "include": [

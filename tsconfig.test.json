@@ -9,16 +9,16 @@
     "strict": false,
     "noUnusedLocals": true,
     "outDir": "out-test",
-    "sourceRoot": "src",
     "inlineSourceMap": true,
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "typings"
     ]
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules/**/*"
+    "node_modules"
   ]
 }
