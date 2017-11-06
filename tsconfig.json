@@ -7,15 +7,9 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": false,
     "strict": false,
-    "noUnusedLocals": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "noUnusedLocals": true
   },
   "include": [
     "src"
-  ],
-  "exclude": [
-    "node_modules/**/*"
   ]
 }

@@ -63,7 +63,7 @@
     "@types/electron-store": "^1.2.0",
     "@types/mockery": "^1.4.29",
     "@types/mousetrap": "^1.5.34",
-    "@types/react": "^16.0.19",
+    "@types/react": "^16.0.20",
     "@types/react-dom": "^16.0.2",
     "@types/react-test-renderer": "^16.0.0",
     "@types/sinon": "^2.3.7",
@@ -86,12 +86,12 @@
     "ts-loader": "^3.1.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1"
+    "typescript": "~2.6.1"
   },
   "license": "MIT",
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write --no-semi --print-width 100 --single-quote",
+      "prettier --write",
       "tslint --fix",
       "git add"
     ]
