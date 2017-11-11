@@ -169,29 +169,11 @@ What I do know is, once I started playing with FuseBox, I was sold. I like the d
 
 ## Testing
 
-> **ava**
+> **jest**
 
-[ava - github](https://github.com/avajs/ava)
+[jest - github](https://github.com/facebook/jest)
 
-This is my favourite testing framework. I've tried them all. The devs behind this are very talented, helpful, and friendly.
-
-> **sinon**
-
-[sinon - github](https://github.com/sinonjs/sinon)
-
-This is great for spies and stubs.
-
-> **mockery**
-
-[mockery - github](https://github.com/mockery/mockery)
-
-Hooks require('') calls to hijack dependencies and replace with your own.
-
-> **nyc**
-
-[nyc - github](https://github.com/istanbuljs/nyc)
-
-Coverage report generation of your tests.
+Because we're using TypeScript, Jest makes this much easier.  Jest comes with mocking and coverage as well.
 
 
 ## Compile Time Utilities

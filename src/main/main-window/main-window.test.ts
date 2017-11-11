@@ -1,114 +1,40 @@
-import { test } from 'ava'
-import * as mockery from 'mockery'
-import { stub } from 'sinon'
-import { electron, BrowserWindow } from '../test/mock-electron'
-import { WindowStateManager } from '../test/mock-window-state-manager'
+import { createMainWindow } from './main-window'
+import * as WindowStateManager from 'electron-window-state-manager'
+import * as containDeep from 'jest-expect-contain-deep'
+import { BrowserWindow } from 'electron'
 
-test.beforeEach(() => {
-  mockery.enable({ warnOnUnregistered: false })
-})
-test.afterEach.always(() => {
-  mockery.deregisterAll()
-  mockery.disable()
+it('can read window state', () => {
+  WindowStateManager.mockImplementation(() => ({ width: 10, height: 40 }))
+  createMainWindow(__dirname)
+  expect(BrowserWindow).toBeCalledWith(containDeep({ width: 10, height: 40 }))
 })
 
-test('mocks have coverage :(', t => {
-  const win = new WindowStateManager()
-  t.is(win.x, 1)
-  t.is(win.y, 2)
-  t.is(win.width, 3)
-  t.is(win.height, 4)
-  t.is(win.maximized, true)
-  t.is(win.saveState({}), undefined)
-
-  const bw = new BrowserWindow()
-  t.is(bw.getSize(), undefined)
-  t.is(bw.loadURL(), undefined)
-  t.is(bw.maximize(), undefined)
-  t.is(bw.show(), undefined)
-  t.is(bw.focus(), undefined)
+it('might maximize on startup', () => {
+  WindowStateManager.mockImplementation(() => ({ maximized: true }))
+  const window = createMainWindow(__dirname)
+  expect(window.maximize).toBeCalled()
 })
 
-test('reads from window state', t => {
-  // two step process for the getters :(
-  const width = stub()
-  const height = stub()
-  const x = stub()
-  const y = stub()
-  stub(WindowStateManager.prototype, 'width').get(width)
-  stub(WindowStateManager.prototype, 'height').get(height)
-  stub(WindowStateManager.prototype, 'x').get(x)
-  stub(WindowStateManager.prototype, 'y').get(y)
-
-  // hijack the 3rd parties
-  mockery.registerMock('electron-window-state-manager', WindowStateManager)
-  mockery.registerMock('electron', electron)
-
-  // now we can create our window
-  require('./main-window').createMainWindow(__dirname)
-
-  // did our mocks get called?
-  t.true(width.calledOnce)
-  t.true(height.calledOnce)
-  t.true(x.calledOnce)
-  t.true(y.calledOnce)
+it('might not maximize on startup', () => {
+  WindowStateManager.mockImplementation(() => ({ maximized: false }))
+  expect(createMainWindow(__dirname).maximize).not.toBeCalled()
 })
 
-test('maximizes if told by the window state manager', t => {
-  const maximized = stub().returns(true)
-  stub(WindowStateManager.prototype, 'maximized').get(maximized)
-
-  mockery.registerMock('electron-window-state-manager', WindowStateManager)
-  mockery.registerMock('electron', electron)
-  const maximize = stub(BrowserWindow.prototype, 'maximize')
-  require('./main-window').createMainWindow(__dirname)
-  maximize.restore()
-
-  t.true(maximized.calledOnce)
-  t.true(maximize.calledOnce)
-})
-
-test('does not maximize unless told by the window state manager', t => {
-  const maximized = stub().returns(false)
-  stub(WindowStateManager.prototype, 'maximized').get(maximized)
-
-  mockery.registerMock('electron-window-state-manager', WindowStateManager)
-  mockery.registerMock('electron', electron)
-  const maximize = stub(BrowserWindow.prototype, 'maximize')
-  require('./main-window').createMainWindow(__dirname)
-  maximize.restore()
-
-  t.true(maximized.calledOnce)
-  t.true(maximize.notCalled)
-})
-
-test('saves window state', t => {
-  const saveState = stub(WindowStateManager.prototype, 'saveState')
-
-  mockery.registerMock('electron-window-state-manager', WindowStateManager)
-  mockery.registerMock('electron', electron)
-
-  const window: BrowserWindow = require('./main-window').createMainWindow(__dirname)
+test('saves window state', () => {
+  let saveState = jest.fn()
+  WindowStateManager.mockImplementation(() => ({ saveState: saveState }))
+  const window: BrowserWindow = createMainWindow(__dirname)
   window.emit('close')
   window.emit('move')
   window.emit('resize')
-
-  t.is(saveState.callCount, 3)
+  expect(saveState).toHaveBeenCalledTimes(3)
 })
 
-test.cb('show the window after we finish loading + delay', t => {
-  mockery.registerMock('electron-window-state-manager', WindowStateManager)
-  mockery.registerMock('electron', electron)
-
-  const window: BrowserWindow = require('./main-window').createMainWindow(__dirname, 1)
-  const showStub = stub(window, 'show')
-  const focusStub = stub(window, 'focus')
-
+test('show the window after we finish loading + delay', async () => {
+  const window: BrowserWindow = createMainWindow(__dirname, 1)
   window.webContents.emit('did-finish-load')
-
-  setTimeout(() => {
-    t.true(showStub.calledOnce)
-    t.true(focusStub.calledOnce)
-    t.end()
-  }, 2)
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+  await delay(2)
+  expect(window.show).toHaveBeenCalled()
+  expect(window.focus).toHaveBeenCalled()
 })

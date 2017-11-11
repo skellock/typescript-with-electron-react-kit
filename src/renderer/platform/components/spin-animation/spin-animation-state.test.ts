@@ -1,17 +1,16 @@
-import { test } from 'ava'
 import { next, createSpinStates } from './spin-animation-state'
 
-test('next', t => {
+test('next', () => {
   function back() {}
   function forward() {}
   const motionState = { v: 1, setRef: () => {}, velocity: 2, setStateTo: { back, forward } }
-  t.is(next({ ...motionState, state: 'forward' }), back)
-  t.is(next({ ...motionState, state: 'back' }), forward)
+  expect(next({ ...motionState, state: 'forward' })).toBe(back)
+  expect(next({ ...motionState, state: 'back' })).toBe(forward)
 })
 
-test('createSpinStates', t => {
+test('createSpinStates', () => {
   const states = createSpinStates({})
-  t.is(typeof states.back, 'function')
+  expect(typeof states.back).toBe('function')
 
   const value: any = () => {}
   value.get = () => 1
@@ -22,7 +21,6 @@ test('createSpinStates', t => {
   }
 
   const backEvent: any = { value }
-  t.is(typeof states.forward, 'function')
+  expect(typeof states.forward).toBe('function')
   states.back(backEvent)
-  t.pass('going for coverage :(')
 })
