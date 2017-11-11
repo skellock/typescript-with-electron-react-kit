@@ -1,13 +1,15 @@
 {
+  "name": "typescript-with-electron-react-kit",
+  "main": "out/main.js",
+  "version": "1.0.0",
+  "description": "An electron starter project.",
+  "license": "MIT",
+  "private": true,
   "author": {
     "email": "steve@kellock.ca",
     "name": "Steve Kellock"
   },
-  "ava": {
-    "require": [
-      "./out-test/main/test/setup.js"
-    ]
-  },
+  "repository": "skellock/typescript-with-electron-react-kit",
   "build": {
     "appId": "com.example.typescript-with-electron-react-kit",
     "files": [
@@ -21,9 +23,7 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": [
-        "tar.gz"
-      ]
+      "target": ["tar.gz"]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -35,71 +35,9 @@
       "repo": "typescript-with-electron-react-kit"
     },
     "win": {
-      "target": [
-        "zip",
-        "nsis"
-      ]
+      "target": ["zip", "nsis"]
     }
   },
-  "dependencies": {
-    "electron-is-dev": "^0.3.0",
-    "electron-log": "^2.2.11",
-    "electron-store": "^1.3.0",
-    "electron-updater": "^2.15.0",
-    "electron-window-state-manager": "^0.3.2",
-    "glamor": "^2.20.40",
-    "mousetrap": "^1.6.1",
-    "popmotion": "^7.8.2",
-    "popmotion-react": "^1.1.1",
-    "ramda": "^0.25.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-transition-group": "^2.2.1"
-  },
-  "description": "An electron starter project.",
-  "devDependencies": {
-    "@storybook/react": "^3.2.14",
-    "@types/electron-is-dev": "^0.3.0",
-    "@types/electron-store": "^1.2.0",
-    "@types/mockery": "^1.4.29",
-    "@types/mousetrap": "^1.5.34",
-    "@types/react": "^16.0.20",
-    "@types/react-dom": "^16.0.2",
-    "@types/react-test-renderer": "^16.0.0",
-    "@types/sinon": "^2.3.7",
-    "@types/storybook__react": "^3.0.5",
-    "ava": "^0.23.0",
-    "babel-preset-react": "^6.24.1",
-    "coveralls": "^3.0.0",
-    "electron": "^1.7.9",
-    "electron-builder": "^19.43.0",
-    "fuse-box": "^2.4.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
-    "mockery": "^2.1.0",
-    "npm-run-all": "^4.1.1",
-    "npm-scripts-info": "^0.3.6",
-    "nyc": "^11.2.1",
-    "prettier": "^1.7.4",
-    "react-test-renderer": "^16.0.0",
-    "sinon": "^4.0.2",
-    "ts-loader": "^3.1.1",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.8.0",
-    "typescript": "~2.6.1"
-  },
-  "license": "MIT",
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "tslint --fix",
-      "git add"
-    ]
-  },
-  "main": "out/main.js",
-  "name": "typescript-with-electron-react-kit",
-  "private": true,
-  "repository": "skellock/typescript-with-electron-react-kit",
   "scripts": {
     "build-storybook": "build-storybook",
     "check": "npm-run-all check:*",
@@ -128,5 +66,56 @@
     "watch:compile": "npm run test:compile -- -w",
     "watch:tests": "npm run test:unit -- --watch"
   },
-  "version": "1.0.0"
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "electron-log": "^2.2.11",
+    "electron-store": "^1.3.0",
+    "electron-updater": "^2.16.1",
+    "electron-window-state-manager": "^0.3.2",
+    "glamor": "^2.20.40",
+    "mousetrap": "^1.6.1",
+    "popmotion": "^7.8.2",
+    "popmotion-react": "^1.1.1",
+    "ramda": "^0.25.0",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-transition-group": "^2.2.1"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.15",
+    "@types/electron-is-dev": "^0.3.0",
+    "@types/electron-store": "^1.2.0",
+    "@types/mockery": "^1.4.29",
+    "@types/mousetrap": "^1.5.34",
+    "@types/react": "^16.0.22",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-test-renderer": "^16.0.0",
+    "@types/sinon": "^2.3.7",
+    "@types/storybook__react": "^3.0.5",
+    "ava": "^0.23.0",
+    "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.45.4",
+    "fuse-box": "^2.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "mockery": "^2.1.0",
+    "npm-run-all": "^4.1.2",
+    "npm-scripts-info": "^0.3.6",
+    "nyc": "^11.3.0",
+    "prettier": "^1.8.2",
+    "react-test-renderer": "^16.0.0",
+    "sinon": "^4.1.2",
+    "ts-loader": "^3.1.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "~2.6.1"
+  },
+  "ava": {
+    "require": ["./out-test/main/test/setup.js"]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["prettier --write", "tslint --fix", "git add"]
+  }
 }
