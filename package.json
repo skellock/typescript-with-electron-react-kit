@@ -23,7 +23,9 @@
       "!globals.d.ts"
     ],
     "linux": {
-      "target": ["tar.gz"]
+      "target": [
+        "tar.gz"
+      ]
     },
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -35,19 +37,19 @@
       "repo": "typescript-with-electron-react-kit"
     },
     "win": {
-      "target": ["zip", "nsis"]
+      "target": [
+        "zip",
+        "nsis"
+      ]
     }
   },
   "scripts": {
     "build-storybook": "build-storybook",
-    "check": "npm-run-all check:*",
-    "check:src": "tsc -p tsconfig.json --noEmit --pretty",
-    "check:test": "tsc -p tsconfig.test.json --noEmit --pretty",
-    "clean": "rm -rf .fusebox out dist out-test",
+    "check": "tsc -p . --noEmit --pretty",
+    "clean": "rm -rf .fusebox out dist",
     "compile": "NODE_ENV=production ts-node fuse",
     "coverage:upload": "cat ./coverage/lcov.info | coveralls",
-    "coverage:report": "nyc --reporter=lcov --reporter=html --reporter=text ava",
-    "coverage": "npm-run-all test:clean test:compile coverage:report",
+    "coverage": "yarn test --coverage --no-cache",
     "dist": "electron-builder --mac --win --linux --ia32 --x64",
     "draft": "electron-builder -p always --draft --mac --win --linux --ia32 --x64",
     "info": "npm-scripts-info",
@@ -59,12 +61,7 @@
     "sanity": "npm-run-all clean check lint test clean compile clean",
     "start": "ts-node fuse",
     "storybook": "start-storybook -p 6006",
-    "test": "npm-run-all test:clean test:compile test:unit",
-    "test:clean": "rm -rf out-test",
-    "test:compile": "tsc -p tsconfig.test.json",
-    "test:unit": "ava",
-    "watch:compile": "npm run test:compile -- -w",
-    "watch:tests": "npm run test:unit -- --watch"
+    "test": "jest"
   },
   "dependencies": {
     "electron-is-dev": "^0.3.0",
@@ -85,37 +82,67 @@
     "@storybook/react": "^3.2.15",
     "@types/electron-is-dev": "^0.3.0",
     "@types/electron-store": "^1.2.0",
-    "@types/mockery": "^1.4.29",
+    "@types/jest": "^21.1.6",
     "@types/mousetrap": "^1.5.34",
     "@types/react": "^16.0.22",
     "@types/react-dom": "^16.0.3",
     "@types/react-test-renderer": "^16.0.0",
-    "@types/sinon": "^2.3.7",
     "@types/storybook__react": "^3.0.5",
-    "ava": "^0.23.0",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
     "electron": "^1.7.9",
     "electron-builder": "^19.45.4",
     "fuse-box": "^2.4.0",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "jest-expect-contain-deep": "^1.0.1",
     "lint-staged": "^5.0.0",
-    "mockery": "^2.1.0",
     "npm-run-all": "^4.1.2",
-    "npm-scripts-info": "^0.3.6",
-    "nyc": "^11.3.0",
     "prettier": "^1.8.2",
     "react-test-renderer": "^16.0.0",
-    "sinon": "^4.1.2",
+    "ts-jest": "^21.2.1",
     "ts-loader": "^3.1.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "typescript": "~2.6.1"
   },
-  "ava": {
-    "require": ["./out-test/main/test/setup.js"]
+  "jest": {
+    "setupFiles": [
+      "./test/setup.ts"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/",
+      "/out/",
+      "/build/",
+      "/dist/",
+      "/docs/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverage": true,
+    "mapCoverage": true
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["prettier --write", "tslint --fix", "git add"]
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "tslint --fix",
+      "git add"
+    ]
   }
 }

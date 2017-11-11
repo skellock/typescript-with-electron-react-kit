@@ -1,25 +1,24 @@
-import { test } from 'ava'
 import { createDb, createRepo } from './database.fixtures'
 
-test('can load', async t => {
+test('can load', async () => {
   const db = createDb()
   const repo = await db.load('skellock/typescript-with-electron-react-kit')
 
-  t.is(repo.name, 'typescript-with-electron-react-kit')
-  t.is(repo.fullName, 'skellock/typescript-with-electron-react-kit')
+  expect(repo.name).toBe('typescript-with-electron-react-kit')
+  expect(repo.fullName).toBe('skellock/typescript-with-electron-react-kit')
 })
 
-test('can save', async t => {
+test('can save', async () => {
   const db = createDb()
   const repo = createRepo()
-
-  t.true(await db.save(repo))
+  const result = await db.save(repo)
+  expect(result).toBe(true)
 })
 
-test('fails to save', async t => {
+test('fails to save', async () => {
   const db = createDb()
   const repo = createRepo()
   repo.fullName = 'crap'
-
-  t.false(await db.save(repo))
+  const result = await db.save(repo)
+  expect(result).toBe(false)
 })

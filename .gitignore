@@ -1,13 +1,11 @@
 .DS_Store
 .fusebox/
-.nyc_output/
-coverage/
 node_modules/
 npm-debug.log
 yarn-error.log
 dist/
 out/
 tmp/
-out-test/
 dev-app-update.yml
 .vscode/
+coverage/
