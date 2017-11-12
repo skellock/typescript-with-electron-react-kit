@@ -89,6 +89,8 @@ Start your app only when your gut says, "You'll fuck this up long before your st
 
 Provides a sandbox to work on your components with whatever props you can dream of wanting set to make sure your components are in tip top shape before and during use in your application. If you are writing a component you should be writing stories about it.
 
+Also the storyshots addon for working with `jest` is a great way to add snapshot testing for your React components by using your stories. (Like we needed another reason to use storybook!!)
+
 ## Animations
 
 > **react-transition-group**

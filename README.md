@@ -39,7 +39,7 @@ You have to bring your own awesome.  But here's a picture* after `npm i` and `np
 * lean production bundles
 * integrated storybook support
 * unit tests with mocking
-* 100% code coverage with examples on how to keep it there
+* storybook snapshot testing
 * code linting & formatting
 
 ### Documentation & Samples  🖨
