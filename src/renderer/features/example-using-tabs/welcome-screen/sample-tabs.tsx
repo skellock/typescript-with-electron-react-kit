@@ -19,9 +19,9 @@ export interface SampleTabsProps {
   onChangeTab: (tab: SampleTabType) => void
 }
 
-const KEY_1 = `${commandOrControlKey}+1`
-const KEY_2 = `${commandOrControlKey}+2`
-const KEY_3 = `${commandOrControlKey}+3`
+const KEY_1 = `${commandOrControlKey()}+1`
+const KEY_2 = `${commandOrControlKey()}+2`
+const KEY_3 = `${commandOrControlKey()}+3`
 
 // an extra layer just for the drag style due to electron bug
 const ROOT = css(styles.windowDrag)

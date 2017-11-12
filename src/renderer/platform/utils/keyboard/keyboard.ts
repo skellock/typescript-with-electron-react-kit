@@ -11,11 +11,11 @@ export type KeyboardAction = 'keypress' | 'keydown' | 'keyup'
 //   Mousetrap.prototype.stopCallback = () => false
 // }
 
-export const commandOrControlKey = isMac() ? 'command' : 'ctrl'
+export const commandOrControlKey = () => (isMac() ? 'command' : 'ctrl')
 
 /**
  * Binds a keystroke to a function.
- * 
+ *
  * @param keys The keystroke.
  * @param callback The function to fire.
  * @param action Optional keyboard event to further constraint.
@@ -30,7 +30,7 @@ export function bindKey(
 
 /**
  * Removes a keybind.
- * 
+ *
  * @param keys The keystroke.
  * @param action Optional keyboard event to further constraint.
  */

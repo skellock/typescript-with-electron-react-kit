@@ -1,11 +1,11 @@
-export function isLinux() {
-  return process.platform === 'linux'
+export function isLinux(platform = process.platform) {
+  return platform === 'linux'
 }
 
-export function isWindows() {
-  return process.platform === 'win32'
+export function isWindows(platform = process.platform) {
+  return platform === 'win32'
 }
 
-export function isMac() {
-  return process.platform === 'darwin'
+export function isMac(platform = process.platform) {
+  return platform === 'darwin'
 }

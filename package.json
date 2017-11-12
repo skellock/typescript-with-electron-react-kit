@@ -129,12 +129,13 @@
       "json"
     ],
     "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/out/",
-      "/build/",
-      "/dist/",
-      "/test/",
-      "/docs/"
+      "./node_modules",
+      "./out",
+      "./build",
+      "./dist",
+      "./test",
+      "./docs",
+      "\\.story.tsx$"
     ],
     "coverageThreshold": {
       "global": {

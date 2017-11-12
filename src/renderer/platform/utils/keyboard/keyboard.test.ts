@@ -11,7 +11,6 @@ jest.mock('../../../../shared', () => {
 })
 
 import * as Mousetrap from 'mousetrap'
-// import * as platform from '../../../../shared/utils/platform/platform'
 
 test('changes tabs', () => {
   const fn = () => true
@@ -25,13 +24,13 @@ test('changes tabs', () => {
 
 test('mac is command key', () => {
   const { commandOrControlKey } = require('./keyboard')
-  expect(commandOrControlKey).toBe('command')
+  expect(commandOrControlKey()).toBe('command')
 })
 
 test('non-mac is control', () => {
-  jest.resetModules()
+  // jest.resetModules()
   const shared = require('../../../../shared')
   shared.isMac = jest.fn().mockReturnValue(false)
   const { commandOrControlKey } = require('./keyboard')
-  expect(commandOrControlKey).toBe('ctrl')
+  expect(commandOrControlKey()).toBe('ctrl')
 })

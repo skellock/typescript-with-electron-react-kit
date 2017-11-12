@@ -1,5 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots CenteredContent default 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      default
+    </p>
+    <div
+      data-css-1rz1ovs=""
+    >
+      <p>
+        i am in the middle
+      </p>
+      <p>
+        i am also a really strange component and shouldn't exist.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EnterAnimation default 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      grow
+    </p>
+    <div
+      data-css-1iu15q0=""
+    >
+      <p>
+        hi
+      </p>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      slide
+    </p>
+    <div
+      data-css-11lu6bx=""
+    >
+      <p>
+        hi
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Fun Dog default 1`] = `
 <div
   style={
@@ -59,6 +176,181 @@ exports[`Storyshots Fun Dog default 1`] = `
 </div>
 `;
 
+exports[`Storyshots ScrollableContent default 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      default
+    </p>
+    <div
+      data-css-91r7up=""
+    >
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+      <p>
+        hi
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tab Tab 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      inactive
+    </p>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <div
+        data-css-uujtf8=""
+      >
+        <div
+          data-css-1x7qfvn=""
+          onClick={[Function]}
+        >
+          <p
+            data-css-1pqev5d=""
+          >
+            One
+          </p>
+        </div>
+      </div>
+      <div
+        data-css-uujtf8=""
+      >
+        <div
+          data-css-1x7qfvn=""
+          onClick={[Function]}
+        >
+          <p
+            data-css-1pqev5d=""
+          >
+            Two
+          </p>
+        </div>
+      </div>
+      <div
+        data-css-uujtf8=""
+      >
+        <div
+          data-css-ki8a7u=""
+          onClick={[Function]}
+        >
+          <p
+            data-css-ihrov4=""
+          >
+            Three
+          </p>
+        </div>
+      </div>
+      <div
+        data-css-uujtf8=""
+      >
+        <div
+          data-css-1x7qfvn=""
+          onClick={[Function]}
+        >
+          <p
+            data-css-1pqev5d=""
+          >
+            Four
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Text text styles 1`] = `
 <div
   style={
@@ -104,6 +396,34 @@ exports[`Storyshots Text text styles 1`] = `
       data-css-6bregx=""
     >
       The quick brown fox jumped over the slow lazy dog.
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      with text property
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      Passed in text property
     </p>
   </div>
   <div
