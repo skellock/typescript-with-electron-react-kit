@@ -6,13 +6,17 @@ import { storiesOf } from '@storybook/react'
 import { Text } from './index'
 
 storiesOf('Text', module)
-  .add('text styles', () =>
+  .add('text styles', () => (
     <Story>
       <Group title='regular text'>
         <Text>Hello World!</Text>
         <Text>$123.45</Text>
         <Text>The quick brown fox jumped over the slow lazy dog.</Text>
       </Group>
+      <Group title='with text property'>
+        <Text text='Passed in text property' />
+      </Group>
+
       <Group title='huge paragraph'>
         <Text>
           Wayfarers intelligentsia salvia sartorial keffiyeh locavore direct trade flexitarian
@@ -45,9 +49,9 @@ storiesOf('Text', module)
       <Group title='style={{ color: &quot;red&quot; }}'>
         <Text style={{ color: 'red' }}>Hello World!</Text>
       </Group>
-    </Story>,
-  )
-  .add('with nested children', () =>
+    </Story>
+  ))
+  .add('with nested children', () => (
     <Story>
       <Group title='with nested children'>
         <Text>
@@ -62,5 +66,5 @@ storiesOf('Text', module)
           </p>
         </Text>
       </Group>
-    </Story>,
-  )
+    </Story>
+  ))

@@ -28,6 +28,7 @@ const FINISH = cssProps({ transform: `translate(0, 0) scale(1, 1)` })
 export class EnterAnimation extends React.Component<EnterAnimationProps, EnterAnimationState> {
   state: EnterAnimationState = {}
 
+  // istanbul ignore next
   componentDidMount() {
     setTimeout(() => this.setState({ mounted: true }), 1)
   }
@@ -55,6 +56,7 @@ export class EnterAnimation extends React.Component<EnterAnimationProps, EnterAn
 
     // style props
     const starting = css(cssProps({ transform, transition }))
+    // istanbul ignore next
     const finishing = css(mounted && FINISH)
 
     return (

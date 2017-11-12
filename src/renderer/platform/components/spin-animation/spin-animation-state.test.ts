@@ -10,7 +10,14 @@ test('next', () => {
 
 test('createSpinStates', () => {
   const states = createSpinStates({})
+  expect(typeof states.forward).toBe('function')
   expect(typeof states.back).toBe('function')
+
+  const forwardResults = states.forward({ value: { get: () => 1 } })
+  expect(forwardResults.current).toBe(1)
+
+  const backResults = states.back({ value: { get: () => 1 } })
+  expect(backResults.current).toBe(1)
 
   const value: any = () => {}
   value.get = () => 1

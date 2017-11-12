@@ -10,7 +10,7 @@ module.exports = (config, env) => {
     exclude: /node_modules/,
     include: path.resolve(__dirname, '..', 'src'),
   })
-
+  
   myConfig.resolve.extensions.unshift('.tsx')
   myConfig.resolve.extensions.unshift('.ts')
 
