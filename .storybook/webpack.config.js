@@ -11,10 +11,6 @@ module.exports = (config, env) => {
     include: path.resolve(__dirname, '..', 'src'),
   })
   
-  // i tried adding url-loader and file-loader
-  // but that only seems to break storybooks
-  // rather than fix storyshots
-
   myConfig.resolve.extensions.unshift('.tsx')
   myConfig.resolve.extensions.unshift('.ts')
 
