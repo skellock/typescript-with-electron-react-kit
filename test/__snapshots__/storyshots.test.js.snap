@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Fun Dog default 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      is a doggo
+    </p>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <img
+          data-css-10m1z31=""
+          draggable={false}
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text text styles 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      regular text
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      Hello World!
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      $123.45
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      The quick brown fox jumped over the slow lazy dog.
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      huge paragraph
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      Wayfarers intelligentsia salvia sartorial keffiyeh locavore direct trade flexitarian vexillologist ugh single-origin coffee. Hexagon heirloom direct trade palo santo distillery, PBR&B bespoke fanny pack adaptogen affogato bitters kombucha sartorial taiyaki next level. Cliche artisan iPhone bushwick church-key. Artisan forage mustache, chartreuse vexillologist echo park cronut. 8-bit fanny pack 90's post-ironic venmo vegan. Humblebrag cliche pork belly, cronut twee wayfarers salvia meditation plaid cornhole. Tumeric literally yr XOXO, ennui single-origin coffee blog jianbing jean shorts plaid typewriter prism whatever pabst flannel. Tousled lomo next level pickled mixtape. Everyday carry ennui polaroid chartreuse, biodiesel trust fund hashtag umami cardigan hot chicken locavore gochujang quinoa coloring book williamsburg. Next level 8-bit cornhole brunch venmo. Enamel pin normcore DIY jianbing irony thundercats. Taxidermy quinoa kinfolk, hexagon godard hell of banjo forage ugh blog. Kale chips umami +1 shabby chic air plant keffiyeh authentic whatever sriracha wayfarers letterpress tofu brooklyn next level salvia. Selfies readymade vegan synth chillwave pug banjo dreamcatcher freegan. Artisan cliche subway tile mumblecore, whatever pok pok tote bag celiac hella poke tousled listicle. Deep v unicorn scenester cred direct trade kickstarter microdosing cardigan mustache ennui tumblr umami farm-to-table literally listicle. Post-ironic semiotics venmo gochujang cray green juice lo-fi cardigan tilde prism pop-up jean shorts shoreditch occupy readymade. Portland messenger bag art party, succulents cred lyft bespoke. Kinfolk plaid selfies pinterest iPhone pug narwhal, fashion axe coloring book meditation tousled. Lyft trust fund copper mug DIY la croix banh mi. Jianbing raclette man bun mustache tote bag. Vinyl taiyaki kombucha tattooed, try-hard blog freegan you probably haven't heard of them schlitz shaman listicle chambray. Swag slow-carb enamel pin affogato migas bespoke fashion axe flannel prism marfa activated charcoal pop-up shabby chic. Oh. You need a little dummy text for your mockup? How quaint. I bet you’re still using Bootstrap too…
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      style={{ color: "red" }}
+    </p>
+    <p
+      data-css-1xvfq6x=""
+    >
+      Hello World!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text with nested children 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      with nested children
+    </p>
+    <p
+      data-css-6bregx=""
+    >
+      <p>
+        <strong>
+          I am STRONG
+        </strong>
+      </p>
+      <p>
+        <i>
+          I am ITALIC
+        </i>
+      </p>
+      <p>
+        <p
+          data-css-6bregx=""
+        >
+          I am another nested Text component.
+        </p>
+      </p>
+    </p>
+  </div>
+</div>
+`;
