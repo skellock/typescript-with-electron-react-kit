@@ -1,3 +1,5 @@
+// import 'raf/polyfill'
+
 jest.mock('electron-window-state-manager', () => {
   return jest.fn().mockImplementation(() => ({
     saveState: jest.fn(),
