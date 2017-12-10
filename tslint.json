@@ -1,4 +1,5 @@
 {
+  "extends": "tslint-config-prettier",
   "rules": {
     "ordered-imports": [false],
     "quotemark": [true, "single", "jsx-single", "avoid-escape"],
