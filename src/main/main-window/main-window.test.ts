@@ -1,7 +1,7 @@
 import { createMainWindow } from './main-window'
-import * as WindowStateManager from 'electron-window-state-manager'
 import * as containDeep from 'jest-expect-contain-deep'
 import { BrowserWindow } from 'electron'
+const WindowStateManager = require('electron-window-state-manager')
 
 it('can read window state', () => {
   WindowStateManager.mockImplementation(() => ({ width: 10, height: 40 }))

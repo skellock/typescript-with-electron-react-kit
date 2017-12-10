@@ -11,6 +11,8 @@
     "inlineSourceMap": true
   },
   "include": [
-    "src"
+    "src",
+    "typings",
+    "fuse.ts"
   ]
 }
