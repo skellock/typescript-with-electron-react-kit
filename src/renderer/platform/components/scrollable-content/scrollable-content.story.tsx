@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { StorybookStory as Story, StorybookGroup as Group } from '../storybook'
-import { storiesOf } from '@storybook/react'
-import { ScrollableContent } from './index'
+import * as React from "react"
+import { StorybookStory as Story, StorybookGroup as Group } from "../storybook"
+import { storiesOf } from "@storybook/react"
+import { ScrollableContent } from "./index"
 
-storiesOf('ScrollableContent', module).add('default', () => (
+storiesOf("ScrollableContent", module).add("default", () => (
   <Story>
-    <Group title='default'>
+    <Group title="default">
       <ScrollableContent style={{ height: 100 }}>
         <p>hi</p>
         <p>hi</p>

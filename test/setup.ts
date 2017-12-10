@@ -1,17 +1,17 @@
-import './mock-request-animation-frame'
+import "./mock-request-animation-frame"
 
-jest.mock('electron-window-state-manager', () => {
+jest.mock("electron-window-state-manager", () => {
   return jest.fn().mockImplementation(() => ({
     saveState: jest.fn(),
   }))
 })
 
-jest.mock('electron', () => {
-  const events = require('events')
+jest.mock("electron", () => {
+  const events = require("events")
   return {
     app: {
-      getPath: jest.fn().mockReturnValue('path'),
-      getName: jest.fn().mockReturnValue('name'),
+      getPath: jest.fn().mockReturnValue("path"),
+      getName: jest.fn().mockReturnValue("name"),
     },
     BrowserWindow: jest.fn().mockImplementation(() => {
       const windowEmitter = new events.EventEmitter()
@@ -32,4 +32,4 @@ jest.mock('electron', () => {
   }
 })
 
-jest.mock('mousetrap')
+jest.mock("mousetrap")

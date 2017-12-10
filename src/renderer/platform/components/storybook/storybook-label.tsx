@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
+import * as React from "react"
+import { CSSProperties } from "react"
 
 const textStyle: CSSProperties = {
   marginLeft: -20,
-  color: '#3d3d3d',
-  borderBottom: '1px solid #eee',
+  color: "#3d3d3d",
+  borderBottom: "1px solid #eee",
   paddingBottom: 5,
   marginBottom: 5,
-  fontFamily: 'Helvetica Neue',
+  fontFamily: "Helvetica Neue",
   fontSize: 14,
 }
 

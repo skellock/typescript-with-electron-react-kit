@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { cssProps } from '../..'
-import { css } from 'glamor'
+import * as React from "react"
+import { cssProps } from "../.."
+import { css } from "glamor"
 
 interface EnterAnimationState {
   mounted?: boolean
@@ -9,7 +9,7 @@ interface EnterAnimationState {
 export interface EnterAnimationProps {
   children?: React.ReactNode
   /** the type of animation */
-  animation?: 'grow' | 'slide'
+  animation?: "grow" | "slide"
   /** how long to wait in milliseconds before starting */
   delay?: number
   /** how fast to complete the animation in milliseconds */
@@ -42,7 +42,7 @@ export class EnterAnimation extends React.Component<EnterAnimationProps, EnterAn
     let transform: string
 
     switch (animation) {
-      case 'slide':
+      case "slide":
         transform = `translate(0, ${y}px)`
         break
 

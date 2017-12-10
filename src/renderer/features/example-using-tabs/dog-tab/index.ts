@@ -1,1 +1,1 @@
-export * from './dog-tab'
+export * from "./dog-tab"

@@ -1,4 +1,4 @@
-declare module 'popmotion' {
+declare module "popmotion" {
   export interface ActionProps {
     /** Fires every frame the value is updated. */
     onUpdate?(): void

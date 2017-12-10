@@ -1,5 +1,5 @@
-declare module 'electron-window-state-manager' {
-  import { BrowserWindow } from 'electron'
+declare module "electron-window-state-manager" {
+  import { BrowserWindow } from "electron"
 
   interface ElectronStateManagerOptions {
     /** The default width for this window. */

@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { colors, SpinAnimation } from '../../../platform'
-import { css } from 'glamor'
-const dogImage = require('./fun-dog.jpg')
+import * as React from "react"
+import { CSSProperties } from "react"
+import { colors, SpinAnimation } from "../../../platform"
+import { css } from "glamor"
+const dogImage = require("./fun-dog.jpg")
 
 const IMAGE = css({
   width: 400,
-  borderStyle: 'solid',
+  borderStyle: "solid",
   borderWidth: 2,
   borderColor: colors.line,
   borderRadius: 4,
   transition: `all 150ms`,
-  '&:hover': {
+  "&:hover": {
     borderColor: colors.sentiment.highlight,
   },
 })

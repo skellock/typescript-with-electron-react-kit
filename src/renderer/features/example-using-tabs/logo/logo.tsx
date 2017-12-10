@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { cssProps, animations } from '../../../platform'
-const icon = require('./electron-icon.svg')
-import { css } from 'glamor'
+import * as React from "react"
+import { CSSProperties } from "react"
+import { cssProps, animations } from "../../../platform"
+const icon = require("./electron-icon.svg")
+import { css } from "glamor"
 
 const ROOT = css(
   cssProps({

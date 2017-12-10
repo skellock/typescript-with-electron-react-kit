@@ -1,36 +1,36 @@
-jest.mock('mousetrap', () => {
+jest.mock("mousetrap", () => {
   return {
     bind: jest.fn(),
     unbind: jest.fn(),
   }
 })
-jest.mock('../../../../shared', () => {
+jest.mock("../../../../shared", () => {
   return {
     isMac: jest.fn().mockReturnValueOnce(true),
   }
 })
 
-import * as Mousetrap from 'mousetrap'
+import * as Mousetrap from "mousetrap"
 
-test('changes tabs', () => {
+test("changes tabs", () => {
   const fn = () => true
-  const { bindKey, unbindKey } = require('./keyboard')
-  bindKey('shift+1', fn, 'keyup')
-  unbindKey('shift+2', 'keyup')
+  const { bindKey, unbindKey } = require("./keyboard")
+  bindKey("shift+1", fn, "keyup")
+  unbindKey("shift+2", "keyup")
 
-  expect(Mousetrap.bind).toHaveBeenCalledWith('shift+1', fn, 'keyup')
-  expect(Mousetrap.unbind).toHaveBeenCalledWith('shift+2', 'keyup')
+  expect(Mousetrap.bind).toHaveBeenCalledWith("shift+1", fn, "keyup")
+  expect(Mousetrap.unbind).toHaveBeenCalledWith("shift+2", "keyup")
 })
 
-test('mac is command key', () => {
-  const { commandOrControlKey } = require('./keyboard')
-  expect(commandOrControlKey()).toBe('command')
+test("mac is command key", () => {
+  const { commandOrControlKey } = require("./keyboard")
+  expect(commandOrControlKey()).toBe("command")
 })
 
-test('non-mac is control', () => {
+test("non-mac is control", () => {
   // jest.resetModules()
-  const shared = require('../../../../shared')
+  const shared = require("../../../../shared")
   shared.isMac = jest.fn().mockReturnValue(false)
-  const { commandOrControlKey } = require('./keyboard')
-  expect(commandOrControlKey()).toBe('ctrl')
+  const { commandOrControlKey } = require("./keyboard")
+  expect(commandOrControlKey()).toBe("ctrl")
 })

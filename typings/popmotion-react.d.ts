@@ -1,5 +1,5 @@
-declare module 'popmotion-react' {
-  import { Component } from 'react'
+declare module "popmotion-react" {
+  import { Component } from "react"
 
   export interface StateChangeValue {
     [name: string]: any

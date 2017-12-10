@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react"
 import {
   Tab,
   bindKey,
@@ -9,10 +9,10 @@ import {
   cssProps,
   commandOrControlKey,
   EnterAnimation,
-} from '../../../platform'
-import { css } from 'glamor'
+} from "../../../platform"
+import { css } from "glamor"
 
-export type SampleTabType = 'one' | 'two' | 'three'
+export type SampleTabType = "one" | "two" | "three"
 
 export interface SampleTabsProps {
   tab: SampleTabType
@@ -34,17 +34,17 @@ const BAR = css(
     paddingRight: spacing.medium,
     paddingTop: spacing.small,
     backgroundColor: colors.nav.background,
-    justifyContent: 'center',
+    justifyContent: "center",
     borderBottom: 1,
     borderBottomColor: colors.nav.line,
-    borderBottomStyle: 'solid',
+    borderBottomStyle: "solid",
   }),
 )
 
 export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
-  changeTab1 = () => this.props.onChangeTab('one')
-  changeTab2 = () => this.props.onChangeTab('two')
-  changeTab3 = () => this.props.onChangeTab('three')
+  changeTab1 = () => this.props.onChangeTab("one")
+  changeTab2 = () => this.props.onChangeTab("two")
+  changeTab3 = () => this.props.onChangeTab("three")
 
   componentDidMount() {
     bindKey(KEY_1, this.changeTab1)
@@ -63,11 +63,11 @@ export class SampleTabs extends React.PureComponent<SampleTabsProps, {}> {
 
     return (
       <div {...ROOT}>
-        <EnterAnimation animation='slide' delay={100} y={-60}>
+        <EnterAnimation animation="slide" delay={100} y={-60}>
           <div {...BAR}>
-            <Tab onClick={this.changeTab1} active={tab === 'one'} text='doggo' />
-            <Tab onClick={this.changeTab2} active={tab === 'two'} text='paragraphs' />
-            <Tab onClick={this.changeTab3} active={tab === 'three'} text='empty' />
+            <Tab onClick={this.changeTab1} active={tab === "one"} text="doggo" />
+            <Tab onClick={this.changeTab2} active={tab === "two"} text="paragraphs" />
+            <Tab onClick={this.changeTab3} active={tab === "three"} text="empty" />
           </div>
         </EnterAnimation>
       </div>
