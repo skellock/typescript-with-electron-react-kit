@@ -6,13 +6,11 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": false,
-    "strict": false,
     "noUnusedLocals": true,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true
   },
-  "include": [
-    "src",
-    "typings",
-    "fuse.ts"
-  ]
+  "include": ["src", "typings", "fuse.ts"]
 }
