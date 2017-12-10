@@ -1,5 +1,5 @@
-import { StateChangeEvent, MotionStates, MotionStateProps } from 'popmotion-react'
-import { tween } from 'popmotion'
+import { StateChangeEvent, MotionStates, MotionStateProps } from "popmotion-react"
+import { tween } from "popmotion"
 
 const DEFAULT_DURATION = 500
 const DEFAULT_REVOLUTIONS = 1
@@ -39,5 +39,5 @@ export function createSpinStates(props: SpinAnimationStateProps): MotionStates {
  * @param current The current state.
  */
 export function next(current: MotionStateProps) {
-  return current.state === 'forward' ? current.setStateTo.back : current.setStateTo.forward
+  return current.state === "forward" ? current.setStateTo.back : current.setStateTo.forward
 }

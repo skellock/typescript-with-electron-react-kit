@@ -1,1 +1,1 @@
-export * from './welcome-screen'
+export * from "./welcome-screen"

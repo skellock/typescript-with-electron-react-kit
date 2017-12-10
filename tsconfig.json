@@ -12,5 +12,8 @@
     "noImplicitReturns": true,
     "noImplicitAny": true
   },
-  "include": ["src", "typings", "fuse.ts"]
+  "include": ["src", "typings", "fuse.ts"],
+  "exclude": [
+    "node_modules"
+  ]
 }

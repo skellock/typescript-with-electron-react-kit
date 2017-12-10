@@ -1,1 +1,1 @@
-export * from './spin-animation'
+export * from "./spin-animation"

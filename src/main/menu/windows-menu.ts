@@ -1,5 +1,5 @@
-import { createSharedMenuItems } from './shared-menu'
-import * as isDev from 'electron-is-dev'
+import { createSharedMenuItems } from "./shared-menu"
+import * as isDev from "electron-is-dev"
 
 export function createWindowsMenu(
   window: Electron.BrowserWindow,
@@ -7,23 +7,23 @@ export function createWindowsMenu(
   const shared = createSharedMenuItems(window)
 
   const fileMenu: Electron.MenuItemConstructorOptions = {
-    label: '&File',
-    submenu: [{ ...shared.quit, accelerator: 'Alt+F4' }],
+    label: "&File",
+    submenu: [{ ...shared.quit, accelerator: "Alt+F4" }],
   }
 
   const viewMenu: Electron.MenuItemConstructorOptions = {
-    label: 'View',
+    label: "View",
     submenu: isDev
       ? [
-          { ...shared.reload, accelerator: 'Ctrl+R' },
-          { ...shared.storybook, accelerator: 'Ctrl+Shift+S' },
-          { ...shared.toggleDevTools, accelerator: 'Ctrl+Alt+I' },
-      ]
-      : [{ ...shared.fullScreen, accelerator: 'Ctrl+Alt+F' }],
+          { ...shared.reload, accelerator: "Ctrl+R" },
+          { ...shared.storybook, accelerator: "Ctrl+Shift+S" },
+          { ...shared.toggleDevTools, accelerator: "Ctrl+Alt+I" },
+        ]
+      : [{ ...shared.fullScreen, accelerator: "Ctrl+Alt+F" }],
   }
 
   const helpMenu: Electron.MenuItemConstructorOptions = {
-    label: 'Help',
+    label: "Help",
     submenu: [shared.visit],
   }
 

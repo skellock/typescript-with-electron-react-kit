@@ -1,6 +1,6 @@
-const { app, BrowserWindow } = require('electron')
-const WindowStateManager = require('electron-window-state-manager')
-import { loadURL } from './load-url'
+const { app, BrowserWindow } = require("electron")
+const WindowStateManager = require("electron-window-state-manager")
+import { loadURL } from "./load-url"
 
 // default dimensions
 export const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 450 }
@@ -14,7 +14,7 @@ export const DIMENSIONS = { width: 600, height: 500, minWidth: 450, minHeight: 4
  */
 export function createMainWindow(appPath: string, showDelay: number = 100) {
   // persistent window state manager
-  const windowState = new WindowStateManager('main', {
+  const windowState = new WindowStateManager("main", {
     defaultWidth: DIMENSIONS.width,
     defaultHeight: DIMENSIONS.height,
   })
@@ -29,10 +29,10 @@ export function createMainWindow(appPath: string, showDelay: number = 100) {
     y: windowState.y,
     show: false,
     useContentSize: true,
-    titleBarStyle: 'hidden-inset',
+    titleBarStyle: "hidden-inset",
     autoHideMenuBar: true,
     // backgroundColor: '#fff',
-    vibrancy: 'light',
+    vibrancy: "light",
     transparent: true,
     title: app.getName(),
     webPreferences: {
@@ -47,15 +47,15 @@ export function createMainWindow(appPath: string, showDelay: number = 100) {
   }
 
   // trap movement events
-  window.on('close', () => windowState.saveState(window))
-  window.on('move', () => windowState.saveState(window))
-  window.on('resize', () => windowState.saveState(window))
+  window.on("close", () => windowState.saveState(window))
+  window.on("move", () => windowState.saveState(window))
+  window.on("resize", () => windowState.saveState(window))
 
   // load entry html page in the renderer.
   loadURL(window, appPath)
 
   // only appear once we've loaded
-  window.webContents.on('did-finish-load', () => {
+  window.webContents.on("did-finish-load", () => {
     setTimeout(() => {
       window.show()
       window.focus()

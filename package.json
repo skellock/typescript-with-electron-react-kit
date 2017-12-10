@@ -45,13 +45,13 @@
   },
   "scripts": {
     "build-storybook": "build-storybook",
-    "typecheck": "tsc -p . --noEmit --pretty",
     "clean": "rm -rf .fusebox out dist coverage",
     "compile": "NODE_ENV=production ts-node fuse",
     "coverage:upload": "cat ./coverage/lcov.info | coveralls",
     "coverage": "yarn test --coverage --no-cache",
     "dist": "electron-builder --mac --win --linux --ia32 --x64",
     "draft": "electron-builder -p always --draft --mac --win --linux --ia32 --x64",
+    "format": "prettier --write **/*.ts && tslint -p . --fix",
     "lint": "tslint --project .",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
@@ -60,7 +60,8 @@
     "sanity": "npm-run-all clean typecheck lint test clean compile clean",
     "start": "ts-node fuse",
     "storybook": "start-storybook -p 6006",
-    "test": "jest"
+    "test": "jest",
+    "typecheck": "tsc -p . --noEmit --pretty"
   },
   "dependencies": {
     "electron-is-dev": "^0.3.0",

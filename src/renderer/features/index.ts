@@ -1,2 +1,2 @@
-export * from './example-using-tabs'
-export * from './app'
+export * from "./example-using-tabs"
+export * from "./app"

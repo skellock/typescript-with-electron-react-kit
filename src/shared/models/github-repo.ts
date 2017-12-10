@@ -6,7 +6,7 @@ export interface GithubRepo {
   private: boolean
   owner?: {
     login: string
-    type: 'User' | 'Organization'
+    type: "User" | "Organization"
     avatarUrl: string,
   }
 }

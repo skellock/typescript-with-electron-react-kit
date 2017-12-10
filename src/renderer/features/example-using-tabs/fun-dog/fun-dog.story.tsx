@@ -1,18 +1,18 @@
-import * as React from 'react'
-import { storiesOf } from '@storybook/react'
+import * as React from "react"
+import { storiesOf } from "@storybook/react"
 import {
   StorybookStory as Story,
   StorybookGroup as Group,
-} from '../../../platform/components/storybook'
+} from "../../../platform/components/storybook"
 
-import { FunDog } from './fun-dog'
+import { FunDog } from "./fun-dog"
 
-storiesOf('Fun Dog', module).add('default', () =>
+storiesOf("Fun Dog", module).add("default", () => (
   <Story>
-    <Group title='is a doggo'>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <Group title="is a doggo">
+      <div style={{ display: "flex", flexDirection: "row" }}>
         <FunDog />
       </div>
     </Group>
-  </Story>,
-)
+  </Story>
+))

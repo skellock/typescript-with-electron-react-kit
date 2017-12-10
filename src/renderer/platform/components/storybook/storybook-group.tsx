@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { StorybookLabel } from './storybook-label'
+import * as React from "react"
+import { CSSProperties } from "react"
+import { StorybookLabel } from "./storybook-label"
 
 export interface StorybookGroupProps {
   title?: string

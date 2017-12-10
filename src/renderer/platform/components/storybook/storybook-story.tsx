@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
+import * as React from "react"
+import { CSSProperties } from "react"
 
 const style: CSSProperties = {
   paddingLeft: 20,

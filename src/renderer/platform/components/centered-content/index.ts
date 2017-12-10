@@ -1,1 +1,1 @@
-export * from './centered-content'
+export * from "./centered-content"

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { Text, ScrollableContent, spacing, cssProps } from '../../../platform'
-import { css } from 'glamor'
+import * as React from "react"
+import { CSSProperties } from "react"
+import { Text, ScrollableContent, spacing, cssProps } from "../../../platform"
+import { css } from "glamor"
 
 const PADDED = cssProps({
   paddingBottom: spacing.large,

@@ -1,23 +1,23 @@
-import * as React from 'react'
-import { StorybookStory as Story, StorybookGroup as Group } from '../storybook'
+import * as React from "react"
+import { StorybookStory as Story, StorybookGroup as Group } from "../storybook"
 
-import { storiesOf } from '@storybook/react'
+import { storiesOf } from "@storybook/react"
 
-import { Text } from './index'
+import { Text } from "./index"
 
-storiesOf('Text', module)
-  .add('text styles', () => (
+storiesOf("Text", module)
+  .add("text styles", () => (
     <Story>
-      <Group title='regular text'>
+      <Group title="regular text">
         <Text>Hello World!</Text>
         <Text>$123.45</Text>
         <Text>The quick brown fox jumped over the slow lazy dog.</Text>
       </Group>
-      <Group title='with text property'>
-        <Text text='Passed in text property' />
+      <Group title="with text property">
+        <Text text="Passed in text property" />
       </Group>
 
-      <Group title='huge paragraph'>
+      <Group title="huge paragraph">
         <Text>
           Wayfarers intelligentsia salvia sartorial keffiyeh locavore direct trade flexitarian
           vexillologist ugh single-origin coffee. Hexagon heirloom direct trade palo santo
@@ -46,14 +46,14 @@ storiesOf('Text', module)
           text for your mockup? How quaint. I bet you’re still using Bootstrap too…
         </Text>
       </Group>
-      <Group title='style={{ color: &quot;red&quot; }}'>
-        <Text style={{ color: 'red' }}>Hello World!</Text>
+      <Group title="style={{ color: &quot;red&quot; }}">
+        <Text style={{ color: "red" }}>Hello World!</Text>
       </Group>
     </Story>
   ))
-  .add('with nested children', () => (
+  .add("with nested children", () => (
     <Story>
-      <Group title='with nested children'>
+      <Group title="with nested children">
         <Text>
           <p>
             <strong>I am STRONG</strong>

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { colors, spacing, fontSizes, Text, styles, cssProps, EnterAnimation } from '../..'
-import { css, compose } from 'glamor'
+import * as React from "react"
+import { CSSProperties } from "react"
+import { colors, spacing, fontSizes, Text, styles, cssProps, EnterAnimation } from "../.."
+import { css, compose } from "glamor"
 
 export interface TabProps {
   text: string
@@ -13,7 +13,7 @@ export interface TabProps {
 const BASE = compose(
   styles.noWindowDrag,
   cssProps({
-    cursor: 'pointer',
+    cursor: "pointer",
     paddingTop: spacing.small,
     paddingBottom: spacing.small,
     paddingLeft: spacing.medium,
@@ -24,7 +24,7 @@ const BASE = compose(
 const ACTIVE = cssProps({
   borderBottom: colors.nav.line,
   borderBottomWidth: 2,
-  borderBottomStyle: 'solid',
+  borderBottomStyle: "solid",
 })
 
 const BASE_TEXT = cssProps({ color: colors.nav.inactive, fontSize: fontSizes.mediumPlus })
@@ -39,7 +39,7 @@ export function Tab(props: TabProps) {
   const textStyle = css(BASE_TEXT, props.active && ACTIVE_TEXT)
 
   return (
-    <EnterAnimation animation='grow' speed={100} delay={400}>
+    <EnterAnimation animation="grow" speed={100} delay={400}>
       <div {...styleProps} onClick={props.onClick}>
         <Text style={textStyle} text={props.text} />
       </div>

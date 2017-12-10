@@ -1,12 +1,12 @@
-import { Menu } from 'electron'
-import { createMacMenu } from './macos-menu'
-import { createLinuxMenu } from './linux-menu'
-import { createWindowsMenu } from './windows-menu'
-import { isMac, isLinux, isWindows } from '../../shared'
+import { Menu } from "electron"
+import { createMacMenu } from "./macos-menu"
+import { createLinuxMenu } from "./linux-menu"
+import { createWindowsMenu } from "./windows-menu"
+import { isMac, isLinux, isWindows } from "../../shared"
 
 /**
  * Attaches the menu to the appropriate place.
- * 
+ *
  * @param window The main window.
  */
 export function createMenu(window: Electron.BrowserWindow) {

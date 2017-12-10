@@ -1,38 +1,38 @@
-import { shell, ipcMain } from 'electron'
+import { shell, ipcMain } from "electron"
 
 export function createSharedMenuItems(window: Electron.BrowserWindow) {
   const visit: Electron.MenuItemConstructorOptions = {
-    label: 'Visit on Github',
+    label: "Visit on Github",
     click() {
-      shell.openExternal('https://github.com/skellock/typescript-with-electron-react-kit')
+      shell.openExternal("https://github.com/skellock/typescript-with-electron-react-kit")
     },
   }
 
   const reload: Electron.MenuItemConstructorOptions = {
-    label: 'Reload',
+    label: "Reload",
     click() {
       window.webContents.reload()
     },
   }
 
   const storybook: Electron.MenuItemConstructorOptions = {
-    label: 'Toggle Storybook',
+    label: "Toggle Storybook",
     click() {
-      ipcMain.emit('storybook-toggle')
+      ipcMain.emit("storybook-toggle")
     },
   }
 
-  const quit: Electron.MenuItemConstructorOptions = { label: 'Quit', role: 'quit' }
+  const quit: Electron.MenuItemConstructorOptions = { label: "Quit", role: "quit" }
 
   const toggleDevTools: Electron.MenuItemConstructorOptions = {
-    label: 'Toggle Developer Tools',
+    label: "Toggle Developer Tools",
     click() {
       window.webContents.toggleDevTools()
     },
   }
 
   const fullScreen: Electron.MenuItemConstructorOptions = {
-    label: 'Toggle Full Screen',
+    label: "Toggle Full Screen",
     click() {
       window.setFullScreen(!window.isFullScreen())
     },

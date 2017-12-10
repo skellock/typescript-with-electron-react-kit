@@ -1,1 +1,1 @@
-export * from './long-tab'
+export * from "./long-tab"

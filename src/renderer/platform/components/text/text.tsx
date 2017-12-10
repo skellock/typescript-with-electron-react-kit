@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
-import { colors, fonts, fontSizes, cssProps } from '../..'
-import { css } from 'glamor'
+import * as React from "react"
+import { CSSProperties } from "react"
+import { colors, fonts, fontSizes, cssProps } from "../.."
+import { css } from "glamor"
 
 export interface TextProps {
   text?: string
@@ -19,9 +19,5 @@ const STYLE = cssProps({
 
 export function Text(props: TextProps) {
   const styleProps = css(STYLE, props.style)
-  return (
-    <p {...styleProps}>
-      {props.children || props.text}
-    </p>
-  )
+  return <p {...styleProps}>{props.children || props.text}</p>
 }

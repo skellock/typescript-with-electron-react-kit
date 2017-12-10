@@ -1,5 +1,5 @@
 // this example is here only to show how some testing could work.
-import { GithubRepo } from '../../shared/models/github-repo'
+import { GithubRepo } from "../../shared/models/github-repo"
 
 interface DatabaseOptions {
   readonly directory: string
@@ -22,7 +22,7 @@ export class Database {
     return new Promise(resolve =>
       setTimeout(() => {
         const repo: GithubRepo = {
-          name: fullName.split('/')[1],
+          name: fullName.split("/")[1],
           fullName,
           private: false,
         }
@@ -33,10 +33,10 @@ export class Database {
 
   /**
    * Saves something to the database.
-   * 
+   *
    * @param repo The thing to save.
    */
   save(repo: GithubRepo): Promise<boolean> {
-    return new Promise(resolve => setTimeout(() => resolve(repo.fullName !== 'crap'), 10))
+    return new Promise(resolve => setTimeout(() => resolve(repo.fullName !== "crap"), 10))
   }
 }
