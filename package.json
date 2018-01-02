@@ -1,5 +1,6 @@
 {
   "name": "typescript-with-electron-react-kit",
+  "productName": "Sweet Sweet App",
   "main": "out/main.js",
   "version": "1.0.0",
   "description": "An electron starter project.",
@@ -30,7 +31,6 @@
     "mac": {
       "category": "public.app-category.developer-tools"
     },
-    "productName": "Sweet Sweet App",
     "publish": {
       "owner": "skellock",
       "provider": "github",
