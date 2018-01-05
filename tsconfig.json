@@ -7,7 +7,6 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": false,
     "noUnusedLocals": true,
-    "inlineSourceMap": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "noImplicitAny": true
