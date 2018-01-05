@@ -1,16 +1,16 @@
 import { isLinux, isMac, isWindows } from "./platform"
 
 test("detects linux", () => {
-  process.platform = "linux"
+  Object.defineProperty(process, "platform", { value: "linux" })
   expect(isLinux()).toBe(true)
 })
 
 test("detects windows", () => {
-  process.platform = "win32"
+  Object.defineProperty(process, "platform", { value: "win32" })
   expect(isWindows()).toBe(true)
 })
 
 test("detects mac", () => {
-  process.platform = "darwin"
+  Object.defineProperty(process, "platform", { value: "darwin" })
   expect(isMac()).toBe(true)
 })
