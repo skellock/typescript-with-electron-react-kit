@@ -75,6 +75,11 @@ You down with MIT?
     @rmevans9
     </a>
   </td>
+  <td align='center'>
+    <a href='https://github.com/firede'><img src='https://avatars0.githubusercontent.com/u/157338?s=400&v=4' width='120' style='border-radius: 10px;' ><br>
+    @firede
+    </a>
+  </td>
 </tr>
 </table>
 
