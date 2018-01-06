@@ -251,6 +251,61 @@ exports[`Storyshots ScrollableContent default 1`] = `
 </div>
 `;
 
+exports[`Storyshots SpinAnimation default 1`] = `
+<div
+  style={
+    Object {
+      "paddingLeft": 20,
+      "paddingRight": 20,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "borderBottom": "1px solid #eee",
+          "color": "#3d3d3d",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 14,
+          "marginBottom": 5,
+          "marginLeft": -20,
+          "paddingBottom": 5,
+        }
+      }
+    >
+      default
+    </p>
+    <span
+      style={
+        Object {
+          "display": "inline-block",
+          "width": 100,
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        I am going to spin.
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Tab Tab 1`] = `
 <div
   style={
