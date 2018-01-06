@@ -10,7 +10,7 @@ const isProduction = process.env.NODE_ENV === "production"
 
 // copy the renderer's html file into the right place
 Sparky.task("copy-html", () => {
-  return Sparky.src("src/renderer/index.html").dest(`${OUTPUT_DIR}/$name`)
+  return Sparky.src("src/app/index.html").dest(`${OUTPUT_DIR}/$name`)
 })
 
 // the default task
@@ -32,7 +32,7 @@ Sparky.task("default", ["copy-html"], () => {
   }
 
   // bundle the electron main code
-  const mainBundle = fuse.bundle("main").instructions("> [main/main.ts]")
+  const mainBundle = fuse.bundle("main").instructions("> [app/main.ts]")
 
   // and watch unless we're bundling for production
   if (!isProduction) {
@@ -42,7 +42,7 @@ Sparky.task("default", ["copy-html"], () => {
   // bundle the electron renderer code
   const rendererBundle = fuse
     .bundle("renderer")
-    .instructions("> [renderer/index.tsx] +fuse-box-css")
+    .instructions("> [app/index.tsx] +fuse-box-css")
     .plugin(CSSPlugin())
     .plugin(CopyPlugin({ useDefault: false, files: ASSETS, dest: "assets", resolve: "assets/" }))
 
