@@ -56,7 +56,12 @@ Sparky.task("default", ["copy-html"], () => {
   return fuse.run().then(() => {
     if (!isProduction) {
       // startup electron
-      spawn("node", [`${__dirname}/node_modules/electron/cli.js`, __dirname], { stdio: "inherit" })
+      spawn("node", [`${__dirname}/node_modules/electron/cli.js`, __dirname], {
+        stdio: "inherit",
+      }).on("exit", code => {
+        console.log(`electron process exited with code ${code}`)
+        process.exit(code)
+      })
     }
   })
 })
