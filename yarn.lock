@@ -3464,7 +3464,7 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-framesync@^3.0.1:
+framesync@^3.0.2, framesync@^3.1.7:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.7.tgz#9b9aa3eff8598625302597851a428f40c3dc1c6b"
 
@@ -6017,15 +6017,19 @@ podda@^1.2.2:
     babel-runtime "^6.11.6"
     immutable "^3.8.1"
 
-popmotion-react@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/popmotion-react/-/popmotion-react-1.1.1.tgz#5eef3877914cdd9fb007f1e92b32142b5b5676e0"
-
-popmotion@^7.8.2:
-  version "7.8.2"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-7.8.2.tgz#984ecbdc1ea70c022ee8d4bc36a4317ed619ba1d"
+popmotion-react@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/popmotion-react/-/popmotion-react-2.1.0.tgz#519e7004d9d5ab5c571c2bf03627daf4ebc18152"
   dependencies:
-    framesync "^3.0.1"
+    popmotion "^8.1.0"
+
+popmotion@^8.1.0, popmotion@^8.1.7:
+  version "8.1.7"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.1.7.tgz#7dba748d9fae1284fc7a5702e5ed0b7be66ffcbe"
+  dependencies:
+    framesync "^3.1.7"
+    style-value-types "^1.0.3"
+    stylefire "^1.1.8"
 
 postcss-calc@^5.2.0:
   version "5.3.1"
@@ -7555,6 +7559,17 @@ style-loader@^0.19.1:
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
+
+style-value-types@^1.0.0, style-value-types@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-1.0.3.tgz#651c3c75c988ea2ef86e20c6a07f98cce62efddf"
+
+stylefire@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-1.1.8.tgz#2e26894c5e2877c5100a7b29522d918a6fc4f1e1"
+  dependencies:
+    framesync "^3.0.2"
+    style-value-types "^1.0.0"
 
 subarg@^1.0.0:
   version "1.0.0"

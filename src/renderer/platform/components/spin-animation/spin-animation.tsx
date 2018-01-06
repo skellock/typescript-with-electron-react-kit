@@ -1,35 +1,43 @@
 import * as React from "react"
-import { MotionValue, MotionStates, MotionStateProps } from "popmotion-react"
-import { SpinAnimationStateProps, createSpinStates, next } from "./spin-animation-state"
+import { MotionValue, MotionStateProps, MotionStates } from "popmotion-react"
+import { tween } from "popmotion"
+
+const DEFAULT_DURATION = 500
+const DEFAULT_REVOLUTIONS = 1
+
+export interface SpinAnimationProps {
+  duration?: number
+  revolutions?: number
+}
 
 /**
  * Provides a container which will do a barrel roll when clicked.
  */
-export class SpinAnimation extends React.PureComponent<SpinAnimationStateProps, {}> {
-  animationStates: MotionStates
-
-  componentWillMount() {
-    this.animationStates = createSpinStates(this.props)
-  }
-
-  /* istanbul ignore next */
-  componentWillReceiveProps(newProps: SpinAnimationStateProps) {
-    this.animationStates = createSpinStates(newProps)
-  }
-
+export class SpinAnimation extends React.PureComponent<SpinAnimationProps, {}> {
   render() {
-    // the view to spin
-    // NOTE: This is a function and not a component due to popmotion-react.
-    const spinWrapper = (motionState: MotionStateProps) => {
-      const props = {
-        style: { transform: `rotate(${motionState.v}deg)`, cursor: "pointer" },
-        onClick: next(motionState),
-        children: this.props.children,
-      }
+    const duration = this.props.duration || DEFAULT_DURATION
+    const forwardAngle = 360 * (this.props.revolutions || DEFAULT_REVOLUTIONS)
 
-      return <div {...props} />
+    // istanbul ignore next
+    const motionStates: MotionStates = {
+      on: ({ value }) => tween({ from: value.get(), to: forwardAngle, duration }).start(value),
+      off: ({ value }) => tween({ from: value.get(), to: 0, duration }).start(value),
     }
 
-    return <MotionValue onStateChange={this.animationStates} children={spinWrapper} />
+    return (
+      <MotionValue onStateChange={motionStates}>
+        {(motionState: MotionStateProps) => (
+          <div
+            style={{ transform: `rotate(${motionState.v}deg)`, cursor: "pointer" }}
+            onClick={
+              // istanbul ignore next
+              motionState.state === "on" ? motionState.setStateTo.off : motionState.setStateTo.on
+            }
+          >
+            {this.props.children}
+          </div>
+        )}
+      </MotionValue>
+    )
   }
 }
