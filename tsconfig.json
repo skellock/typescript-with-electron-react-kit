@@ -11,7 +11,7 @@
     "noImplicitReturns": true,
     "noImplicitAny": true
   },
-  "include": ["src", "typings", "fuse.ts"],
+  "include": ["src", "typings", "fuse.ts", "./storybook/views"],
   "exclude": [
     "node_modules"
   ]

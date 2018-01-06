@@ -2,7 +2,7 @@
   "name": "typescript-with-electron-react-kit",
   "productName": "Sweet Sweet App",
   "main": "out/main.js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An electron starter project.",
   "license": "MIT",
   "private": true,
