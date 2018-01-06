@@ -1,6 +1,6 @@
 ## Test Drive
 
-Want to try this out? Clone & run.  There's a small sample project included.
+Want to try this out? Clone & run. There's a small sample project included.
 
 ```sh
 git clone --depth 1 git@github.com:skellock/typescript-with-electron-react-kit.git
@@ -9,37 +9,58 @@ npm i
 npm start
 ```
 
-_Requires `node@>=8.2` and `npm@>=5.3`._ (NOTE: not really, but ya, upgrade ... there's some pretty big bugs in earlier versions)
+_Requires `node@>=8.6` and `npm@>=5.4`._ (NOTE: not really, but ya, upgrade ... there's some pretty big bugs in earlier versions)
 
 ## Start Your Own Project
 
 Ready to start your project?
 
-I'm still deciding on a simple way, but there will be a script you can run.
+This sample app has a few things that should be swapped out for your settings.
 
-```sh
-# this does exist yet
-npm run time-to-shine
-```
+#### Reset git
 
+You'll want to start from a fresh source control history.
+
+* delete the `.git` directory
+* re-initialize git by running `git init`
+
+#### Change App Settings
+
+Open `package.json` and change these keys to be your own:
+
+* name
+* productName
+* description
+* license
+* author
+* repository
+* build.mac.category
+* build.publish
+
+#### Change Web Site Menu Item
+
+Open `src/menu/shared-menu.ts` and change the visit menu item to point to your web site.
 
 ## Strip It Down to the Bones
 
-You can keep the Electron parts but lose the rendering opinions.
+If you're looking for a really fresh start:
 
-* delete the directories under `src/renderer`
-* change `src/renderer/index.tsx` to point to your new component
-
+* delete the `src/views` directory
+* delete the `src/models` directory
+* delete the `src/services` directory
+* delete the `src/i18n` directory
+* delete the `src/app/root-component.tsx` file
+* change `src/app/index.tsx` to point to your new root component
 
 ## Keep the Meat, Ditch the Fluff
 
 If you want to just remove the examples and continue with the app layout:
 
-* delete `src/renderer/features/example-using-tabs`
-* remove corresponding lines from `src/renderer/index.ts`
-* remove the same from `src/renderer/app/app.tsx`
-* remove the `src/shared/models`
-* remove the `src/main/database`
+* delete the `src/views/example` directory
+* delete the contents of `src/models`
+* delete the contents of `src/services`
+* create a new react component under `src/views` (i prefer a sub-directory under here)
+* open `src/app/root-component.tsx` and point to your new component
 
 Now you're ready to start adding your own features.
 
@@ -61,7 +82,7 @@ It'll:
 * compile the app in production mode
 * clean 1 last time.
 
-This is hooked up to a `pre-push` build script. This will help you not check in mistakes.  Trust me.
+This is hooked up to a `pre-push` build script. This will help you not check in mistakes. Trust me.
 
 If you want to run in `watch` mode for testing while you develop (quite nice!):
 
@@ -73,7 +94,7 @@ npm run watch:compile
 npm run watch:tests
 ```
 
-Now when you edit your files, it'll recompile & re-run the relevant tests on the fly.  And it's quick!
+Now when you edit your files, it'll recompile & re-run the relevant tests on the fly. And it's quick!
 
 If you are ready to see how much of your codebase is covered simply run:
 
@@ -82,7 +103,6 @@ npm run coverage
 ```
 
 and check out the output in the coverage folder.
-
 
 ## Writing Components
 
@@ -93,8 +113,6 @@ npm run storybook
 ```
 
 and then switch to the storybook view from the `view` menu in your app so you can get a live preview of the component you are working on.
-
-
 
 ## Building
 

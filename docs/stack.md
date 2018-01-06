@@ -2,7 +2,6 @@
 
 Hey, so everyone has their favourites right? Here's a few of mine.
 
-
 ## Language
 
 > **typescript**
@@ -10,7 +9,6 @@ Hey, so everyone has their favourites right? Here's a few of mine.
 [typescript - github](https://github.com/Microsoft/TypeScript)
 
 Such a well polished and wonderful typing system. I know this is a stepping stone to a better language, but JavaScript is really comfortable at this point. TypeScript dials the safety part in.
-
 
 ## Language Support
 
@@ -28,7 +26,6 @@ A linter with a great set of rules is awesome.
 
 Some automation so I stop checking in crap-looking code.
 
-
 ## Rendering
 
 > **react**, **react-dom**
@@ -37,9 +34,9 @@ Some automation so I stop checking in crap-looking code.
 
 Can't imagine doing web differently to be honest. I'm sure we will soon, but for mid-2017, this is dominating.
 
-I like `preact` as well.  I feel like the switching over will be pretty simple and I probably will.
+I like `preact` as well. I feel like the switching over will be pretty simple and I probably will.
 
-## Components ##
+## Components
 
 > **glamor**
 
@@ -65,17 +62,17 @@ I've flip-flopped on this quite a bit. We're spoiled by awesome options.
 
 `glamor` nails what I'm looking for:
 
-* ✅  objects are first class
-* ✅  strong on composibility
-* ✅  performant out of the box (without configuration)
-* ✅  works well with global styles and things like keyframes
-* ✅  friendly devs
-* ✅  a DSL that is true to CSS (especially with child selectors)
-* ✅  built-in escape hatches
-* ✅  clear docs with examples, patterns, and advice
-* ✅  stable-ish API
-* ✅  TypeScript-friendly
-* ✅  testability without flushing caches or buffers
+* ✅ objects are first class
+* ✅ strong on composibility
+* ✅ performant out of the box (without configuration)
+* ✅ works well with global styles and things like keyframes
+* ✅ friendly devs
+* ✅ a DSL that is true to CSS (especially with child selectors)
+* ✅ built-in escape hatches
+* ✅ clear docs with examples, patterns, and advice
+* ✅ stable-ish API
+* ✅ TypeScript-friendly
+* ✅ testability without flushing caches or buffers
 
 My advice? **Don't listen to my advice**. Explore & pick your own. Much, if not most, of your app is UI.
 
@@ -105,7 +102,6 @@ Brings enter + leave lifecycle events for animations.
 
 Power animation & tweening library.
 
-
 ## Keyboard Support
 
 > **mousetrap**
@@ -116,7 +112,6 @@ The main menu in electron has keyboard accelators, but we still need one in the 
 
 Mousetrap fills that gap. It's a pretty decent little library despite not being maintained any more (lol@js). Does the job though. I've tried a couple of others but keep coming back to this one.
 
-
 ## Utilities
 
 > **ramda**
@@ -124,7 +119,6 @@ Mousetrap fills that gap. It's a pretty decent little library despite not being 
 [ramda - github](https://github.com/ramda/ramda)
 
 There's so much awesome packed in here. `pipe` for days. I'll be honest, it took me a long time get comfortable with `ramda`. Nowadays, you can pry it from my cold dead hands. PRECIOUS!!!
-
 
 ## Electron Things
 
@@ -157,7 +151,6 @@ Persist JSON to the file system.
 
 Persist window coordinates & dimensions to disk to survive restarts.
 
-
 ## Bundler
 
 > **fuse-box**
@@ -168,15 +161,13 @@ Yes, you read that right. Not WebPack. WebPack always rubbed me wrong. Maybe it'
 
 What I do know is, once I started playing with FuseBox, I was sold. I like the devs behind this too.
 
-
 ## Testing
 
 > **jest**
 
 [jest - github](https://github.com/facebook/jest)
 
-Because we're using TypeScript, Jest makes this much easier.  Jest comes with mocking and coverage as well.
-
+Because we're using TypeScript, Jest makes this much easier. Jest comes with mocking and coverage as well.
 
 ## Compile Time Utilities
 
@@ -186,7 +177,6 @@ Because we're using TypeScript, Jest makes this much easier.  Jest comes with mo
 [npm-run-all - github](hhttps://github.com/mysticatea/npm-run-all)
 
 Quality-of-life utilities for npm.
-
 
 ## Docs
 

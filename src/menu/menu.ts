@@ -2,7 +2,7 @@ import { Menu } from "electron"
 import { createMacMenu } from "./macos-menu"
 import { createLinuxMenu } from "./linux-menu"
 import { createWindowsMenu } from "./windows-menu"
-import { isMac, isLinux, isWindows } from "../../lib/platform"
+import { isMac, isLinux, isWindows } from "../lib/platform"
 
 /**
  * Attaches the menu to the appropriate place.

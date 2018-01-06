@@ -1,4 +1,3 @@
-- [Home](/)
-- [Using](/using)
-- [The Stack](/stack)
-
+* [Home](/)
+* [Using](/using)
+* [The Stack](/stack)

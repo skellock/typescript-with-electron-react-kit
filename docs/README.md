@@ -8,13 +8,11 @@
 
 This is a `TypeScript` and `React` starter kit for building Electron apps.
 
-
 ### Why?
 
 I've got dozens of Electron apps started and not finished. They die before they can leave the bikeshed.
 
 This is my attempt to fix that.
-
 
 ### Why Not?
 
@@ -31,10 +29,8 @@ Honestly, these are pretty pro.
 * https://github.com/bitjson/typescript-starter
 * https://github.com/alexjoverm/typescript-library-starter
 
-They have been influential and instructional.  Pretty cool people at the helm too.
-
+They have been influential and instructional. Pretty cool people at the helm too.
 
 ### License
 
 MIT. A tip of the hat is always nice, but I'm more interested in hearing what you do with it.
-

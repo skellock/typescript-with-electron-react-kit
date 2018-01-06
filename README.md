@@ -10,15 +10,13 @@ This is a `TypeScript` and `React` starter kit for building Electron apps.
 
 [Check out the docs](https://skellock.github.io/typescript-with-electron-react-kit) for some of the choices and motivations.
 
-
 ### Example
 
-You have to bring your own awesome.  But here's a picture* after `npm i` and `npm start` and `npm storybook`...
+You have to bring your own awesome. But here's a picture\* after `npm i` and `npm start` and `npm storybook`...
 
 <img src='./docs/demo.gif' width='450' />
 
-><small>* What it looks like moments before you hit the delete button to nuke all the staged features..</small>
-
+> <small>\* What it looks like moments before you hit the delete button to nuke all the staged features..</small>
 
 # Out of the Box
 
@@ -33,7 +31,7 @@ You have to bring your own awesome.  But here's a picture* after `npm i` and `np
 * persist application data as JSON
 * sane styling defaults on windows, mac, and linux
 
-### Devs Like Nice Things Too  🔨
+### Devs Like Nice Things Too 🔨
 
 * super-fast hot reloading 🔥
 * lean production bundles
@@ -42,24 +40,22 @@ You have to bring your own awesome.  But here's a picture* after `npm i` and `np
 * storybook snapshot testing
 * code linting & formatting
 
-### Documentation & Samples  🖨
+### Documentation & Samples 🖨
 
 * how to quickly jettison parts you don't want
 * why we chose the stack we did
 * how to structure your electron app
 * a simple & co-located approach to building your components
 
-### Not Included  💣
+### Not Included 💣
 
 * lock in... keep what works for you, ditch the rest
-* state management... `mobx`? / `redux`? ... both awesome.  both excluded.
+* state management... `mobx`? / `redux`? ... both awesome. both excluded.
 * a component toolkit
 
+# License 🎤
 
-# License  🎤 
-
-You down with MIT? 
-
+You down with MIT?
 
 # Contributors
 

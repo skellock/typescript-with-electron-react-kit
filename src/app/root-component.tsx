@@ -2,7 +2,7 @@
 import * as React from "react"
 import { compose } from "glamor"
 import { styles, colors } from "../views/theme"
-import { WelcomeScreen } from "../views/example-using-tabs/welcome-screen"
+import { WelcomeScreen } from "../views/example/welcome-screen"
 
 const ROOT = compose(styles.fullScreen, {
   background: colors.window.background,

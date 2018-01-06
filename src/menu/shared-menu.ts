@@ -2,7 +2,7 @@ import { shell, ipcMain } from "electron"
 
 export function createSharedMenuItems(window: Electron.BrowserWindow) {
   const visit: Electron.MenuItemConstructorOptions = {
-    label: "Visit on Github",
+    label: "On The Web",
     click() {
       shell.openExternal("https://github.com/skellock/typescript-with-electron-react-kit")
     },
