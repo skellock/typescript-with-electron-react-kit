@@ -34,7 +34,7 @@ export function createMacMenu(
 
   const helpMenu: Electron.MenuItemConstructorOptions = {
     label: "Help",
-    submenu: [shared.visit],
+    submenu: [process.env.HOMEPAGE && shared.visit].filter(Boolean),
   }
 
   return [appMenu, viewMenu, helpMenu]

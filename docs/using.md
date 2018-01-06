@@ -5,6 +5,9 @@ Want to try this out? Clone & run. There's a small sample project included.
 ```sh
 git clone --depth 1 git@github.com:skellock/typescript-with-electron-react-kit.git
 cd typescript-with-electron-react-kit
+rm -rf .git
+git init
+git add .
 npm i
 npm start
 ```
@@ -34,12 +37,9 @@ Open `package.json` and change these keys to be your own:
 * license
 * author
 * repository
+* homepage
 * build.mac.category
 * build.publish
-
-#### Change Web Site Menu Item
-
-Open `src/menu/shared-menu.ts` and change the visit menu item to point to your web site.
 
 ## Strip It Down to the Bones
 

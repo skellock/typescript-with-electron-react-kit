@@ -1,5 +1,6 @@
-import { FuseBox, CSSPlugin, Sparky, CopyPlugin } from "fuse-box"
+import { FuseBox, CSSPlugin, Sparky, CopyPlugin, ReplacePlugin } from "fuse-box"
 import { spawn } from "child_process"
+import * as pjson from "./package.json"
 
 const DEV_PORT = 4445
 const OUTPUT_DIR = "out"
@@ -32,7 +33,16 @@ Sparky.task("default", ["copy-html"], () => {
   }
 
   // bundle the electron main code
-  const mainBundle = fuse.bundle("main").instructions("> [app/main.ts]")
+  const mainBundle = fuse
+    .bundle("main")
+    .target("server")
+    .instructions("> [app/main.ts]")
+    // inject in some configuration
+    .plugin(
+      ReplacePlugin({
+        "process.env.HOMEPAGE": pjson.homepage ? `"${pjson.homepage}"` : "null",
+      }),
+    )
 
   // and watch unless we're bundling for production
   if (!isProduction) {
