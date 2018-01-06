@@ -105,7 +105,7 @@
     "prettier": "^1.9.2",
     "react-powerplug": "^0.1.2",
     "react-test-renderer": "^16.2.0",
-    "ts-jest": "^22.0.0",
+    "ts-jest": "^22.0.1",
     "ts-loader": "^3.2.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.8.0",
