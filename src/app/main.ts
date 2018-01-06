@@ -4,11 +4,11 @@
 // It is responsible for launching a renderer window.
 
 import { app, dialog, ipcMain } from "electron"
-import { createMainWindow, loadURL } from "../views/main-window"
+import { createMainWindow, loadURL } from "../main-window"
 import * as log from "electron-log"
 import * as isDev from "electron-is-dev"
 import { createUpdater } from "../lib/updater"
-import { createMenu } from "../views/menu"
+import { createMenu } from "../menu"
 
 // set proper logging level
 log.transports.file.level = isDev ? false : "info"
