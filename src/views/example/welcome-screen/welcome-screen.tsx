@@ -11,7 +11,7 @@ const HIDDEN = cssProps({
 })
 
 // a sample store
-const store = new Store()
+const store = new Store<SampleTabType>()
 
 interface WelcomeScreenState {
   tab: SampleTabType
