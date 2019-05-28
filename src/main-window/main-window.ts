@@ -29,7 +29,7 @@ export function createMainWindow(appPath: string, showDelay: number = 100) {
     y: windowState.y,
     show: false,
     useContentSize: true,
-    titleBarStyle: "hidden-inset",
+    titleBarStyle: "hiddenInset",
     autoHideMenuBar: true,
     // backgroundColor: '#fff',
     vibrancy: "light",
