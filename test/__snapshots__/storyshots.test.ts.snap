@@ -156,15 +156,7 @@ exports[`Storyshots Fun Dog default 1`] = `
         }
       }
     >
-      <div
-        onClick={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-            "transform": "rotate(0deg)",
-          }
-        }
-      >
+      <div>
         <img
           data-css-10m1z31=""
           draggable={false}
@@ -290,15 +282,7 @@ exports[`Storyshots SpinAnimation default 1`] = `
         }
       }
     >
-      <div
-        onClick={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-            "transform": "rotate(0deg)",
-          }
-        }
-      >
+      <div>
         I am going to spin.
       </div>
     </span>

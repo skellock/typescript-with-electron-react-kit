@@ -95,8 +95,10 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-test-renderer": "^16.8.1",
     "@types/semver": "^6.0.0",
+    "@types/storybook__addon-storyshots": "^4.0.0",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.5.1",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.3",
     "electron": "^5.0.2",
@@ -110,6 +112,7 @@
     "prettier": "^1.17.1",
     "react-powerplug": "^1.0.0",
     "react-test-renderer": "^16.8.6",
+    "require-context.macro": "^1.0.4",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.1",
     "ts-node": "^8.2.0",
@@ -123,7 +126,7 @@
       "./test/setup.ts"
     ],
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "ts-jest"
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/mock-file.ts",
@@ -154,7 +157,15 @@
       }
     },
     "collectCoverage": false,
-    "mapCoverage": true
+    "globals": {
+      "ts-jest": {
+        "babelConfig": {
+          "plugins": [
+            "macros"
+          ]
+        }
+      }
+    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
