@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron")
+import { app, BrowserWindow } from "electron"
 const WindowStateManager = require("electron-window-state-manager")
 import { loadURL } from "./load-url"
 
@@ -38,6 +38,7 @@ export function createMainWindow(appPath: string, showDelay: number = 100) {
     webPreferences: {
       backgroundThrottling: false,
       textAreasAreResizable: false,
+      nodeIntegration: true,
     },
   })
 

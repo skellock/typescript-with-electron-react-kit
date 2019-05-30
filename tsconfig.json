@@ -11,7 +11,8 @@
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "allowJs": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["src", "typings", "fuse.ts", "./storybook/views"],
   "exclude": ["node_modules"]

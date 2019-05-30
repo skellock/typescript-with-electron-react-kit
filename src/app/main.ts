@@ -26,6 +26,8 @@ app.on("ready", () => {
   window = createMainWindow(appPath)
   createMenu(window)
 
+  window.webContents.openDevTools({ mode: "detach" })
+
   if (isDev) {
     window.webContents.on("did-fail-load", () => {
       dialog.showErrorBox(

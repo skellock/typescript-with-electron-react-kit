@@ -7,8 +7,8 @@ export interface SpinAnimationProps {
 
 const SpinAnimation = posed.div({
   pressable: true,
-  init: {},
-  press: { rotateX: 1 },
+  init: { rotate: 0 },
+  press: { rotate: 360 },
 })
 
 export { SpinAnimation }
