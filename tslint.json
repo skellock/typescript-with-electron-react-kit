@@ -9,6 +9,6 @@
     "trailing-comma": [true, { "singleline": "never", "multiline": "always" }],
     "no-empty": false,
     "no-duplicate-imports": false,
-    "max-classes-per-file": [false]
+    "max-classes-per-file": false
   }
 }
