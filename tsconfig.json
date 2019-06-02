@@ -9,10 +9,11 @@
     "noUnusedLocals": true,
     "strictNullChecks": false,
     "noImplicitReturns": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["src", "typings", "fuse.ts", "./storybook/views"],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

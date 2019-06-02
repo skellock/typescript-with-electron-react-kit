@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron")
+import { app, BrowserWindow } from "electron"
 const WindowStateManager = require("electron-window-state-manager")
 import { loadURL } from "./load-url"
 
@@ -29,15 +29,16 @@ export function createMainWindow(appPath: string, showDelay: number = 100) {
     y: windowState.y,
     show: false,
     useContentSize: true,
-    titleBarStyle: "hidden-inset",
+    titleBarStyle: "hiddenInset",
     autoHideMenuBar: true,
-    // backgroundColor: '#fff',
+    backgroundColor: "#fff",
     vibrancy: "light",
-    transparent: true,
+    transparent: false,
     title: app.getName(),
     webPreferences: {
       backgroundThrottling: false,
       textAreasAreResizable: false,
+      nodeIntegration: true,
     },
   })
 

@@ -1,4 +1,5 @@
 import "./mock-request-animation-frame"
+import * as React from "react"
 
 jest.mock("electron-window-state-manager", () => {
   return jest.fn().mockImplementation(() => ({
@@ -33,3 +34,21 @@ jest.mock("electron", () => {
 })
 
 jest.mock("mousetrap")
+
+const mockPoseComponent = (name: string) => () => (props: {
+  children: React.ReactChildren
+  style: ElementCSSInlineStyle,
+}) => {
+  const { style, children } = props
+  return React.createElement(name, { style }, children)
+}
+
+jest.mock("react-pose", () => {
+  const module = jest.genMockFromModule("react-pose") as any
+
+  module.default = jest.fn()
+
+  module.default.div = mockPoseComponent("div")
+
+  return module
+})
